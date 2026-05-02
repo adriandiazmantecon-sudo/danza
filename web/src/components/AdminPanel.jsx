@@ -73,22 +73,6 @@ export default function AdminPanel({ onLogout, password }) {
         </button>
       </div>
 
-      <div style={{ 
-        marginBottom: '2rem', 
-        padding: '1rem', 
-        background: 'rgba(var(--accent-rgb), 0.1)', 
-        borderRadius: '12px',
-        border: '1px solid rgba(var(--accent-rgb), 0.2)',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.75rem'
-      }}>
-        <CheckCircle2 className="accent-color" size={20} />
-        <p style={{ fontSize: '0.9rem', margin: 0 }}>
-          Sesión segura activa. El token de GitHub está protegido en el servidor.
-        </p>
-      </div>
-
       <section>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
             <h3 style={{ margin: 0 }}>Actualizar Eventos</h3>
