@@ -13,6 +13,11 @@ __pycache__/
 *.txt
 *.png
 *.log
+check_*.py
+debug_*.py
+inspect_*.py
+ocr_check.py
+test_*.py
 scratch/
 backups/
 canal_html.txt
@@ -25,6 +30,7 @@ pozuelo_list_debug.html
 scratch_matadero.html
 scratch_matadero_event.html
 test_out.txt
+madrid_dance.code-workspace
 
 # IDE
 .vscode/
