@@ -78,13 +78,12 @@ function App() {
 
   const handleAdminLogin = (e) => {
     e.preventDefault();
-    // Simplified security: check against a hardcoded string or environment variable
-    // For personal use, a simple password is often enough if the site isn't high-risk
-    if (adminPassword === 'madrid2026') { // Default temporary password
+    // Security: The real password check now happens in the PHP backend.
+    // We just allow entry to the UI here.
+    if (adminPassword.length > 0) {
       setIsAdminAuthenticated(true);
-      setAdminPassword('');
     } else {
-      alert('Contraseña incorrecta');
+      alert('Por favor, introduce la contraseña');
     }
   };
 
@@ -196,7 +195,14 @@ function App() {
             </form>
           </div>
         ) : (
-          <AdminPanel onLogout={() => { setIsAdminAuthenticated(false); setView('home'); }} />
+          <AdminPanel 
+            password={adminPassword} 
+            onLogout={() => { 
+              setIsAdminAuthenticated(false); 
+              setAdminPassword('');
+              setView('home'); 
+            }} 
+          />
         )
       ) : (
         <>

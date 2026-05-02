@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, RefreshCw, CheckSquare, Square, ExternalLink, LogOut } from 'lucide-react';
+import { Shield, RefreshCw, CheckSquare, Square, ExternalLink, LogOut, CheckCircle2 } from 'lucide-react';
 
 const THEATERS = [
   { id: 'real', name: 'Teatro Real' },
@@ -14,12 +14,10 @@ const THEATERS = [
   { id: 'mostoles', name: 'Teatro del Bosque' }
 ];
 
-export default function AdminPanel({ onLogout }) {
+export default function AdminPanel({ onLogout, password }) {
   const [selected, setSelected] = useState([]);
   const [isUpdating, setIsUpdating] = useState(false);
   const [status, setStatus] = useState(null);
-  const [githubToken, setGithubToken] = useState(localStorage.getItem('gh_token') || '');
-  const [isTokenSaved, setIsTokenSaved] = useState(!!localStorage.getItem('gh_token'));
 
   const toggleTheater = (id) => {
     setSelected(prev => 
@@ -30,46 +28,32 @@ export default function AdminPanel({ onLogout }) {
   const selectAll = () => setSelected(THEATERS.map(t => t.id));
   const selectNone = () => setSelected([]);
 
-  const saveToken = () => {
-    localStorage.setItem('gh_token', githubToken);
-    setIsTokenSaved(true);
-    setStatus({ type: 'success', message: 'Token guardado localmente' });
-  };
-
   const handleUpdate = async (venues) => {
-    if (!githubToken) {
-      setStatus({ type: 'error', message: 'Falta el Token de GitHub' });
-      return;
-    }
-
     setIsUpdating(true);
-    setStatus({ type: 'info', message: 'Iniciando proceso en GitHub...' });
+    setStatus({ type: 'info', message: 'Conectando con el servidor seguro...' });
 
     try {
-      // GitHub API call to trigger workflow
-      const response = await fetch('https://api.github.com/repos/adriandiazmantecon-sudo/danza/dispatches', {
+      // Call our PHP Backend instead of GitHub API
+      const response = await fetch('/api/dispatch.php', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${githubToken}`,
-          'Accept': 'application/vnd.github+json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          event_type: 'trigger-scrape',
-          client_payload: {
-            venues: venues.join(',')
-          }
+          password: password,
+          venues: venues.join(',')
         })
       });
+
+      const result = await response.json();
 
       if (response.ok) {
         setStatus({ 
           type: 'success', 
-          message: '¡Acción lanzada con éxito! Los datos tardarán unos minutos en actualizarse.' 
+          message: '¡Petición enviada! El servidor está actualizando los datos.' 
         });
       } else {
-        const error = await response.json();
-        setStatus({ type: 'error', message: `Error de GitHub: ${error.message}` });
+        setStatus({ type: 'error', message: `Error del Servidor: ${result.message}` });
       }
     } catch (err) {
       setStatus({ type: 'error', message: `Error de conexión: ${err.message}` });
@@ -89,33 +73,29 @@ export default function AdminPanel({ onLogout }) {
         </button>
       </div>
 
-      <section style={{ marginBottom: '2rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
-        <h4 style={{ marginTop: 0 }}>Configuración de GitHub</h4>
-        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-          Necesitas un Personal Access Token (PAT) con permisos de 'repo'.
+      <div style={{ 
+        marginBottom: '2rem', 
+        padding: '1rem', 
+        background: 'rgba(var(--accent-rgb), 0.1)', 
+        borderRadius: '12px',
+        border: '1px solid rgba(var(--accent-rgb), 0.2)',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.75rem'
+      }}>
+        <CheckCircle2 className="accent-color" size={20} />
+        <p style={{ fontSize: '0.9rem', margin: 0 }}>
+          Sesión segura activa. El token de GitHub está protegido en el servidor.
         </p>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <input 
-            type="password" 
-            placeholder="GitHub Token (Classic)" 
-            value={githubToken}
-            onChange={(e) => setGithubToken(e.target.value)}
-            style={{ flexGrow: 1 }}
-          />
-          <button onClick={saveToken} disabled={!githubToken}>
-            {isTokenSaved ? 'Actualizar Token' : 'Guardar Token'}
-          </button>
-        </div>
-        <p style={{ fontSize: '0.75rem', marginTop: '0.5rem', opacity: 0.7 }}>
-          * El token se guarda solo en tu navegador (localStorage).
-        </p>
-      </section>
+      </div>
 
       <section>
-        <h3>Actualizar Eventos</h3>
-        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-          <button onClick={selectAll} className="text-button">Seleccionar todos</button>
-          <button onClick={selectNone} className="text-button">Deseleccionar</button>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
+            <h3 style={{ margin: 0 }}>Actualizar Eventos</h3>
+            <div style={{ display: 'flex', gap: '1rem' }}>
+                <button onClick={selectAll} className="text-button" style={{ fontSize: '0.85rem' }}>Seleccionar todos</button>
+                <button onClick={selectNone} className="text-button" style={{ fontSize: '0.85rem' }}>Deseleccionar</button>
+            </div>
         </div>
 
         <div style={{ 
@@ -133,13 +113,14 @@ export default function AdminPanel({ onLogout }) {
                 alignItems: 'center', 
                 gap: '0.5rem', 
                 cursor: 'pointer',
-                padding: '0.5rem',
+                padding: '0.75rem',
                 borderRadius: '8px',
-                background: selected.includes(theater.id) ? 'rgba(var(--accent-rgb), 0.2)' : 'transparent',
-                border: '1px solid ' + (selected.includes(theater.id) ? 'var(--accent-primary)' : 'rgba(255,255,255,0.1)')
+                background: selected.includes(theater.id) ? 'rgba(var(--accent-rgb), 0.2)' : 'rgba(255,255,255,0.03)',
+                border: '1px solid ' + (selected.includes(theater.id) ? 'var(--accent-primary)' : 'rgba(255,255,255,0.05)'),
+                transition: 'all 0.2s ease'
               }}
             >
-              {selected.includes(theater.id) ? <CheckSquare size={18} className="accent-color" /> : <Square size={18} />}
+              {selected.includes(theater.id) ? <CheckSquare size={18} className="accent-color" /> : <Square size={18} style={{ opacity: 0.5 }} />}
               <span style={{ fontSize: '0.9rem' }}>{theater.name}</span>
             </div>
           ))}
@@ -153,13 +134,14 @@ export default function AdminPanel({ onLogout }) {
             style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem' }}
           >
             <RefreshCw size={18} className={isUpdating ? 'spin' : ''} />
-            {isUpdating ? 'Actualizando...' : `Actualizar seleccionados (${selected.length})`}
+            {isUpdating ? 'Procesando...' : `Actualizar seleccionados (${selected.length})`}
           </button>
           
           <button 
             onClick={() => handleUpdate([])} 
             disabled={isUpdating}
             className="secondary-button"
+            style={{ padding: '1rem' }}
           >
             Actualizar TODO
           </button>
@@ -169,17 +151,21 @@ export default function AdminPanel({ onLogout }) {
       {status && (
         <div style={{ 
           marginTop: '2rem', 
-          padding: '1rem', 
-          borderRadius: '8px',
-          background: status.type === 'error' ? 'rgba(255,0,0,0.1)' : 
-                      status.type === 'success' ? 'rgba(0,255,0,0.1)' : 'rgba(0,0,255,0.1)',
+          padding: '1.25rem', 
+          borderRadius: '12px',
+          background: status.type === 'error' ? 'rgba(255,68,68,0.1)' : 
+                      status.type === 'success' ? 'rgba(0,200,81,0.1)' : 'rgba(51,181,229,0.1)',
           borderLeft: `4px solid ${status.type === 'error' ? '#ff4444' : 
-                                 status.type === 'success' ? '#00c851' : '#33b5e5'}`
+                                 status.type === 'success' ? '#00c851' : '#33b5e5'}`,
+          animation: 'slideIn 0.3s ease-out'
         }}>
-          {status.message}
+          <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>
+            {status.type === 'error' ? 'Error' : status.type === 'success' ? 'Éxito' : 'Info'}
+          </div>
+          <div style={{ fontSize: '0.95rem' }}>{status.message}</div>
           {status.type === 'success' && (
-            <div style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
-              Pueedes ver el progreso en <a href="https://github.com/adriandiazmantecon-sudo/danza/actions" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>GitHub Actions <ExternalLink size={12} /></a>
+            <div style={{ marginTop: '0.75rem', fontSize: '0.85rem' }}>
+              Puedes ver el progreso en <a href="https://github.com/adriandiazmantecon-sudo/danza/actions" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>GitHub Actions <ExternalLink size={12} /></a>
             </div>
           )}
         </div>
