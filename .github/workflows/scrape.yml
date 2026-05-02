@@ -41,12 +41,14 @@ jobs:
             python scraper/main.py
           fi
 
-      - name: Upload to IONOS via FTP
+      - name: Upload to IONOS via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
           local-dir: ./web/public/data/
-          server-dir: /danza/data/ # Subir a la carpeta de datos dentro de danza
+          server-dir: ./data/
           only-newer: false

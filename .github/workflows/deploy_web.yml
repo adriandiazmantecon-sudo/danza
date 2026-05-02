@@ -32,12 +32,14 @@ jobs:
           cd web
           npm run build
 
-      - name: Upload to IONOS via FTP
+      - name: Upload to IONOS via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
           local-dir: ./web/dist/
-          server-dir: /danza/ # Subir a la carpeta donde apunta el subdominio
+          server-dir: ./
           only-newer: false
