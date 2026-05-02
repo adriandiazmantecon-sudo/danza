@@ -1442,5 +1442,25 @@
         "time": "20:00"
       }
     ]
+  },
+  {
+    "id": "d874d92d-62df-47c7-910a-7e02a791e0f2",
+    "title": "MÚSICA Y DANZA EN EL PALACIO",
+    "company": "danza de Pilar Domínguez con la Orquesta de Pulso y Púa 5º traste de Boadilla del Monte",
+    "venue": {
+      "name": "Jardines del Palacio del Infante Don Luis",
+      "municipality": "Boadilla del Monte"
+    },
+    "type": "Danza",
+    "price_range": "Gratis",
+    "is_free": true,
+    "image_url": "https://www.ayuntamientoboadilladelmonte.org/sites/default/files/styles/ultimas_imagenes_alcalde/public/images/boadilla_portada-cultura_a3_38.jpg?itok=ZIMzeJNK",
+    "url": "https://www.ayuntamientoboadilladelmonte.org/boadilla-actualidad/agenda/musica-y-danza-en-el-palacio-2",
+    "sessions": [
+      {
+        "date": "2026-06-05",
+        "time": "20:30"
+      }
+    ]
   }
 ]

@@ -19,6 +19,7 @@ from venues.paco_rabal import scrape_paco_rabal
 from venues.majadahonda import scrape_majadahonda
 from venues.getafe import scrape_getafe
 from venues.mostoles import scrape_mostoles
+from venues.boadilla import scrape_boadilla
 
 def main():
     parser = argparse.ArgumentParser(description='Madrid Dance Events Scraper')
@@ -39,7 +40,8 @@ def main():
         'paco_rabal': ('Centro Cultural Paco Rabal', scrape_paco_rabal),
         'majadahonda': ('Casa de la Cultura Carmen Conde', scrape_majadahonda),
         'getafe': ('Teatro Federico García Lorca', scrape_getafe),
-        'mostoles': ('Teatro del Bosque', scrape_mostoles)
+        'mostoles': ('Teatro del Bosque', scrape_mostoles),
+        'boadilla': ('Boadilla del Monte', scrape_boadilla)
     }
 
     venues_to_scrape = []
