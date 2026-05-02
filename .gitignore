@@ -10,6 +10,7 @@ __pycache__/
 
 # Debug/Temp files
 *.html
+!web/index.html
 *.txt
 *.png
 *.log
