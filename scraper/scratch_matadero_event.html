@@ -1,0 +1,1653 @@
+<!DOCTYPE html><html lang="es" dir="ltr" prefix="og: https://ogp.me/ns#" class=" js" data-once="slider"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    <meta charset="utf-8">
+<script>localStorage.removeItem("popup_show");</script>
+<meta name="keywords" content="Danza, baile, danza contemporánea, flamenco, danza española, danza urbana, danza clásica, música, talento, conferencias, pensamiento, formación, talleres, artes vivas, matadero, Madrid">
+<link rel="canonical" href="https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero">
+<meta property="og:site_name" content="Centro Danza Matadero - CDM">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero">
+<meta property="og:title" content="Staatsballett Hannover | Goyo Montero">
+<meta property="og:image" content="https://www.centrodanzamatadero.es/sites/default/files/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="4758">
+<meta property="og:image:height" content="3172">
+<meta property="og:image:alt" content="Ballet Ópera de Hannover - GOLDBERG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Staatsballett Hannover | Goyo Montero">
+<meta name="twitter:image" content="https://www.centrodanzamatadero.es/sites/default/files/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg">
+<meta name="twitter:image:alt" content="Ballet Ópera de Hannover - GOLDBERG">
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "name": "Centro Danza Matadero - CDM",
+            "url": "https://www.centrodanzamatadero.es/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.centrodanzamatadero.es/programacion?search_api_fulltext={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    ]
+}</script>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" as="image" href="/sites/default/files/styles/desktop_full/public/oembed_thumbnails/2026-04/CNBgFi3iRsWD5_P6Y9Tqii2iVfhTmcl-Q3LtpvEwzWQ.jpg.webp?itok=sTaMNJAU" type="image/jpeg">
+<link rel="icon" href="/themes/custom/centro_danza/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="alternate" hreflang="es" href="https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero">
+<link rel="alternate" hreflang="en" href="https://www.centrodanzamatadero.es/en/activities/staatsballett-hannover-goyo-montero">
+<script src="/sites/default/files/eu_cookie_compliance/eu_cookie_compliance.script.js?0" defer=""></script>
+<script type="application/ld+json">[{
+    "@context": "http://www.schema.org",
+    "@type": "VisualArtsEvent",
+    "name": "Staatsballett Hannover | Goyo Montero",
+    "url": "https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero",
+    "image": "https://www.centrodanzamatadero.es/sites/default/files/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg",
+    "description": "\u003Cp\u003EUn destello de imágenes, una oscilación entre la luz y la sombra. El ritmo y el movimiento se funden en un diario nocturno de sueños y pesadillas que se adentra en las profundidades de la conexión humana y revela momentos de ternura y vulnerabilidad, así como de agresividad, conflicto y miedo.\u003C/p\u003E\u003Cp\u003E\u003Cem\u003EGoldberg \u003C/em\u003Ees la obra maestra de Goyo Montero, una declaración de amor por la danza profundamente poética, pero a la vez poderosa y virtuosa. Con esta obra, el coreógrafo y director de ballet español presenta por primera vez al público de su ciudad natal, Madrid, a su nueva compañía: el Staatsballett Hannover, un conjunto de 28 excepcionales artistas de la danza.\u003C/p\u003E\u003Cp\u003EInspirado en una maravilla musical, las \u003Cem\u003EVariaciones Goldberg, BWV 988\u003C/em\u003E, de Johann Sebastian Bach, Montero entrelaza la partitura de Bach con nuevas composiciones del canadiense Owen Belton, creando un brillante paisaje sonoro. No hay una trama lineal, ni un único «héroe», sino más bien una serie de contrapuntos formados a través de solos, dúos, tríos y piezas de conjunto. El tema y las variaciones, la transformación y el retorno dan estructura a la secuencia de escenas. Al final, despertamos de un sueño, cambiados y conmovidos, y aún resonando con sus ecos.\u003C/p\u003E",
+    "startDate": "2026-05-07T18:00:00",
+    "endDate": "2026-05-09T17:00:00",
+    "@id": "https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero",
+    "location": {
+        "@type": "Place",
+        "name": "Nave 11",
+        "url": "https://www.centrodanzamatadero.es/espacios/nave-11"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "url": "https://tienda.madrid-destino.com/es/centro-danza-matadero/staatsballett-hannover-goyo-montero"
+    }
+}]</script>
+
+    <title>Staatsballett Hannover | Goyo Montero | Centro Danza Matadero - CDM</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_0jbkkVgDfbXyIP3VqHD9HtJiqcizRLkUB_zlaG4GgyU.juu34ARinZVugQ857Kl8U27t3C7i1gHUpHo4jM_mHzk.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_PsU8Bq5Sm8kXPn6Ihg0wR6YvbzCZz3BqGW88PdTpACA.VBK8-SBxTkx4qBGTYM3tXnSHSrNVuXTAcYIc5MeS9WU.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_yJnC2bWrChKBOURrlgid46kX6YQNE-LSAAzEO9IXBfQ.DC46eXDXNqd7nAabBNwZ9u8wUQRe9Ua37dH_hzHCrN4.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_rjhFvhLug4sBaPSX9ojPsHvJxyadIQiN7QWycz-suKE.zL94vjZU6WBHfpDiaNcFc6GySFhRdcficK1hYxjWP5o.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_zb4hD9RYeO_a2k3ZsEz8KPenuBB7SSv9bDY_z7uahA0.dUoS3YriKBjPqKvjKLwLYFu5L_9UAnCwYsqwQSM8Lxc.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_f9BQVP2qehRR_UoBL11gjylGZmlxgtgRQGf3D3qZ0lw.9Wc67ZOkMRBZhjmdKwi3A-H493K38psJTOnYfrKO76o.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_DAlNNFJ1oIqKLlb0gCT58mcfERgK2UQX91z0Mi2-B3Y.BUEjdj2hCBDLvQJqPxHjZbJG2JuXAdB6h3avyHpGdc0.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_QrUTEaOzvSBESz-aOoXUA_1W7cTBYxrI9kOiRf2Klcs.GuPe412NhYE65xxzl1tEJAD26168tfggOKmG0S5BQ0Q.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_eGuxffD5lqn4m3H6v-LTgFOK1ruGkwH4EjdCOQpIrNs.oYn54AOkSGp1k5qXsADMn5oA4Eolu41COpweO_04W20.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_0OToU6KOchjTxQj8UlnmdBroxd8-S7iKrHSMtmxaVTo.L-4W2LZuoqtQxm090IWHMFNIVPGmYaH_4on7y3JWhfw.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_JXx5UMsFlyZFFM8hfwB6A1qxWGAPi71-RmVO8yoqccU.nuRbiJmFw3eLF-r0jVGIg_LUjBzuI_0rA8poWU_EsUc.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_25yuktMPu2Z-kMDe63PPaxZ8hsB7cryuVQ520F6NLZE.QrFpOOTW17n39pbb4linYKbLxXSKpWn8vBlH_DWGI6s.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_pzjBlnMvqs3kxrCfgxaaOxMlL3V2DhW9UE-Eg2MFYsE.0LCOIDODj83LBD47weDZWP44ueBb_9cpeiWifvH7JGY.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_cAQ9O8lUBnArwEXD20yAxZmdyf_LxYy8jQ0NWK5RUkc.Vy5XP9uG9AcnxR__PfLbRLWgKlubbUP9jaYKe5RrFIM.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_6QzAQgzRpkXsWG2yAY-ULathhg6Ib9D6l0LfbNx3lks.LuxurhhYdAnti-P-ETB91TityPAvNpwbaPZPPfmLB3I.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_c74y8_oUJGgQIUt9N09D37H_0J80g-siF7G2yy8GsjU.zCux8GT5qvrIUkHR39u0_QCLSDLFpPOa4tkl0pUEX3s.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_zMIo38HyMz8kvU5nydBWljA0FHAkbDULJTrcD0vZFcE.yxbrXhgNjGqKFcJaR8_opyzMpsSkl8tges_s9fPxuMQ.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_NRX3xIUk4cZm_p8yPIdwvxOqj9THJamJLmDAmw7bFW4.fPv1Lad5e5ZOXgzG7RguvSm6-v3l2-6H7PoFb0z19nY.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_8WOLC2f3DjJwjBT3iRncEjlTDUlpqzmEsNqJ_NwsaxY.D25qZgnisSsaVdw4zUVhHnOKMrfadT53lpbOqMLQqWE.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_wqN97ipeCNmQwizdksEDKvouqRtPs02gzg265U42ng4.sK8nWl5SZFnR_blTUB3g-n-1JMU-fF-gx24bhhVG3rY.css?tdxr7r">
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_GGMeZm79X80btCi4J6rDk6BMFv1vO7PekAFvG8ysDhs.kT5d8mWQkhBCGvAUo0hTqfG5AfdHh116hBBjdyUBwG0.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_hMw-5o89tuUzV9WRbIsDMwg92AK1u_aikzCOWt2WAEs.hNTX33AkWMnPjwNSFJw89OqfUSrfgt8i8NZqTMLskK4.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_TGUpIthANN-tG8SBdGZT1o0urEYlVWF4w0hYlrquEW8.47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_xmwoqAdtgC_27xpGDaD2rx6yqx7wfCq52boqawW8Vb4.ZzGhrb3J52v75ybleNjIhzkBdRTtYIIMSM2drAQ0-YE.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_w4Cf-PvoREVxdbxMZrM2ZbqGxqy1X12ZcXXgFnrCquM.g3Tkd9uaOJTroSubdeIMs0rzXoAPeFGPB8g6AFpQbP4.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_zXEkozYNRdlJ_UC7dXYlE2RCgBFGnZHPR39gO70xISw.3-uI1Q8GLsmlNViAPentwvGMglxi80oTQnRpK_kSR3U.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_CM3EncRgcWJ0r7KULZUuKYYLok93tUXm2dnIVJYvf54.gmyYwEZZ2azQ8Q7EOIrlMIIRCwwSAkyRYLzNxrNJ2aw.css?tdxr7r">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Teko:wght@500;700&amp;display=swap">
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_4ha4mvxIYkG5vH_-OSLLLbp7tGjYKNNp2E0_tF_WVoc.kfVZOKKn2g6BytamLtTxiEZZIuFz832V0PGRqzyWlG4.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_kFUrJrb_iirqbtNMAKJuZOFTh63Dn5hU8sZiOA3QSmo.6QufFj_XYEAq-S3Iz-sqbdTkvxVquDXtO9fU2EuUqk4.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_-LCH7tW9dueH_1dv6gIr378Eik0pRnDjewdbM8nWt9E.59-_3nd8lqwqjse-_30kBEmiNBEFnPS0ropzUt_TJQY.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_94pIfj5ArR1kDvy1wB6oz9xT2qC_TPqUAFpHVxP05oQ.y6Qc3Fl4jFuZG_dwhIxNEs3yaxUkx_BVgoCsHAAFfm8.css?tdxr7r">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/optimized/css_x3G-yBTdW3g2VQt7xITaJjR6qdBu0RsH4bV4p-sGKaI.jgDCmsU0HCpZfhX-2wOk85H_hJIV1EyoUyF_pIWSDtg.css?tdxr7r">
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/121","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyNU-2SpCAMfCE_HokKEJGbQCyC47hPf9F16krH29o_mHSnmqSDFmvFYvA1saA3QyRNpQ-YsQA19p4WJHTVAJHJnLGxBF9rv59H7AhEKEo9cmLwRzgxrSpE77RwivLWKDAc0YJ2aixzlVpgMhZKidwPXNInGogtUCt1pZjDJ6_oQz7hhCIQUAzFMNZPPrPHxmGuhY2H_AU6IrtH53y6hZkfEeWGMhmeaAhymLf7lljdiOW_hZWXPKq5I4LHshO3tbgI7Qs6swNkt1p-XVDO9dLbxbYTl9BH6HhWRyB7pdtn9Mjnos2gDlyNz1jXbph1qT_wFUGuvaoXE5Y26LRY1jP3jLh0BQkq-vZQ2f3lgr3jNOnT05m6697aNmGejWOaU_51eYKYv2t9mScgXScRTPoycdPaVms2FYpqL_Z34CaITWAOpEuE0Ac9rnkHf-B1BlOTvAHnUKKNpFb1FtwDs2-y3eQT5_7700xQIGjvo7zb_Id0c55mqz_diL6RVSomFdIBNiNlt1O6xH4m_At7jo9x","theme":"centro_danza","theme_token":null},"ajaxTrustedUrl":{"\/programacion":true},"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5TSV6J9"]},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EGestionar cookies\u003C\/button\u003E\n\n\n\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--categories\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-title\u0022 class=\u0022eu-cookie-compliance-title\u0022\u003E\n      \u003Cspan class=\u0022title\u0022\u003EGestionar cookies\u003C\/span\u003E\n      \u003Cdiv id=\u0022eu-cookie-compliance-close\u0022 class=\u0022eu-cookie-compliance-close\u0022\u003E\n        \u003Cspan\u003ECerrar\u003C\/span\u003E\n        \u003Cimg src=\u0022\/themes\/custom\/centro_danza\/assets\/img\/icon-close--light.svg\u0022 alt=\u0022close\u0022\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EUtilizamos cookies de terceros y persistentes para analizar nuestros servicios y mostrar informaci\u00f3n relacionada con las preferencias de los usuarios en base a sus h\u00e1bitos de navegaci\u00f3n. Puedes obtener m\u00e1s informaci\u00f3n y configurar tus preferencias \u003Ca href=\u0022\/politica-cookies\u0022\u003Eaqu\u00ed\u003C\/a\u003E.\u003C\/p\u003E\n          \u003C\/div\u003E\n\n                \u003Cdiv id=\u0022eu-cookie-compliance-categories-modal-overlay\u0022 class=\u0022eu-cookie-compliance-categories-modal-overlay\u0022\u003E\n              \u003Cdiv id=\u0022eu-cookie-compliance-categories-dialog\u0022 class=\u0022eu-cookie-compliance-categories-dialog\u0022\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-dialog-close\u0022 class=\u0022eu-cookie-compliance-dialog-close\u0022\u003E\n                      \u003Cspan\u003ECerrar\u003C\/span\u003E\n                      \u003Cimg src=\u0022\/themes\/custom\/centro_danza\/assets\/img\/icon-close.svg\u0022 alt=\u0022close\u0022\u003E\n                  \u003C\/div\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-summary\u0022 class=\u0022eu-cookie-compliance-summary\u0022\u003E\n                      \u003Ch2\u003EAjustes de cookies\u003C\/h2\u003E\n                      \u003Cp\u003ELas cookies son peque\u00f1os elementos de una web que se almacena en el ordenador, m\u00f3vil o tablet del usuario mientras est\u00e1 navegando. Nuestras cookies no guardan datos de car\u00e1cter personal y se utilizan para mejorar y optimizar su visita.\u003C\/p\u003E\n                  \u003C\/div\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-categories\u0022 class=\u0022eu-cookie-compliance-categories\u0022\u003E\n                                                \u003Cdetails class=\u0022eu-cookie-compliance-category\u0022\u003E\n                              \u003Csummary\u003EGeneral\u003C\/summary\u003E\n                              \u003Cdiv class=\u0022flex-container\u0022\u003E\n                                  \u003Cdiv class=\u0022category-checkbox\u0022\u003E\n                                      \u003Cinput type=\u0022checkbox\u0022 name=\u0022cookie-categories\u0022 id=\u0022cookie-category-general\u0022\n                                             value=\u0022general\u0022\n                                               checked                                                disabled  \u003E\n                                      \u003Clabel for=\u0022cookie-category-general\u0022\u003E\u003C\/label\u003E\n                                  \u003C\/div\u003E\n                                                                        \u003Cdiv class=\u0022eu-cookie-compliance-category-description\u0022\u003ECookies propias de sesi\u00f3n como la aceptaci\u00f3n de cookie\u003C\/div\u003E\n                                                                \u003C\/div\u003E\n                          \u003C\/details\u003E\n                                                \u003Cdetails class=\u0022eu-cookie-compliance-category\u0022\u003E\n                              \u003Csummary\u003ESeguimiento\u003C\/summary\u003E\n                              \u003Cdiv class=\u0022flex-container\u0022\u003E\n                                  \u003Cdiv class=\u0022category-checkbox\u0022\u003E\n                                      \u003Cinput type=\u0022checkbox\u0022 name=\u0022cookie-categories\u0022 id=\u0022cookie-category-analytics\u0022\n                                             value=\u0022analytics\u0022\n                                                                                             \u003E\n                                      \u003Clabel for=\u0022cookie-category-analytics\u0022\u003E\u003C\/label\u003E\n                                  \u003C\/div\u003E\n                                                                        \u003Cdiv class=\u0022eu-cookie-compliance-category-description\u0022\u003ECookies de an\u00e1lisis y seguimiento (Google Analytics, Google Tag Manager) \u003C\/div\u003E\n                                                                \u003C\/div\u003E\n                          \u003C\/details\u003E\n                                        \u003C\/div\u003E\n                  \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons eu-cookie-compliance-has-categories\u0022\u003E\n                                                \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-save-preferences-button\u0022\u003EGuardar ajustes\u003C\/button\u003E\n                                            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EAceptar todas y cerrar\u003C\/button\u003E\n                  \u003C\/div\u003E\n              \u003C\/div\u003E\n          \u003C\/div\u003E\n      \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons eu-cookie-compliance-has-categories\u0022\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-open-dialog\u0022\u003EAjustes de cookies\u003C\/button\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EAceptar todas y cerrar\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-default-button eu-cookie-compliance-reject-button button button--small\u0022\u003ERechazar todas\u003C\/button\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button visually-hidden button button--small\u0022\u003ERevocar consentimiento\u003C\/button\u003E\n          \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EGestionar cookies\u003C\/button\u003E\n\n\n\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--categories\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-title\u0022 class=\u0022eu-cookie-compliance-title\u0022\u003E\n      \u003Cspan class=\u0022title\u0022\u003EGestionar cookies\u003C\/span\u003E\n      \u003Cdiv id=\u0022eu-cookie-compliance-close\u0022 class=\u0022eu-cookie-compliance-close\u0022\u003E\n        \u003Cspan\u003ECerrar\u003C\/span\u003E\n        \u003Cimg src=\u0022\/themes\/custom\/centro_danza\/assets\/img\/icon-close--light.svg\u0022 alt=\u0022close\u0022\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n          \u003C\/div\u003E\n\n                \u003Cdiv id=\u0022eu-cookie-compliance-categories-modal-overlay\u0022 class=\u0022eu-cookie-compliance-categories-modal-overlay\u0022\u003E\n              \u003Cdiv id=\u0022eu-cookie-compliance-categories-dialog\u0022 class=\u0022eu-cookie-compliance-categories-dialog\u0022\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-dialog-close\u0022 class=\u0022eu-cookie-compliance-dialog-close\u0022\u003E\n                      \u003Cspan\u003ECerrar\u003C\/span\u003E\n                      \u003Cimg src=\u0022\/themes\/custom\/centro_danza\/assets\/img\/icon-close.svg\u0022 alt=\u0022close\u0022\u003E\n                  \u003C\/div\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-summary\u0022 class=\u0022eu-cookie-compliance-summary\u0022\u003E\n                      \u003Ch2\u003EAjustes de cookies\u003C\/h2\u003E\n                      \u003Cp\u003ELas cookies son peque\u00f1os elementos de una web que se almacena en el ordenador, m\u00f3vil o tablet del usuario mientras est\u00e1 navegando. Nuestras cookies no guardan datos de car\u00e1cter personal y se utilizan para mejorar y optimizar su visita.\u003C\/p\u003E\n                  \u003C\/div\u003E\n                  \u003Cdiv id=\u0022eu-cookie-compliance-categories\u0022 class=\u0022eu-cookie-compliance-categories\u0022\u003E\n                                                \u003Cdetails class=\u0022eu-cookie-compliance-category\u0022\u003E\n                              \u003Csummary\u003EGeneral\u003C\/summary\u003E\n                              \u003Cdiv class=\u0022flex-container\u0022\u003E\n                                  \u003Cdiv class=\u0022category-checkbox\u0022\u003E\n                                      \u003Cinput type=\u0022checkbox\u0022 name=\u0022cookie-categories\u0022 id=\u0022cookie-category-general\u0022\n                                             value=\u0022general\u0022\n                                               checked                                                disabled  \u003E\n                                      \u003Clabel for=\u0022cookie-category-general\u0022\u003E\u003C\/label\u003E\n                                  \u003C\/div\u003E\n                                                                        \u003Cdiv class=\u0022eu-cookie-compliance-category-description\u0022\u003ECookies propias de sesi\u00f3n como la aceptaci\u00f3n de cookie\u003C\/div\u003E\n                                                                \u003C\/div\u003E\n                          \u003C\/details\u003E\n                                                \u003Cdetails class=\u0022eu-cookie-compliance-category\u0022\u003E\n                              \u003Csummary\u003ESeguimiento\u003C\/summary\u003E\n                              \u003Cdiv class=\u0022flex-container\u0022\u003E\n                                  \u003Cdiv class=\u0022category-checkbox\u0022\u003E\n                                      \u003Cinput type=\u0022checkbox\u0022 name=\u0022cookie-categories\u0022 id=\u0022cookie-category-analytics\u0022\n                                             value=\u0022analytics\u0022\n                                                                                             \u003E\n                                      \u003Clabel for=\u0022cookie-category-analytics\u0022\u003E\u003C\/label\u003E\n                                  \u003C\/div\u003E\n                                                                        \u003Cdiv class=\u0022eu-cookie-compliance-category-description\u0022\u003ECookies de an\u00e1lisis y seguimiento (Google Analytics, Google Tag Manager) \u003C\/div\u003E\n                                                                \u003C\/div\u003E\n                          \u003C\/details\u003E\n                                        \u003C\/div\u003E\n                  \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons eu-cookie-compliance-has-categories\u0022\u003E\n                                                \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-save-preferences-button\u0022\u003EGuardar ajustes\u003C\/button\u003E\n                                            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EAceptar todas y cerrar\u003C\/button\u003E\n                  \u003C\/div\u003E\n              \u003C\/div\u003E\n          \u003C\/div\u003E\n      \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons eu-cookie-compliance-has-categories\u0022\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-open-dialog\u0022\u003EAjustes de cookies\u003C\/button\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EAceptar todas y cerrar\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-compliance-default-button eu-cookie-compliance-reject-button button button--small\u0022\u003ERechazar todas\u003C\/button\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button visually-hidden button button--small\u0022\u003ERevocar consentimiento\u003C\/button\u003E\n          \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.centrodanzamatadero.es\/politica-cookies","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"es","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"cookie-agreed2","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":1,"disagree_do_not_show_popup":false,"method":"categories","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EGestionar cookies\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button  button button--small button--primary\u0022\u003ERevocar consentimiento\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":true,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":true,"cookie_categories":["general","analytics"],"cookie_categories_details":{"general":{"uuid":"b8605f37-86e3-485a-b932-c944e4a0d80b","langcode":"es","status":true,"dependencies":[],"id":"general","label":"General","description":"Cookies propias de sesi\u00f3n como la aceptaci\u00f3n de cookie","checkbox_default_state":"required","weight":-9},"analytics":{"uuid":"f2ab7293-78ac-4709-91c3-8c0d184a5523","langcode":"es","status":true,"dependencies":[],"id":"analytics","label":"Seguimiento","description":"Cookies de an\u00e1lisis y seguimiento (Google Analytics, Google Tag Manager) ","checkbox_default_state":"unchecked","weight":-8}},"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":" button button--small button--primary","olivero_secondary_button_classes":" button button--small","close_button_action":"close_banner","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true,"unverified_scripts":[]},"field_group":{"html_element":{"mode":"full","context":"view","settings":{"classes":"media--outstanding","show_empty_fields":false,"id":"","element":"div","show_label":false,"label_element":"h3","label_element_classes":"","attributes":"","effect":"none","speed":"fast"}},"link":{"mode":"teaser","context":"view","settings":{"classes":"group--link","show_empty_fields":false,"id":"","target":"entity","custom_uri":"","target_attribute":"default"}}},"blazy":{"loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"user":{"uid":0,"permissionsHash":"1e895ce22ae0446fe4a44b75eee63c4c9e361694da730af88a94efd9dcdb3885"}}</script>
+<script src="/sites/default/files/js/optimized/js_cTNrr7zyQ0tXCEpYb5XxuPH26TYyQwlHohgJHP4dIRg.9H1W9OQqD9V27idEVOJMCFAQtGS4Scq-gAQciKr0U2M.js?v=11.2.10"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?tdxr7r"></script>
+
+  </head>
+  <body class="layout-no-sidebars page-node-121 language--es path-node node--type-activity eu-cookie-compliance-popup-open eu-cookie-compliance-status-null" data-once="b-root form-single-submit detailsAria" data-eu-cookie-compliance-once="true">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Pasar al contenido principal
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TSV6J9"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+<div id="page-wrapper">
+  <div id="page">
+    <div class="bg--navigation">
+      <div class="container--search"></div>
+    </div>
+    <header id="header" class="header" role="banner" aria-label="Site header" data-once="trigger">
+              <div class="header-ayto">
+            <section class="row region region-header-sponsor">
+    <div id="block-nave-townhallheaderblock" class="block block-mdcommon block-md-town-hall-header-block">
+  
+    
+      <div class="content">
+      <div class="web-name"><a href="/">Centro Danza Matadero</a></div>
+<div class="logo"><a href="http://www.madrid.es" class="ayto-logo" title="Ayuntamiento de Madrid" target="_blank"><img class="img-logo-madrid" src="/themes/custom/centro_danza/images/new_logo_madrid.png" alt="Madrid logo">
+</a></div>
+
+    </div>
+  </div>
+
+  </section>
+
+        </div>
+                              <div class="container">
+                    <a href="/" title="Inicio" rel="home" class="navbar-brand">
+              <img src="/themes/custom/centro_danza/logo-cdm-vertical.svg" alt="Centro Danza Matadero Logo" class="img--dark">
+          </a>
+  <nav role="navigation" aria-labelledby="block-nave-main-menu-menu" id="block-nave-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-nave-main-menu-menu">Navegación principal</h2>
+  
+
+        
+              <ul class="clearfix nav navbar-nav" data-component-id="bootstrap_barrio:menu_main">
+                    <li class="nav-item">
+                          <a href="/proyecto-artistico" class="nav-link nav-link--proyecto-artistico" data-drupal-link-system-path="node/1">CDM</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/programacion" class="nav-link nav-link--programacion" data-drupal-link-system-path="programacion">Programación</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/formacion" class="nav-link nav-link--formacion" data-drupal-link-system-path="formacion">Formación</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/residencias" class="nav-link nav-link--residencias" data-drupal-link-system-path="residencias">Residencias</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/encuentros" class="nav-link nav-link--encuentros" data-drupal-link-system-path="encuentros">Encuentros</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/espacios-y-como-llegar" class="nav-link nav-link--espacios-y-como-llegar" data-drupal-link-system-path="node/2">El espacio</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/prensa" class="nav-link nav-link--prensa" data-drupal-link-system-path="node/4">Prensa</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://www.madrid-destino.com/cultura/jobo" target="_blank" class="nav-link nav-link-https--wwwmadrid-destinocom-cultura-jobo">JOBO</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/informacion-util" class="nav-link nav-link--informacion-util" data-drupal-link-system-path="node/5">Información útil</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-nave-languageswitcher" role="navigation">
+  
+    
+      <div class="content">
+      
+
+  <nav class="links nav links-inline"><span hreflang="es" data-drupal-link-system-path="node/121" class="es nav-link is-active" aria-current="page"><a href="/actividades/staatsballett-hannover-goyo-montero" class="language-link is-active" hreflang="es" data-drupal-link-system-path="node/121" aria-current="page">Es</a></span><span hreflang="en" data-drupal-link-system-path="node/121" class="en nav-link"><a href="/en/activities/staatsballett-hannover-goyo-montero" class="language-link" hreflang="en" data-drupal-link-system-path="node/121">En</a></span></nav>
+
+    </div>
+  </div>
+<div id="block-centro-danza-social-networks" class="block block-custom-markup-block block-custom-markup">
+  
+    
+      <div class="content">
+      <ul class="navbar-nav ms-auto redes-menu" aria-label="Redes sociales"><li class="nav-item-redes"><a href="https://www.instagram.com/centro_danza_matadero/" target="_blank"><span class="sr-only" aria-readonly="">Instagram</span><img src="/themes/custom/centro_danza/images/icons/black-instagram-icon.svg" width="150" height="150" aria-hidden="true" loading="lazy"></a></li><li class="nav-item-redes"><a href="https://www.facebook.com/centrodanzamatadero" target="_blank"><span class="sr-only" aria-readonly="">Facebook</span><img src="/themes/custom/centro_danza/images/icons/icon-facebook.svg" width="24" height="24" aria-hidden="true" loading="lazy"></a></li><li class="nav-item-redes youtube"><a href="https://www.youtube.com/@CentroDanzaMatadero" target="_blank"><span class="sr-only" aria-readonly="">Youtube</span><img src="/themes/custom/centro_danza/images/icons/icon-youtube.svg" width="24" height="24" aria-hidden="true" loading="lazy"></a></li></ul>
+    </div>
+  </div>
+<div id="block-centro-danza-search-trigger" class="block block-custom-markup-block block-custom-markup">
+  
+    
+      <div class="content">
+      <a class="js--search" href="#" aria-label="Buscar"><svg aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="iconSearch" transform="translate(-1343, -89)" stroke="#000000"><g id="Group-552" transform="translate(94, 87)"><g id="ICON-SEARCH" transform="translate(1250.146, 3.238)"><line x1="13.327" y1="13.515" x2="16.0264921" y2="16.2144917" id="Stroke-539" stroke-width="2" stroke-linecap="round"></line><line x1="16.327" y1="16.515" x2="20.5696404" y2="20.7576408" id="Stroke-541" stroke-width="4" stroke-linecap="round"></line><path d="M7.5,15 C11.64214,15 15,11.64214 15,7.5 C15,3.357864 11.64214,0 7.5,0 C3.357864,0 -2.27373675e-13,3.357864 -2.27373675e-13,7.5 C-2.27373675e-13,11.64214 3.357864,15 7.5,15 Z" id="Stroke-543" stroke-width="2"></path></g></g></g></g></svg></a>
+    </div>
+  </div>
+<div id="block-nave-tickets-navbar" class="block block-custom-markup-block block-custom-markup">
+  
+    
+      <div class="content">
+      <div class="block--item tickets"><a class="btn" href="https://tienda.madrid-destino.com/es/centro-danza-matadero/" target="_blank" aria-label="Ir a las entradas">Entradas</a></div>
+    </div>
+  </div>
+<div id="block-nave-main-menu-trigger" class="block block-custom-markup-block block-custom-markup" data-once="context">
+      <div class="content">
+      <p><a class="block--item menu--mobile js--menu-mobile" href="#" aria-label="Ir a Menú"><span class="visually-hidden">Menu</span></a></p>
+      <span class="burger"></span>
+    </div>
+  </div>
+<div class="views-exposed-form bef-exposed-form block block-views block-views-exposed-filter-blockgeneral-search-page-1" data-drupal-selector="views-exposed-form-general-search-page-1" id="block-centro-danza-search-block">
+      <a href="#" class="search--close">Cerrar</a>
+    <div class="content">
+      
+<form action="/programacion" method="get" id="views-exposed-form-general-search-page-1" accept-charset="UTF-8" data-once="form-updated" data-drupal-form-fields="edit-field-category-113--2,edit-field-category-118--2,edit-field-category-121--2,edit-field-category-116--2,edit-field-category-117--2,edit-field-category-122--2,edit-field-category-114--2,edit-field-category-123--2,edit-field-category-115--2,edit-field-category-119--2,edit-field-category-120--2,edit-field-category-163--2,edit-field-season-136--2,edit-field-season-154--2,edit-search-api-fulltext--2">
+  <div class="d-flex flex-wrap">
+  <details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-field-category-collapsible" id="edit-field-category-collapsible--2" data-once="details"><summary role="button" aria-controls="edit-field-category-collapsible--2" aria-expanded="false">Categoría<span class="summary"></span></summary><div class="details-wrapper">
+    <div id="edit-field-category--2" class="checkbox"><div class="form-checkboxes bef-checkboxes">
+                  
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-113 form-item-field-category-113">
+                <input data-drupal-selector="edit-field-category-113" type="checkbox" id="edit-field-category-113--2" name="field_category[113]" value="113" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-113--2">
+        Espectáculo
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-118 form-item-field-category-118">
+                <input data-drupal-selector="edit-field-category-118" type="checkbox" id="edit-field-category-118--2" name="field_category[118]" value="118" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-118--2">
+        Masterclass
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-121 form-item-field-category-121">
+                <input data-drupal-selector="edit-field-category-121" type="checkbox" id="edit-field-category-121--2" name="field_category[121]" value="121" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-121--2">
+        Taller
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-116 form-item-field-category-116">
+                <input data-drupal-selector="edit-field-category-116" type="checkbox" id="edit-field-category-116--2" name="field_category[116]" value="116" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-116--2">
+        Experiencia
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-117 form-item-field-category-117">
+                <input data-drupal-selector="edit-field-category-117" type="checkbox" id="edit-field-category-117--2" name="field_category[117]" value="117" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-117--2">
+        Familiar
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-122 form-item-field-category-122">
+                <input data-drupal-selector="edit-field-category-122" type="checkbox" id="edit-field-category-122--2" name="field_category[122]" value="122" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-122--2">
+        +  16 años
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-114 form-item-field-category-114">
+                <input data-drupal-selector="edit-field-category-114" type="checkbox" id="edit-field-category-114--2" name="field_category[114]" value="114" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-114--2">
+        Estreno
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-123 form-item-field-category-123">
+                <input data-drupal-selector="edit-field-category-123" type="checkbox" id="edit-field-category-123--2" name="field_category[123]" value="123" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-123--2">
+        Nueva producción
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-115 form-item-field-category-115">
+                <input data-drupal-selector="edit-field-category-115" type="checkbox" id="edit-field-category-115--2" name="field_category[115]" value="115" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-115--2">
+        Exhibición
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-119 form-item-field-category-119">
+                <input data-drupal-selector="edit-field-category-119" type="checkbox" id="edit-field-category-119--2" name="field_category[119]" value="119" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-119--2">
+        Residencias
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-120 form-item-field-category-120">
+                <input data-drupal-selector="edit-field-category-120" type="checkbox" id="edit-field-category-120--2" name="field_category[120]" value="120" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-120--2">
+        Seminario
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-163 form-item-field-category-163">
+                <input data-drupal-selector="edit-field-category-163" type="checkbox" id="edit-field-category-163--2" name="field_category[163]" value="163" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-163--2">
+        Encuentro con el público
+      </label>
+                  </div>
+
+      </div>
+</div>
+    <div class="actions"></div>
+  </div>
+</details>
+<details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-field-season-collapsible" id="edit-field-season-collapsible--2" data-once="details"><summary role="button" aria-controls="edit-field-season-collapsible--2" aria-expanded="false">Temporada<span class="summary"></span></summary><div class="details-wrapper">
+    <div id="edit-field-season--2" class="checkbox"><div class="form-checkboxes bef-checkboxes">
+                  
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-season-136 form-item-field-season-136">
+                <input data-drupal-selector="edit-field-season-136" type="checkbox" id="edit-field-season-136--2" name="field_season[136]" value="136" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-season-136--2">
+        2025
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-season-154 form-item-field-season-154">
+                <input data-drupal-selector="edit-field-season-154" type="checkbox" id="edit-field-season-154--2" name="field_season[154]" value="154" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-season-154--2">
+        2026
+      </label>
+                  </div>
+
+      </div>
+</div>
+    <div class="actions"></div>
+  </div>
+</details>
+<details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-search-api-fulltext-collapsible" id="edit-search-api-fulltext-collapsible--2" open="" data-once="details"><summary role="button" aria-controls="edit-search-api-fulltext-collapsible--2" aria-expanded="false">Buscar<span class="summary"></span></summary><div class="details-wrapper">
+    
+
+
+
+  <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext form-no-label form-group">
+                          <input data-drupal-selector="edit-search-api-fulltext" type="text" id="edit-search-api-fulltext--2" name="search_api_fulltext" value="" size="30" maxlength="128" placeholder="Escribe aquí tu búsqueda" class="form-control">
+
+                          </fieldset>
+    <div class="actions"></div>
+  </div>
+</details>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper mb-3" id="edit-actions--2"><button data-drupal-selector="edit-submit-general-search-2" type="submit" id="edit-submit-general-search--2" value="Buscar" class="button js-form-submit form-submit btn btn-primary">Buscar</button>
+</div>
+
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+
+          </div>
+                          <div class="menu--overlay">
+              <div class="views-exposed-form bef-exposed-form block block-views block-views-exposed-filter-blockgeneral-search-page-1" data-drupal-selector="views-exposed-form-general-search-page-1" id="block-centro-danza-mobile-search-block">
+  
+    
+      <div class="content">
+      
+<form action="/programacion" method="get" id="views-exposed-form-general-search-page-1" accept-charset="UTF-8" data-once="form-updated" data-drupal-form-fields="edit-field-category-113,edit-field-category-118,edit-field-category-121,edit-field-category-116,edit-field-category-117,edit-field-category-122,edit-field-category-114,edit-field-category-123,edit-field-category-115,edit-field-category-119,edit-field-category-120,edit-field-category-163,edit-field-season-136,edit-field-season-154,edit-search-api-fulltext">
+  <div class="d-flex flex-wrap">
+  <details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-field-category-collapsible" id="edit-field-category-collapsible" data-once="details"><summary role="button" aria-controls="edit-field-category-collapsible" aria-expanded="false">Categoría<span class="summary"></span></summary><div class="details-wrapper">
+    <div id="edit-field-category" class="checkbox"><div class="form-checkboxes bef-checkboxes">
+                  
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-113 form-item-field-category-113">
+                <input data-drupal-selector="edit-field-category-113" type="checkbox" id="edit-field-category-113" name="field_category[113]" value="113" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-113">
+        Espectáculo
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-118 form-item-field-category-118">
+                <input data-drupal-selector="edit-field-category-118" type="checkbox" id="edit-field-category-118" name="field_category[118]" value="118" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-118">
+        Masterclass
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-121 form-item-field-category-121">
+                <input data-drupal-selector="edit-field-category-121" type="checkbox" id="edit-field-category-121" name="field_category[121]" value="121" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-121">
+        Taller
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-116 form-item-field-category-116">
+                <input data-drupal-selector="edit-field-category-116" type="checkbox" id="edit-field-category-116" name="field_category[116]" value="116" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-116">
+        Experiencia
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-117 form-item-field-category-117">
+                <input data-drupal-selector="edit-field-category-117" type="checkbox" id="edit-field-category-117" name="field_category[117]" value="117" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-117">
+        Familiar
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-122 form-item-field-category-122">
+                <input data-drupal-selector="edit-field-category-122" type="checkbox" id="edit-field-category-122" name="field_category[122]" value="122" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-122">
+        +  16 años
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-114 form-item-field-category-114">
+                <input data-drupal-selector="edit-field-category-114" type="checkbox" id="edit-field-category-114" name="field_category[114]" value="114" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-114">
+        Estreno
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-123 form-item-field-category-123">
+                <input data-drupal-selector="edit-field-category-123" type="checkbox" id="edit-field-category-123" name="field_category[123]" value="123" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-123">
+        Nueva producción
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-115 form-item-field-category-115">
+                <input data-drupal-selector="edit-field-category-115" type="checkbox" id="edit-field-category-115" name="field_category[115]" value="115" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-115">
+        Exhibición
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-119 form-item-field-category-119">
+                <input data-drupal-selector="edit-field-category-119" type="checkbox" id="edit-field-category-119" name="field_category[119]" value="119" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-119">
+        Residencias
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-120 form-item-field-category-120">
+                <input data-drupal-selector="edit-field-category-120" type="checkbox" id="edit-field-category-120" name="field_category[120]" value="120" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-120">
+        Seminario
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-category-163 form-item-field-category-163">
+                <input data-drupal-selector="edit-field-category-163" type="checkbox" id="edit-field-category-163" name="field_category[163]" value="163" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-category-163">
+        Encuentro con el público
+      </label>
+                  </div>
+
+      </div>
+</div>
+    <div class="actions"></div>
+  </div>
+</details>
+<details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-field-season-collapsible" id="edit-field-season-collapsible" data-once="details"><summary role="button" aria-controls="edit-field-season-collapsible" aria-expanded="false">Temporada<span class="summary"></span></summary><div class="details-wrapper">
+    <div id="edit-field-season" class="checkbox"><div class="form-checkboxes bef-checkboxes">
+                  
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-season-136 form-item-field-season-136">
+                <input data-drupal-selector="edit-field-season-136" type="checkbox" id="edit-field-season-136" name="field_season[136]" value="136" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-season-136">
+        2025
+      </label>
+                  </div>
+
+                    
+
+                
+
+  <div class="js-form-item js-form-type-checkbox checkbox form-check js-form-item-field-season-154 form-item-field-season-154">
+                <input data-drupal-selector="edit-field-season-154" type="checkbox" id="edit-field-season-154" name="field_season[154]" value="154" class="form-checkbox form-check-input">
+          <label class="form-check-label" for="edit-field-season-154">
+        2026
+      </label>
+                  </div>
+
+      </div>
+</div>
+    <div class="actions"></div>
+  </div>
+</details>
+<details class="form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-search-api-fulltext-collapsible" id="edit-search-api-fulltext-collapsible" open="" data-once="details"><summary role="button" aria-controls="edit-search-api-fulltext-collapsible" aria-expanded="false">Buscar<span class="summary"></span></summary><div class="details-wrapper">
+    
+
+
+
+  <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext form-no-label form-group">
+                          <input data-drupal-selector="edit-search-api-fulltext" type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" placeholder="Escribe aquí tu búsqueda" class="form-control">
+
+                          </fieldset>
+    <div class="actions"></div>
+  </div>
+</details>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper mb-3" id="edit-actions"><button data-drupal-selector="edit-submit-general-search" type="submit" id="edit-submit-general-search" value="Buscar" class="button js-form-submit form-submit btn btn-primary">Buscar</button>
+</div>
+
+</div>
+
+</form>
+
+    </div>
+  </div>
+<nav role="navigation" aria-labelledby="block-nave-main-menu-mobile-menu" id="block-nave-main-menu-mobile" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-nave-main-menu-mobile-menu">[Mobile] Navegación principal</h2>
+  
+
+        
+              <ul class="clearfix nav navbar-nav" data-component-id="bootstrap_barrio:menu_main">
+                    <li class="nav-item">
+                          <a href="/proyecto-artistico" class="nav-link nav-link--proyecto-artistico" data-drupal-link-system-path="node/1">CDM</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/programacion" class="nav-link nav-link--programacion" data-drupal-link-system-path="programacion">Programación</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/formacion" class="nav-link nav-link--formacion" data-drupal-link-system-path="formacion">Formación</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/residencias" class="nav-link nav-link--residencias" data-drupal-link-system-path="residencias">Residencias</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/encuentros" class="nav-link nav-link--encuentros" data-drupal-link-system-path="encuentros">Encuentros</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/espacios-y-como-llegar" class="nav-link nav-link--espacios-y-como-llegar" data-drupal-link-system-path="node/2">El espacio</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/prensa" class="nav-link nav-link--prensa" data-drupal-link-system-path="node/4">Prensa</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://www.madrid-destino.com/cultura/jobo" target="_blank" class="nav-link nav-link-https--wwwmadrid-destinocom-cultura-jobo">JOBO</a>
+              </li>
+                <li class="nav-item">
+                          <a href="/informacion-util" class="nav-link nav-link--informacion-util" data-drupal-link-system-path="node/5">Información útil</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-centro-danza-language-switcher-mobile" role="navigation">
+  
+    
+      <div class="content">
+      
+
+  <nav class="links nav links-inline"><span hreflang="es" data-drupal-link-system-path="node/121" class="es nav-link is-active" aria-current="page"><a href="/actividades/staatsballett-hannover-goyo-montero" class="language-link is-active" hreflang="es" data-drupal-link-system-path="node/121" aria-current="page">Es</a></span><span hreflang="en" data-drupal-link-system-path="node/121" class="en nav-link"><a href="/en/activities/staatsballett-hannover-goyo-montero" class="language-link" hreflang="en" data-drupal-link-system-path="node/121">En</a></span></nav>
+
+    </div>
+  </div>
+<div id="block-centro-danza-social-networks-mobile" class="block block-custom-markup-block block-custom-markup">
+  
+    
+      <div class="content">
+      <ul class="navbar-nav ms-auto redes-menu" aria-label="Redes sociales"><li class="nav-item-redes"><a href="https://www.instagram.com/centro_danza_matadero/" target="_blank"><span class="sr-only" aria-readonly="">Instagram</span><img src="../themes/custom/centro_danza/images/icons/black-instagram-icon.svg" aria-hidden="true"></a></li><li class="nav-item-redes"><a href="https://www.facebook.com/centrodanzamatadero" target="_blank"><span class="sr-only" aria-readonly="">Facebook</span><img src="../themes/custom/centro_danza/images/icons/icon-facebook.svg" aria-hidden="true"></a></li><li class="nav-item-redes youtube"><a href="https://www.youtube.com/@CentroDanzaMatadero" target="_blank"><span class="sr-only" aria-readonly="">Youtube</span><img src="../themes/custom/centro_danza/images/icons/icon-youtube.svg" aria-hidden="true"></a></li></ul>
+    </div>
+  </div>
+
+
+          </div>
+                  </header>
+          <div class="highlighted">
+        <aside class="container section clearfix" role="complementary">
+            <div data-drupal-messages-fallback="" class="hidden"></div>
+
+
+        </aside>
+      </div>
+            <div id="main-wrapper" class="layout-main-wrapper clearfix">
+              <div id="main" class="container">
+          <div class="row row-offcanvas row-offcanvas-left clearfix">
+            <main class="main-content col" id="content" role="main">
+              <section class="section">
+                <a href="#main-content" id="main-content" tabindex="-1"></a>
+                  <div id="block-centro-danza-block-text-cdm-content" class="block block-custom-markup-block block-custom-markup">
+  
+    
+      <div class="content">
+      <h1>Centro Danza Matadero</h1>
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockalerts-alerts" id="block-nave-views-block-alerts">
+  
+    
+      <div class="content">
+      <div><div class="view view-alerts view-id-alerts view-display-id-alerts js-view-dom-id-4ef468e8da2d373ec2599018b97d4f09f84a3d12291f59ac4672fc9d93a450bc">
+  
+    
+      
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+<div id="block-nave-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article data-history-node-id="121" class="has-video node node--type-activity node--promoted node--view-mode-full clearfix">
+  <div class="node__content clearfix">
+    
+<div class="main-content">
+    
+<div class="main-content--left">
+    
+<div class="media--outstanding">
+    
+            <div class="field field--name-field-outstanding-image field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/desktop_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=5ZhQYZKd 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/tablet_wide_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=UXigpQqn 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="595" height="335">
+              <source srcset="/sites/default/files/styles/tablet_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=05pBYmrb 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="810" height="455">
+              <source srcset="/sites/default/files/styles/mobile_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=07QLn-Iv 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="375" height="210">
+                  <img loading="lazy" width="1146" height="620" src="/sites/default/files/styles/desktop_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=5ZhQYZKd" alt="Ballet Ópera de Hannover - GOLDBERG">
+
+  </picture>
+
+</div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesús Vallinas (Ballet Ópera de Hannover)</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+
+</div>
+</div>
+      
+            <div class="blazy blazy--nojs blazy--field blazy--field-outstanding-video blazy--field-outstanding-video--full field field--name-field-outstanding-video field--type-entity-reference field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-thumb="/sites/default/files/styles/desktop_full/public/oembed_thumbnails/2026-04/CNBgFi3iRsWD5_P6Y9Tqii2iVfhTmcl-Q3LtpvEwzWQ.jpg.webp?itok=sTaMNJAU" data-b-token="b-1b7b48fad40" class="media media--blazy media--youtube media--bundle--remote-video media--video">      <iframe allowfullscreen="" src="/media/oembed?url=https%3A//youtu.be/tsVKkgm3mY8%3Fsi%3D5NEvd5eP18CoGGML&amp;max_width=0&amp;max_height=0&amp;hash=N__nZeInpQRwhRMt-ZfEeh6fdDIOVnwlFJ5QPjyrdN4&amp;blazy=1" class="media__element"></iframe>
+  </div>
+  </div>
+      
+  </div>
+<div class="group--title">
+    
+<div class="header">
+    
+<div class="header--left">
+    <h1>Staatsballett Hannover | Goyo Montero</h1>
+            <div class="field field--name-field-subtitle field--type-string field--label-hidden field__item"><h2>Goldberg </h2>
+</div>
+      
+  </div>
+  </div>
+  </div>
+<div class="group--text inner-wrapper reset-spacing">
+    
+            <div class="field field--name-field-description-title field--type-string field--label-hidden field__item"><h3 class="section--title">Sobre el espectáculo</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Un destello de imágenes, una oscilación entre la luz y la sombra. El ritmo y el movimiento se funden en un diario nocturno de sueños y pesadillas que se adentra en las profundidades de la conexión humana y revela momentos de ternura y vulnerabilidad, así como de agresividad, conflicto y miedo.</p><p><em>Goldberg </em>es la obra maestra de Goyo Montero, una declaración de amor por la danza profundamente poética, pero a la vez poderosa y virtuosa. Con esta obra, el coreógrafo y director de ballet español presenta por primera vez al público de su ciudad natal, Madrid, a su nueva compañía: el Staatsballett Hannover, un conjunto de 28 excepcionales artistas de la danza.</p><p>Inspirado en una maravilla musical, las <em>Variaciones Goldberg, BWV 988</em>, de Johann Sebastian Bach, Montero entrelaza la partitura de Bach con nuevas composiciones del canadiense Owen Belton, creando un brillante paisaje sonoro. No hay una trama lineal, ni un único «héroe», sino más bien una serie de contrapuntos formados a través de solos, dúos, tríos y piezas de conjunto. El tema y las variaciones, la transformación y el retorno dan estructura a la secuencia de escenas. Al final, despertamos de un sueño, cambiados y conmovidos, y aún resonando con sus ecos.</p></div>
+      
+  </div>
+<div class="inner-wrapper">
+    
+            <div class="field field--name-field-technicaldata field--type-entity-reference-revisions field--label-hidden field__item">  <div class="paragraph paragraph--type--field-technicaldata paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h3 class="section--title">Ficha artística</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"><div class="box--staff-container"><div class="box--staff-field"><p><span class="lbl">coreografía</span></p><div class="container--value"><span class="value">Goyo Montero</span></div><div class="container--value">&nbsp;</div><p><span class="lbl">MÚSICA</span></p><div class="container--value"><span class="value">Johann Sebastian Bach y Owen Belton</span></div></div><div class="box--staff-field"><p><span class="lbl">diseño de eSCENOGRAFÍA</span></p><div class="container--value"><span class="value">Leticia Gañán Calvo, Curt Allen Wilmer</span></div><div class="container--value">&nbsp;</div><div class="container--value"><span class="lbl">DISEÑO DE VESTUARIO</span></div><div class="container--value"><span class="value">Salvador Mateu Andújar</span></div><div class="container--value">&nbsp;</div></div><div class="box--staff-field"><div class="box--staff-field"><p><span class="lbl">bailarines</span></p><div class="container--value"><span class="value">Alex Akapohi, Lorenzo Alberti, Nicolás Alcázar Sánchez, Tania Angelovski, Jay Ariës, Martin Balabán, Luca Branca, Antoine Charbonneau, Kade Cummings, Sofia Fagioli, Rebeca García Fuster, Carl van Godtsenhoven, Diana van Godtsenhoven, John Hackett, Oriana Mestre Oliveira, Edward Nunes, Camryn Pearson, Daniel Róces, Ammanda Rosa, Emily Seymour, Claudia Sportelli, Mizelle Terre’Blanche, Stella Tozzi, Javier Ubell, Alisa Uzunova, Jeremy Villas, Natalie Wong, Makani Yerg</span></div></div></div><div class="box--staff-field"><p><span class="lbl">diseño de ILUMINACIÓN</span></p><div class="container--value"><span class="value">Martin Gebhardt</span></div><div class="container--value">&nbsp;</div><p><span class="lbl">puesta en escena</span></p><div class="container--value"><span class="value">Macarena González, Carlos Lázaro</span></div><p><span class="lbl">grabación</span></p><div class="container--value"><span class="value">Patrik Hevr, piano</span></div><div class="container--value"><span class="value">Staatsphilharmonie Nürnberg</span></div></div></div></div>
+      
+      </div>
+</div>
+      
+  </div>
+<div class="inner-wrapper">
+    
+      <div class="field field--name-field-extra-information field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--extra-information paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h3 class="section--title">Staatsballett Hannover</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"><div class="box--staff-container"><div class="box--staff-field"><p><span class="lbl">Director del ballet</span></p><div class="container--value"><span class="value">Goyo Montero</span></div><div class="container--value">&nbsp;</div></div><div class="box--staff-field"><p><span class="lbl">Manager</span></p><div class="container--value"><span class="value">Joel Toledo Mirabal</span></div></div><div class="box--staff-field"><p><span class="lbl">Asistente personal del director del ballet</span></p><div class="container--value"><span class="value">Maricmar Pérez</span></div><div class="container--value">&nbsp;</div><p><span class="lbl">asiStente de producción</span></p><div class="container--value"><span class="value">Laura Viganò</span></div><div class="container--value">&nbsp;</div><p><span class="lbl">PIANISTA DEL BALLET</span></p><div class="container--value"><span class="value">Maewen Forest, Claudio Frasseto</span></div><div class="container--value">&nbsp;</div><p><span class="lbl">responsable de iluminación</span></p><div class="container--value"><span class="value">Andreas Schmidt</span></div><div class="container--value">&nbsp;</div><div class="container--value">&nbsp;</div><div class="container--value">&nbsp;</div></div><div class="box--staff-field"><div class="container--value">&nbsp;</div><p><span class="lbl">Director de ensayos</span></p><div class="container--value"><span class="value">Macarena González, Carlos Lázaro</span></div><div class="box--staff-field"><p>&nbsp;</p><p><span class="lbl">Dramaturgista</span></p><div class="container--value"><span class="value">Anne do Paço</span></div><p><span class="lbl">stage manager</span></p><div class="container--value"><span class="value">Kerstin Mertl</span></div><p>&nbsp;</p><p>&nbsp;</p><div class="container--value">&nbsp;</div></div></div></div></div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--extra-information paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h3 class="section--title">Sobre Goyo Montero</h3>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"><p>Desde la temporada 2025/26, Goyo Montero, uno de los directores de ballet y coreógrafos más destacados de su generación, dirige el Staatsballett Hannover. De 2008 a 2025 dirigió el ballet del Staatstheater Nürnberg, al que convirtió en 17 años en una compañía de renombre internacional. Además, está estrechamente vinculado a Acosta Danza como coreógrafo residente y también ha creado obras para compañías como The Royal Ballet London, el Birmingham Royal Ballet, Les Ballets de Monte-Carlo, el Ballet Nacional de Finlandia, el Ballet del Teatro Colón de Buenos Aires, la Companhia de Dança de São Paulo, el Ballet de la Ópera de Perm/Festival Diana Vishneva Context, el Ballet Nacional de Sodre de Uruguay, la Deutsche Oper Berlin, el Ballet Nacional de Cuba o el Ballet Estatal de Ankara. Goyo Montero mantiene una larga relación con el Prix de Lausanne: como miembro habitual del jurado, coreógrafo y director artístico de dos proyectos coreográficos en 2018 y 2023.&nbsp;</p><p>Nacido en Madrid en 1975, Goyo Montero se formó inicialmente con Carmen Roche y en el Real Conservatorio Superior de Danza de Madrid. Completó su formación en la Escuela Nacional de Ballet de Cuba bajo la dirección de Alicia Alonso. Su extensa carrera como bailarín comenzó a los 17 años en el English National Ballet y continuó más tarde como solista en el Leipziger Ballett, en el ballet del Hessisches Staatstheater Wiesbaden, en el Royal Ballet of Flanders y como primer solista en la Deutsche Oper Berlin.</p><p>Entre sus galardones como bailarín se encuentran el Prix de Lausanne en 1994 y el Gran Premio y la Medalla de Oro del Concurso Internacional de Danza de Luxemburgo en 1996. Los críticos de la revista Dance Europe lo nombraron «Mejor Bailarín» de la temporada 2003/04. Como bailarín y coreógrafo, fue galardonado con el Premio Nacional de Danza por el Ministerio de Cultura español en 2011. Otros premios por su trabajo coreográfico incluyen el Premio Villa de Madrid, el primer premio en el Concurso Iberoamericano de Coreografía, el Premio Villanueva (otorgado por la Asociación de Escritores y Periodistas de Cuba, UNEAC), el Premio Teatro de Madrid, el Premio Cultural de la Cámara de Industria y Comercio de Franconia Central y el Premio de Cultura de Baviera en 2014. En 2018, el ballet del Staatstheater Nürnberg, bajo la dirección de Goyo Montero, recibió el Premio Alemán de Danza por «Desarrollos destacados en danza». Ese mismo año, los críticos de Dance Europe lo nombraron «Mejor director de ballet». A esto le siguieron dos de los más altos honores culturales de Baviera: en 2023, el premio Pro Meritis Scientiae Et Litterarum del Ministerio de Ciencia y Arte del Estado de Baviera, que reconoce a personas por sus servicios destacados a la ciencia y las artes y, en 2024, la Orden del Mérito de Baviera.</p><p>&nbsp;</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+<div class="inner-wrapper group--gallery">
+  <h3 class="section--title">Galería</h3>
+    
+
+<div class="swiper-controls">
+  <div class="swiper-gallery-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Anterior contenido" aria-controls="swiper-wrapper-ffa849f889371a8f" aria-disabled="true">
+    <img src="/themes/custom/centro_danza/assets/img/icon-arrow-carousel-black.svg" alt="Slider previous image">
+  </div>
+  <div class="swiper-gallery-next" tabindex="0" role="button" aria-label="Siguiente contenido" aria-controls="swiper-wrapper-ffa849f889371a8f" aria-disabled="false">
+    <img src="/themes/custom/centro_danza/assets/img/icon-arrow-carousel-black.svg" alt="Slider next image">
+  </div>
+</div>
+
+<div class="swiper swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+  <div class="swiper-wrapper" id="swiper-wrapper-ffa849f889371a8f" aria-live="polite" style="cursor: grab;">
+          <div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" role="group" aria-label="1 / 10" style="width: 906px; z-index: 10; transform: translate3d(calc(0px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesús Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-f922fa26e27" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg.webp?itok=cZ1EbdLc 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg.webp?itok=unBI5YWw 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg.webp?itok=wbyNXKa3 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg.webp?itok=sZTKc8TP 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-10/Goldberg_Ensemble_01_FOTO_Jesus_Vallinas.jpg.webp?itok=cZ1EbdLc" alt="Ballet Ópera de Hannover - GOLDBERG">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesús Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10" style="width: 906px; z-index: 9; transform: translate3d(calc(100% - 906px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesús Vallinas (Ballet Ópera de Hannover)">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-955cbfbf366" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=pbK0BesV 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=cJCkTeiB 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=e8SEL1MT 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=ISVByra9 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=pbK0BesV" alt="Ballet Ópera de Hannover - GOLDBERG">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesús Vallinas (Ballet Ópera de Hannover)</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="3 / 10" style="width: 906px; z-index: 8; transform: translate3d(calc(100% - 1812px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesús Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-95de3f2403a" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg.webp?itok=qfrqE_5o 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg.webp?itok=6XvryfdK 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg.webp?itok=J0hJD97K 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg.webp?itok=XycwCDO6 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-10/Goldberg_ESeymour_Ensemble_FOTO_Jesus_Vallinas.jpg.webp?itok=qfrqE_5o" alt="Ballet Ópera de Hannover - GOLDBERG">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesús Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="4 / 10" style="width: 906px; z-index: 7; transform: translate3d(calc(100% - 2718px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesús Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-b4b631b644e" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg.webp?itok=9942C77W 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg.webp?itok=HxlUnCrL 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg.webp?itok=O98mJK28 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg.webp?itok=ayJfO4Si 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-10/Goldberg_STozzi_MTerreBlanche_02_FOTO_Jesus_Vallinas.jpg.webp?itok=9942C77W" alt="Ballet Ópera de Hannover - GOLDBERG">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesús Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 906px; z-index: 6; transform: translate3d(calc(100% - 3624px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesus Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-25d7035a5a8" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg.webp?itok=dpBXngNz 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg.webp?itok=p6fIJSw6 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg.webp?itok=ux8g8kyl 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg.webp?itok=JA6cGCGj 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Goldberg_Ensemble_04_FOTO_Jesus_Vallinas.jpg.webp?itok=dpBXngNz" alt="Goldberg - Staatsballett Hannover | Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesus Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="6 / 10" style="width: 906px; z-index: 5; transform: translate3d(calc(100% - 4530px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesus_Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-b146f24a3ac" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg.webp?itok=6FIg1yYH 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg.webp?itok=2hcLhy4y 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg.webp?itok=noOJ8UrQ 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg.webp?itok=7iHIPCH4 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Goldberg_ENunes_NAlcazar_02_FOTO_Jesus_Vallinas.jpg.webp?itok=6FIg1yYH" alt="Goldberg - Staatsballett Hannover | Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesus_Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="7 / 10" style="width: 906px; z-index: 4; transform: translate3d(calc(100% - 5436px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesus_Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-60ddf098f6d" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg.webp?itok=5bE1Z0dy 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg.webp?itok=D24mE9fp 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg.webp?itok=1sUE7ifK 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg.webp?itok=CROW3QJS 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Goldberg_JVillas_FOTO_Jesus_Vallinas.jpg.webp?itok=5bE1Z0dy" alt="Goldberg - Staatsballett Hannover | Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesus_Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="8 / 10" style="width: 906px; z-index: 3; transform: translate3d(calc(100% - 6342px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg" data-fancybox="gallery" data-caption="Jesus_Vallinas">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-aac61939219" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg.webp?itok=cjKoZH-u 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg.webp?itok=42G29xs_ 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg.webp?itok=ptG9rFa_ 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg.webp?itok=QpEinOtt 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Goldberg_STozzi_MTerreBlanche_FOTO_Jesus_Vallinas.jpg.webp?itok=cjKoZH-u" alt="Goldberg - Staatsballett Hannover | Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Jesus_Vallinas</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="9 / 10" style="width: 906px; z-index: 2; transform: translate3d(calc(100% - 7248px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg" data-fancybox="gallery" data-caption="Pernille_Sandberg">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-e00a64f4fae" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg.webp?itok=hV1UsAfi 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg.webp?itok=DA-xTxcQ 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg.webp?itok=8jn-D4aJ 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg.webp?itok=wmI_cA0T 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Montero_Goyo_04_FOTO_Pernille_Sandberg.jpg.webp?itok=hV1UsAfi" alt="Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Pernille_Sandberg</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+          <div class="swiper-slide" role="group" aria-label="10 / 10" style="width: 906px; z-index: 1; transform: translate3d(calc(100% - 8154px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;"><div>
+  <a href="/sites/default/files/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG" data-fancybox="gallery" data-caption="Alice_Blangero">
+            <div class="blazy blazy--field blazy--field-media-image blazy--field-media-image--fancy field field--name-field-media-image field--type-image field--label-hidden field__item is-blazy" data-blazy="" data-once="blazy">    <div data-b-token="b-486d8f8d540" class="media media--blazy media--image media--responsive is-b-loading">  <picture>
+                  <source srcset="/sites/default/files/styles/gallery/public/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG.webp?itok=9EvQi1ri 1x" media="all and (min-width: 68.76em)" type="image/webp" width="1146" height="620">
+              <source srcset="/sites/default/files/styles/gallery_tablet/public/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG.webp?itok=szLWAdj7 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="580" height="620">
+              <source srcset="/sites/default/files/styles/gallery_portrait/public/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG.webp?itok=RCojpbzV 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="370" height="615">
+              <source srcset="/sites/default/files/styles/gallery_mobile/public/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG.webp?itok=-bHCbLDj 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="335" height="230">
+                  <img data-b-placeholder="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201146%20620'%2F%3E" decoding="async" class="media__element b-lazy" loading="lazy" width="1146" height="620" src="/sites/default/files/styles/gallery/public/2025-11/Montero_Goyo_02_FOTO_Alice_Blangero.JPG.webp?itok=9EvQi1ri" alt="Goyo Montero">
+
+  </picture>
+        </div>
+  </div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Alice_Blangero</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+      </div>
+<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+
+  </div>
+<div class="group--footer inner-wrapper">
+    
+            <div class="field field--name-field-activities-related-text field--type-string field--label-hidden field__item"><h3 class="section--title">También te gustará</h3>
+</div>
+      <div class="views-element-container"><div class="view view-eva view-activities view-id-activities view-display-id-related_activities js-view-dom-id-2163be3a2f2f742744b0f10387872af795f73649e33a9d8c3982333d8cea84a3">
+  
+    
+
+  
+  
+
+      <div class="views-row">
+    
+
+<article data-history-node-id="185" class="node node--type-activity node--promoted node--view-mode-teaser clearfix">
+  <div class="node__content clearfix">
+    <a href="/actividades/taller-de-repertorio-de-goyo-montero" class="field-group-link group--link" hreflang="es">
+<div class="group--content-image">
+    
+            <div class="field field--name-field-outstanding-image field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/activity_teaser_desktop/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=pezAGMjk 1x" media="all and (min-width: 68.76em)" type="image/webp" width="355" height="280">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=DUopQvH1 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=DUopQvH1 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_mobile/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=g8oQByvI 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="275" height="220">
+                  <img loading="lazy" width="355" height="280" src="/sites/default/files/styles/activity_teaser_desktop/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=pezAGMjk" alt="_DSC9686 ©ALICE BLANGERO.jpg">
+
+  </picture>
+
+</div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Alice Blangero</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+
+</div>
+</div>
+      
+  </div>
+<div class="group--content">
+    
+            <div class="field field--name-field-schedule-tip field--type-string field--label-hidden field__item">8 de mayo de 2026</div>
+      <h3>Taller de repertorio de Goyo Montero</h3>
+            <div class="field field--name-field-subtitle field--type-string field--label-hidden field__item">Impartido por Goyo Montero</div>
+      
+  </div></a>
+  </div>
+</article>
+
+  </div>
+    <div class="views-row">
+    
+
+<article data-history-node-id="122" class="node node--type-activity node--promoted node--view-mode-teaser clearfix">
+  <div class="node__content clearfix">
+    <a href="/actividades/compania-nacional-de-danza-luz-arcas-mattia-russo-antonio-de-rosa-korsia" class="field-group-link group--link" hreflang="es">
+<div class="group--content-image">
+    
+            <div class="field field--name-field-outstanding-image field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/activity_teaser_desktop/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=oxAHjE4H 1x" media="all and (min-width: 68.76em)" type="image/webp" width="355" height="280">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=SXt2ahCA 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=SXt2ahCA 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_mobile/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=b5lRiJ0H 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="275" height="220">
+                  <img loading="lazy" width="355" height="280" src="/sites/default/files/styles/activity_teaser_desktop/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=oxAHjE4H" alt="Compañía Nacional de Danza | Luz Arcas | Mattia Russo &amp; Antonio de Rosa (Kor'sia) ©Enrique Escorza">
+
+  </picture>
+
+</div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Enrique Escorza</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+
+</div>
+</div>
+      
+  </div>
+<div class="group--content">
+    
+            <div class="field field--name-field-schedule-tip field--type-string field--label-hidden field__item">26 al 31 de mayo de 2026</div>
+      <h3>Compañía Nacional de Danza | Luz Arcas | Mattia Russo &amp; Antonio de Rosa (Kor'sia)</h3>
+            <div class="field field--name-field-subtitle field--type-string field--label-hidden field__item">Struere</div>
+      
+      <div class="field field--name-field-accesibility field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="taxonomy-term--view-mode-icon-dark taxonomy-term vocabulary-accesibility" id="taxonomy-term-150">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/accesibilidad_fisica.svg" alt="Accesibilidad física">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+  </div>
+</div>
+</div>
+              <div class="field__item"><div class="taxonomy-term--view-mode-icon-dark taxonomy-term vocabulary-accesibility" id="taxonomy-term-147">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/bucle_magnetico_0.svg" alt="Bucle Magnético">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div></a>
+  </div>
+</article>
+
+  </div>
+    <div class="views-row">
+    
+
+<article data-history-node-id="125" class="node node--type-activity node--promoted node--view-mode-teaser clearfix">
+  <div class="node__content clearfix">
+    <a href="/actividades/lorena-nogal" class="field-group-link group--link" hreflang="es">
+<div class="group--content-image">
+    
+            <div class="field field--name-field-outstanding-image field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">    <picture>
+                  <source srcset="/sites/default/files/styles/activity_teaser_desktop/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=BQIhCT8P 1x" media="all and (min-width: 68.76em)" type="image/webp" width="355" height="280">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=BXFTysKr 1x" media="all and (min-width: 64.2em) and (max-width: 68.75em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_tablet/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=BXFTysKr 1x" media="all and (min-width: 48em) and (max-width: 64.1em)" type="image/webp" width="300" height="240">
+              <source srcset="/sites/default/files/styles/activity_teaser_mobile/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=Zm3DHmx2 1x" media="all and (min-width: 15em) and (max-width: 47.99em)" type="image/webp" width="275" height="220">
+                  <img loading="lazy" width="355" height="280" src="/sites/default/files/styles/activity_teaser_desktop/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=BQIhCT8P" alt="Lorena Nogal ©Nia Delfau">
+
+  </picture>
+
+</div>
+      
+
+<div class="field field--name-copyright field--type-string field--label-hidden">
+      <div class="field__item">
+      <span class="copy">Nia Delfau</span>
+      <span class="image"><img src="/themes/custom/centro_danza/assets/img/icon-copyright.svg" alt=""></span>
+    </div>
+  </div>
+
+</div>
+</div>
+      
+  </div>
+<div class="group--content">
+    
+            <div class="field field--name-field-schedule-tip field--type-string field--label-hidden field__item">26 y 27 de junio de 2026</div>
+      <h3>Lorena Nogal</h3>
+            <div class="field field--name-field-subtitle field--type-string field--label-hidden field__item">La protagonista</div>
+      
+      <div class="field field--name-field-accesibility field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="taxonomy-term--view-mode-icon-dark taxonomy-term vocabulary-accesibility" id="taxonomy-term-150">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/accesibilidad_fisica.svg" alt="Accesibilidad física">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+  </div>
+</div>
+</div>
+              <div class="field__item"><div class="taxonomy-term--view-mode-icon-dark taxonomy-term vocabulary-accesibility" id="taxonomy-term-147">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/bucle_magnetico_0.svg" alt="Bucle Magnético">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div></a>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  </div>
+</div>
+
+  </div>
+  </div>
+<div class="main-content--right">
+    
+<div class="group--info2">
+    
+<div class="inner-wrapper card">
+    
+  <div class="field field--name-field-schedule-tip field--type-string field--label-above">
+    <div class="field__label">Fecha</div>
+              <div class="field__item">7 al 9 de mayo de 2026</div>
+          </div>
+
+  <div class="clearfix text-formatted field field--name-field-schedule-txt field--type-text-long field--label-above">
+    <div class="field__label">Horario</div>
+              <div class="field__item"><p>Jueves a sábado / 20h</p></div>
+          </div>
+
+  <div class="field field--name-space field--type-entity-reference field--label-above">
+    <div class="field__label">Lugar</div>
+              <div class="field__item"><a href="/espacios/nave-11" hreflang="es">Nave 11</a></div>
+          </div>
+
+  <div class="field field--name-field-price field--type-string field--label-above">
+    <div class="field__label">Precio</div>
+              <div class="field__item">Desde 27€</div>
+          </div>
+
+  <div class="field field--name-field-duration field--type-string field--label-above">
+    <div class="field__label">Duración</div>
+              <div class="field__item">1 hora y 15 min aprox</div>
+          </div>
+
+      <div class="field field--name-field-side-blocks field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--side-block paragraph--view-mode--lateral">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><span class="field__label">Encuentro con el público</span>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"><p>Viernes, 8 de mayo de 2026</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+  </div>
+<div class="tickets">
+    
+<div class="d-none tickets--exhausted">
+    Entradas agotadas
+  </div>
+      <div class="field field--name-field-ticketing-links field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://tienda.madrid-destino.com/es/centro-danza-matadero/staatsballett-hannover-goyo-montero" target="_blank">Comprar entradas</a></div>
+          </div>
+  
+  </div>
+            <div class="field field--name-field-season field--type-entity-reference field--label-hidden field__item">2026</div>
+      
+<div class="group--jobo inner-wrapper">
+    
+<div class="group--categories">
+    
+      <div class="field field--name-field-category field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="taxonomy-term--view-mode-link taxonomy-term vocabulary-categoria" id="taxonomy-term-113">
+  <div class="content">
+    <a href="https://www.centrodanzamatadero.es/programacion?field_category[113]=113" class="field-group-link">
+<div class="field--name-name">
+    <p>Espectáculo</p>
+  </div></a>
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+  </div>
+  </div>
+<div class="inner-wrapper group--accessibility">
+  <h3 class="section--title">Accesibilidad</h3>
+    
+      <div class="field field--name-field-accesibility field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="taxonomy-term--view-mode-text-and-icon taxonomy-term vocabulary-accesibility" id="taxonomy-term-150">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/accesibilidad_fisica.svg" alt="Accesibilidad física">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+<div class="field--name-name">
+    <p>Accesibilidad física</p>
+  </div>
+  </div>
+</div>
+</div>
+              <div class="field__item"><div class="taxonomy-term--view-mode-text-and-icon taxonomy-term vocabulary-accesibility" id="taxonomy-term-147">
+  <div class="content">
+    
+            <div class="field field--name-icon-dark field--type-entity-reference field--label-hidden field__item"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field__label visually-hidden">Imagen</div>
+              <div class="field__item">  <img loading="lazy" width="64" height="64" src="/sites/default/files/2026-04/bucle_magnetico_0.svg" alt="Bucle Magnético">
+
+</div>
+          </div>
+
+</div>
+</div>
+      
+<div class="field--name-name">
+    <p>Bucle Magnético</p>
+  </div>
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+
+              </section>
+            </main>
+                                  </div>
+        </div>
+          </div>
+          <div class="featured-bottom">
+        <aside class="container clearfix" role="complementary">
+            <section class="row region region-featured-bottom-first">
+    <div id="block-nave-newsletter" class="block block-custom-markup-block block-custom-markup">
+  
+      <h2>Newsletter</h2>
+    
+      <div class="content">
+      <p class="block-description">Permanece al tanto de nuestras novedades, estrenos, convocatorias, descuentos, última hora...</p><p><a class="button--black modal-frame__show" href="#">Apúntate</a></p><div class="modal--newsletter modal-frame" id="modal-newsletter"><div class="inner"><div class="head-newsletter"><a class="modal-frame__close" href="#">X</a></div><!--
+                                                                   
+                                                                
+                                                        
+                                                
+                                        
+                                
+                        
+                
+        <p class="info">
+                                                                                                Gracias por suscribirte a nuestra lista de correo. Por favor, rellena los campos de la ficha que encontrarás más abajo para que podamos incluirte en la lista. A continuación recibirás un correo electrónico para confirmar tu suscripción.
+                                                                                            
+                                                                                
+                                                                    
+                                                        
+                                            
+                                
+                    
+        </p>
+                                                                --><div class="form"><iframe frameborder="0" height="750" width="650" src="https://panel-tienda.madrid-destino.com/public_api/newsletter/form?token=eyJpdiI6InZEMXNkdkR6ajJuVk9BSng1QytTSEE9PSIsInZhbHVlIjoibVh1VDk0NUF4eER0RGRsQW9zRUtlakxPSmhYakk0dE9oS0NmREZtdG11Qm51Wkp1MlB6ampJWFBldGFzMW5zWjZZM1ZCV3BrUjZFWmF4cDZpaVYyemc9PSIsIm1hYyI6IjE3NDdmYTk5OTZkZDlkNmY1OWZkOTliMzlmNDhiMjczMjMxZTQ1M2QxMzIwNDYxZmFiMTM0YmU4MGVmYWI2YjMiLCJ0YWciOiIifQ==">&nbsp;</iframe></div></div></div>
+    </div>
+  </div>
+
+  </section>
+
+        </aside>
+      </div>
+        <footer class="site-footer">
+              <div class="container">
+                      <div class="site-footer__top clearfix">
+              <div class="footer--first">
+                
+              </div>
+              <div class="footer--second">
+                  <section class="row region region-footer-second">
+    <div id="block-nave-townhallfooterblock" class="block block-mdcommon block-md-town-hall-footer-block">
+  
+    
+      <div class="content">
+      <p>MADRID DESTINO CULTURA TURISMO Y NEGOCIO, S.A.</p><p class="date">Algunos derechos reservados</p><span> 2026</span>
+    </div>
+  </div>
+<nav role="navigation" aria-labelledby="block-nave-legal-menu-menu" id="block-nave-legal-menu" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-nave-legal-menu-menu">Pie de página</h2>
+  
+
+        
+              <ul class="clearfix nav flex-row" data-component-id="bootstrap_barrio:menu_columns">
+                    <li class="nav-item">
+                <a href="/node/8" class="nav-link nav-link--node-8" data-drupal-link-system-path="node/8">Política de privacidad</a>
+              </li>
+                <li class="nav-item">
+                <a href="/condiciones-de-uso" class="nav-link nav-link--condiciones-de-uso" data-drupal-link-system-path="node/9">Condiciones de uso</a>
+              </li>
+                <li class="nav-item">
+                <a href="/accesibilidad" class="nav-link nav-link--accesibilidad" data-drupal-link-system-path="node/10">Accesibilidad</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+  </section>
+
+              </div>
+            </div>
+                  </div>
+          </footer>
+  </div>
+</div>
+
+  </div>
+
+    
+    <script src="/sites/default/files/js/optimized/js_6Dru9tqJf0P4hc8Wp-Q7IM3qvKYK8RIxAU8ldeXE6fk.whL0tQWoY1Ku1iskqPFvmZ-CHsvmRWx_PIoEvIeWh4I.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_HKig8eDuYunQyRoOGup3kmAZMJpuUox8yI42dLcMMj4.ew8UiV1pJH_YjpOEBInP1HxVvT_SfrCmwSoUzF9JIgc.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_R843x-nq13222cYV8kaBTMrnZlk9LXfqSxg_RbNU-Y4.uHcio2Ol4PQs96KF5hPboUr08ITSIZy2b74A9ekVgu8.js?tdxr7r"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/sites/default/files/js/optimized/js_GEGeLlWVbdFSFfvN2njfZ7XwWdO4pkei-g7K23Abr2A.oFRnATk0sdkZF5yWvnEYlMXQH316LgqX4mO8H-lMrgw.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_Bv7zk6mIOQFW6XMjgPXbuQuVl5gUb4GVit9qE2RSpFo.NouP2nRlcKXMb1If7baKa-pFzesQW9DZTFwz-Eb2XTQ.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_dUv-ZUTRRLr97vqgJGLa9zI3dY28dInJCgu8lj2YFkI.FFAjeYpoxNGMgJQu4K1wimEH4mEBzzotfkE-UUjccUU.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_gI1p_raX3E7HztFApMG0toFgPp8A9_5PChqlGZYI6qw.HRN_m4FplP890kDvBJQuv0fEgTHDKwrMZA2zBldV1JY.js?v=1.0.1"></script>
+<script src="/sites/default/files/js/optimized/js_7nv4oaoYRx5aTtK07BBEL_b8t5DjG9DpwkMTs8O_jTc.WdcQS9nXh1BR9xXzvILRvNHZtIS9TilxuI5W3pfKg7E.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_u5Qj_ka9yJioMz1FEECc24PGRy7PPMLi7OQgTqcSJ88.Lws73m2omshebio0CGrl7LTedD-Msr8MJ-tS-aLe3bI.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_021cNtIyW2671r3A0CxVnoYRpnT5vE41nLuZV3R45Og.kjk12BMQYgWzHTlTsh40oAfzJ1jsDD0rpt092h-M9uk.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_e1nV4Wx0cEIAa1397nhf5A88SpXmgEQ8aK7KtmGQFVA.m0lAV_rWZW_ZziCJ0LaJjfljLBDkXkd1pDBzpGz_yMs.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_baJdyyB2LcT0VrMHzp3xAwP9gTK7G-_MsUNLy5Ow0Lw.CJF84Dv0PjH3KPaqgwzS-NJS45qPbXaVePB7UAw-uH8.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_y6-MuLwZbKl5nM8SfbiXXQII588-U4D5kdUrnwl8Ay8.ytmTSq1lajbXsBKpVZfQXTjVeavAdfgKw-GX8LUGh6c.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_vtmhKD6Jae1NH3iql-yKb1U_nel3in7Swp1MfeCAkWQ.xJWOHtGo2SDO2wASIMRv18VoL9Rn1ueIS60Cl8e0Yyw.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_alNBZlD7V_UoqPhhxUshghw38yW80Nfbjg-ckfQXia8.x_6nokSrXvdWaXQcuspfXkZWRXmwbf7lHfn7vN1kRLs.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_b8j2xOMddU8P4_jWVJQ3MBVuhnnkFaE616TwZXGHbLE.RfDCGKtJ3fOBa3MBnqtoE57akNRrPFuPwkgaGjv0Nyk.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_UHjmxXwc2r0I0NwX2SKwDmVYXSV6sf0I_f8AUAVAwbY.rbuQabp1IXwtaAaEK2jv-UqrNqVB2SnJX9XVgercnU0.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_KHhXH483FEWTfb8a1zM9uCyyh-gBnIRihXSQBI8zfTc.cB6m3P0mstYTZ66ufGGP_qtuL_jmtXGQe8ueepKerJw.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_vfvPG8IVoZtKg7JbNesZQ7YCoAryJ2-lGZn_CSYzVIg.bN8n_kht9zXxMG4X1G5i1LtYVyzpB5IS21_UkBlzsOA.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_kXSDnPyG33u8Exq_tbGnh1pbeGcmmf5aaqfDfZ9H8RA.Evd-HJGbfWTs1hqwSsgg5MiPBhSeDvEuEVGbXdlDZaA.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_nbACPadbl6t4_cwXtelgjQxhfGUz-Dk2xbUscEUeVmM.OtGvz-xXN64xtZKipS99bf1NDAx2u-pQzZJOagEsqME.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_xN03Xv__SFRzDYG7YfM0rBOZzZGnY4Wqy_vJTPAhx-o.SZLIRyOV-js-OcgGTBIQbjxuVCEXvqWuDxdKCznGXkY.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_HQeTqv6Gqfn_O72Ar1zCkLT-qg9CLMX82NFv7JZj5fM.hkS6IvCjpoOvg2zv1lO_w145STDkT0JegIThUHqGPA8.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_jfFzC3VlU0GXT8Yamkjkzs10cfwbJnnS9uiUvBv4rmQ.7uI40L0t7eh2s9z2Lk2Xy65MV5RNBybZ9pI-K5iDdP4.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_6WxLfOi6oGW465Ztj38ThvrP6XEVQ1qarP13OXPTa60.ODBkJVb6oMw9FRquAwGOxFhlKgNX42VZpMVgBce0VaQ.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_E2qHoZiMJedNPrxVJM8U8Q9RkIvvL7ByclrqGGsRl2w.v1EyPGlwWPAuyKeCgpukWc-ct99svXwpU91M4PTdUfU.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_oNcOrbgLsaeMNRwITlM-fJGFCN5B5bNHfuyrxJmPShI.AqviidrYGQwz8F-yl5dsxzt-syn-YK_e7FsfTuF3P80.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_GkjVF2Nkay_F63n-YtZm8koh8T6iFtuNFXGANJoFTgI.Br6_GEATLDgeVHsysE3koKVGTBNXy_ACPiUbTvPIEkE.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_TtAU81RVSJZqvRE1-p45T8Y283rB-Bz6ZGNiEP6ru3Y.NZBJsscuqj8FSA_BMxQqLx5FgLA4EReglnRQeH4TsWI.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_2OhRea86x_VbsN7uJTX1pGhqGQDAvtZ05Hfxb4tHn54.HmKlReEYCiV9GnfhxV81WuXqMJ6i6CJEQgYJrzlXRtw.js?v=6.2.0"></script>
+<script src="/sites/default/files/js/optimized/js_D-_Eu94Nj-dZDLiWJ3YiXKfM3RXBYjN0hM9xi6oEB3g.N9Cf6R3IN3qZuqcRnb9UjsrSjyz17r0l2KXJ05f7zv0.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_hziQhSg-kG34eaa1WX518P89dJ_vzPH7MHRmbCxIwF0.Jvl5YoK7YPeRgyoTefkqzBzDDzS4hamvjkw22J7aLG0.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_pwzvMbBfEPULcpQNv2fx4z5GJFC-xN4eHBW0q1fsM8s.pydd31qeaVwnZ7zmVFZER7RdslYTSa4L05Z96Bj0rpA.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_Apsa0ti8V0NkYgdL3H6zks_LUKK1k7RTS_YMkQ9ig_E.pMTBYmavvxWwegzqwJmMmmYVLsQ3cxiWBi9yq_dxzNM.js?v=4.3.0"></script>
+<script src="/sites/default/files/js/optimized/js_TavHUb0LcW40jMIdXq1aTRpo4BsaeVpE7NxoxLVbk-A.s0ftg9DcYKonxRNsyujPK8mZFoHu6DwZvsB0967odSI.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_Xhs8a347cVg4T0quWn6eWKPkuQp3HbtQz7MoYJEESzc.JGXJ4009UF1XiMLt8MUiCnWcX7JqJZMkUs0n8Iwry8Q.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_635XszNm3atfmrFF3yxhxeuVzdw4B3SFFTlE9j9zI2Y.xRuCCcf8b4S7ZwK1on2tk1Zb4Jh4tzaX1HzZcLx5xes.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_NpQ71gwtTHUHWESaJXoDJMe4CKCU8fsGgCWMMoxsZZA.eKp-scTfe0UCL6DjrrvKvvtZPu8tc60LKTkzhwvPipg.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_tZTdfuoLX81AF5jaBuYFxJyCoLF-pQ03HbqhQ2IsCE4.rp4XnaeNwAcHpBFlfNbY6vC7jyF99H6AtpcBa0G58aU.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_mILWTjQ1-76i-RqOjfFVjMKmQzvNLswfERJvVkgEWag.ZmUc7acqlwFTKlXbmqdmfJMrTpJG75dX5-wzHOWujV0.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_nv2xW1qOg9u4IiWGO8MzwpA2o4Dx9GIkeDlI3VoTm9s.zGjBvPcYpq-91USqCFs3XoZwoVT9QXKK48LSWIoTNvo.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_2mh6U4PizycTlgWnVccY81pUxlWGO8EL6TNsz1LSRqg.uANMMuRIFqTovapT9QTXefYD3ofgdIFgXe55mNRc5uA.js?tdxr7r"></script>
+<script src="//cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="/sites/default/files/js/optimized/js_2kSyGOILrN33z4dn4y2P_p6UtTu1LQ-FcYslGcttXl8.VzK_mGS1HkmHWCEnrX6vYTVgBgYOnUelk1OzjD117uM.js?v=3.5.7"></script>
+<script src="/sites/default/files/js/optimized/js_6Ug-J_RtUaDfuVmx0d0M1P41V1XE07B3XGEfJ6J4ClY.JCjtlhNYxar6a2W3NtCEWJMy0rEUyW2mD4dWmVSN4mk.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_I0t9RbZws8AKceht7SK6bKRxpLO5UUbUR7UkYdLhgvs.pNRHCb-HMBAz4gXAQ21WVoa0k0_3zpkYF1fhfWnf980.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_japNJHstMlMtljfQKyrGXtAWEmvWTQArMy2dlTtnIeo.f6YplbJBcRDt0t_BjUMlaBb3BfkQeykNdY-5yHBePic.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_Dm0S4HBeJ3c4VR4F0xs_oVhP1FMZCAXVz6mfy3EauMY.mI4l8V38HLLXDEmroy0ARKB0EFz5VON_Zm0MeEeV5gI.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_tBYoAgjkDw6X2e0zqszFAh8z37rhdx_Ad6KJwYQj3k4.rCACDWCp_VzIh0rsB-ipQCM9XBvO8HNe0fNSOa4sys0.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_nF5BKUl7kDmXdNW1M4_TxyX1A5Mdj-6uog34GfSdwCM.xo6Q4e8iHlnmdF11AScfdscv-STz1bdbUbHmjYjTT90.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_z-m4RjFI4JzKuhigetRZOQTMWg32iVyNkkb7mkD0wCs.H_L9VURG50AVElsVC8cfNIsvp5KJIIsgwL6m0VHrLUs.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_mNOU2h8NWYc2pVV0R9GkBkolQWw9CelIpvTkOhH1SQQ.qCSBVreQDwgt04mIiB11tbq9nBNmL631YiDRboQEq20.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_Kq85rNXdLMs4EJzt4BUtl3XZCYjKcw2HHim8KhSACQk.UqepwdqyIPvnWFxJ_G8zsWXF6nBWNBEO2_-e0XPK8Zw.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_FSARCbZJye5ILc1qGzrG1muYPoICCGKyejFnYyDv370.G3FsyBlDBeqiJGH9QJgJtF4EJDafJlH8g6SVbcsg5rw.js?v=11.2.10"></script>
+<script src="/sites/default/files/js/optimized/js_TAlp0OE7XtmlPEHD_5a0i6RvOxUxXlpmVSerNd1ypns.VXK-xkRSz-srRbbGku94nqtLvqTuFoIXBiu0x_ljH3Y.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_nq-QWLUhtRPTvTqn5hOud2HSvj0iigqvge2IXI0SoPs.akPIL5F6ygowEntokyWY4_Tg4pNQtEi97UIJcojA29M.js?tdxr7r"></script>
+<script src="/sites/default/files/js/optimized/js_w3X377xvOLzBocD58R_plAjFgfZBlrWK6a21F0BsG6g.HuUoj0ShqhnKM8iJLOW3q5FBW5nIT3cwTzB8Fn6JDWc.js?tdxr7r"></script>
+
+  
+
+<div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div><div id="sliding-popup" role="alertdialog" aria-describedby="popup-text" aria-label="Cookie compliance banner" class="sliding-popup-bottom" style="bottom: 0px;"><button type="button" class="eu-cookie-withdraw-tab" data-once="teatroespanol_v2">Gestionar cookies</button>
+
+
+<div role="alertdialog" aria-labelledby="popup-text" class="eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--categories" aria-hidden="false">
+  <div class="popup-content info eu-cookie-compliance-content">
+    <div id="popup-title" class="eu-cookie-compliance-title">
+      <span class="title">Gestionar cookies</span>
+      <div id="eu-cookie-compliance-close" class="eu-cookie-compliance-close">
+        <span>Cerrar</span>
+        <img src="/themes/custom/centro_danza/assets/img/icon-close--light.svg" alt="close">
+      </div>
+    </div>
+    <div id="popup-text" class="eu-cookie-compliance-message">
+      <p>Utilizamos cookies de terceros y persistentes para analizar nuestros servicios y mostrar información relacionada con las preferencias de los usuarios en base a sus hábitos de navegación. Puedes obtener más información y configurar tus preferencias <a href="/politica-cookies" tabindex="0">aquí</a>.</p>
+          </div>
+
+                <div id="eu-cookie-compliance-categories-modal-overlay" class="eu-cookie-compliance-categories-modal-overlay">
+              <div id="eu-cookie-compliance-categories-dialog" class="eu-cookie-compliance-categories-dialog">
+                  <div id="eu-cookie-compliance-dialog-close" class="eu-cookie-compliance-dialog-close" data-once="teatroespanol_v2">
+                      <span>Cerrar</span>
+                      <img src="/themes/custom/centro_danza/assets/img/icon-close.svg" alt="close">
+                  </div>
+                  <div id="eu-cookie-compliance-summary" class="eu-cookie-compliance-summary">
+                      <h2>Ajustes de cookies</h2>
+                      <p>Las cookies son pequeños elementos de una web que se almacena en el ordenador, móvil o tablet del usuario mientras está navegando. Nuestras cookies no guardan datos de carácter personal y se utilizan para mejorar y optimizar su visita.</p>
+                  </div>
+                  <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories">
+                                                <details class="eu-cookie-compliance-category">
+                              <summary>General</summary>
+                              <div class="flex-container">
+                                  <div class="category-checkbox">
+                                      <input type="checkbox" name="cookie-categories" id="cookie-category-general" value="general" checked="" disabled="" tabindex="0">
+                                      <label for="cookie-category-general"></label>
+                                  </div>
+                                                                        <div class="eu-cookie-compliance-category-description">Cookies propias de sesión como la aceptación de cookie</div>
+                                                                </div>
+                          </details>
+                                                <details class="eu-cookie-compliance-category">
+                              <summary>Seguimiento</summary>
+                              <div class="flex-container">
+                                  <div class="category-checkbox">
+                                      <input type="checkbox" name="cookie-categories" id="cookie-category-analytics" value="analytics" tabindex="0">
+                                      <label for="cookie-category-analytics"></label>
+                                  </div>
+                                                                        <div class="eu-cookie-compliance-category-description">Cookies de análisis y seguimiento (Google Analytics, Google Tag Manager) </div>
+                                                                </div>
+                          </details>
+                                        </div>
+                  <div id="popup-buttons" class="eu-cookie-compliance-buttons eu-cookie-compliance-has-categories">
+                                                <button type="button" class="eu-cookie-compliance-save-preferences-button" tabindex="0" data-once="teatroespanol_v2">Guardar ajustes</button>
+                                            <button type="button" class="agree-button eu-cookie-compliance-default-button button button--small button--primary" tabindex="0">Aceptar todas y cerrar</button>
+                  </div>
+              </div>
+          </div>
+      
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons eu-cookie-compliance-has-categories">
+              <button type="button" class="eu-cookie-compliance-open-dialog" tabindex="0" data-once="teatroespanol_v2">Ajustes de cookies</button>
+            <button type="button" class="agree-button eu-cookie-compliance-default-button button button--small button--primary" tabindex="0">Aceptar todas y cerrar</button>
+              <button type="button" class="eu-cookie-compliance-default-button eu-cookie-compliance-reject-button button button--small" tabindex="0">Rechazar todas</button>
+                    <button type="button" class="eu-cookie-withdraw-button visually-hidden button button--small" tabindex="0">Revocar consentimiento</button>
+          </div>
+
+  </div>
+</div></div></body></html>

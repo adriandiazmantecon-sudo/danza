@@ -1,0 +1,52 @@
+name: Scrape Events
+
+on:
+  workflow_dispatch:
+    inputs:
+      venues:
+        description: 'Venues to scrape (comma separated, e.g. "real,canal")'
+        required: false
+        default: ''
+  repository_dispatch:
+    types: [trigger-scrape]
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r scraper/requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run scraper
+        run: |
+          # Use the input from workflow_dispatch if present, otherwise use payload from repository_dispatch
+          VENUES="${{ github.event.inputs.venues }}"
+          if [ -z "$VENUES" ]; then
+            VENUES="${{ github.event.client_payload.venues }}"
+          fi
+          
+          if [ -n "$VENUES" ]; then
+            python scraper/main.py --venue "$VENUES"
+          else
+            python scraper/main.py
+          fi
+
+      - name: Upload to IONOS via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./web/public/data/
+          server-dir: ./public/data/ # Adjust this path to your IONOS structure
+          only-newer: false

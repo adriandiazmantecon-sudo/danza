@@ -1,0 +1,350 @@
+<div id="cmplz-cookiebanner-container"><div class="cmplz-cookiebanner banner-1 bottom-right-minimal optin cmplz-bottom-right cmplz-categories-type-view-preferences cmplz-show" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin"><div class="cmplz-header"><div class="cmplz-logo"></div><div class="cmplz-title" id="cmplz-header-1-optin">Gestionar el consentimiento de las cookies</div><div class="cmplz-close" tabindex="0" role="button" aria-label="Cerrar ventana">
+<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></div></div><div class="cmplz-divider cmplz-divider-header"></div><div class="cmplz-body"><div class="cmplz-message" id="cmplz-message-1-optin"><p>Utilizamos cookies para optimizar nuestro sitio web y nuestro servicio.</p></div><div class="cmplz-categories">
+<details class="cmplz-category cmplz-functional">
+<summary>
+<span class="cmplz-category-header">
+<span class="cmplz-category-title">Funcional</span>
+<span class="cmplz-always-active">
+<span class="cmplz-banner-checkbox">
+<input type="checkbox" id="cmplz-functional-optin" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1">
+<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Funcional</span></label>
+</span>
+Siempre activo							</span>
+<span class="cmplz-icon cmplz-open">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+</span>
+</span>
+</summary><div class="cmplz-description">
+<span class="cmplz-description-functional">El almacenamiento o acceso técnico es estrictamente necesario para el propósito legítimo de permitir el uso de un servicio específico explícitamente solicitado por el abonado o usuario, o con el único propósito de llevar a cabo la transmisión de una comunicación a través de una red de comunicaciones electrónicas.</span></div>
+</details><details class="cmplz-category cmplz-preferences">
+<summary>
+<span class="cmplz-category-header">
+<span class="cmplz-category-title">Preferencias</span>
+<span class="cmplz-banner-checkbox">
+<input type="checkbox" id="cmplz-preferences-optin" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1">
+<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span class="screen-reader-text">Preferencias</span></label>
+</span>
+<span class="cmplz-icon cmplz-open">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+</span>
+</span>
+</summary><div class="cmplz-description">
+<span class="cmplz-description-preferences">El almacenamiento o acceso técnico es necesario para la finalidad legítima de almacenar preferencias no solicitadas por el abonado o usuario.</span></div>
+</details><details class="cmplz-category cmplz-statistics">
+<summary>
+<span class="cmplz-category-header">
+<span class="cmplz-category-title">Estadísticas</span>
+<span class="cmplz-banner-checkbox">
+<input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1">
+<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Estadísticas</span></label>
+</span>
+<span class="cmplz-icon cmplz-open">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+</span>
+</span>
+</summary><div class="cmplz-description">
+<span class="cmplz-description-statistics">El almacenamiento o acceso técnico que es utilizado exclusivamente con fines estadísticos.</span>
+<span class="cmplz-description-statistics-anonymous">El almacenamiento o acceso técnico que se utiliza exclusivamente con fines estadísticos anónimos. Sin un requerimiento, el cumplimiento voluntario por parte de tu proveedor de servicios de Internet, o los registros adicionales de un tercero, la información almacenada o recuperada sólo para este propósito no se puede utilizar para identificarte.</span></div>
+</details>
+<details class="cmplz-category cmplz-marketing">
+<summary>
+<span class="cmplz-category-header">
+<span class="cmplz-category-title">Marketing</span>
+<span class="cmplz-banner-checkbox">
+<input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1">
+<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Marketing</span></label>
+</span>
+<span class="cmplz-icon cmplz-open">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+</span>
+</span>
+</summary><div class="cmplz-description">
+<span class="cmplz-description-marketing">El almacenamiento o acceso técnico es necesario para crear perfiles de usuario para enviar publicidad, o para rastrear al usuario en una web o en varias web con fines de marketing similares.</span></div>
+</details></div></div><div class="cmplz-links cmplz-information">
+<a class="cmplz-link cmplz-manage-options cookie-statement" href="https://www.teatroscanal.com/politica-de-cookies-ue/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Administrar opciones</a>
+<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="https://www.teatroscanal.com/politica-de-cookies-ue/#cmplz-cookies-overview" data-relative_url="#cmplz-cookies-overview">Gestionar los servicios</a>
+<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="https://www.teatroscanal.com/politica-de-cookies-ue/#cmplz-tcf-wrapper" data-relative_url="#cmplz-tcf-wrapper">Gestionar {vendor_count} proveedores</a>
+<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Leer más sobre estos propósitos</a></div><div class="cmplz-divider cmplz-footer"></div><div class="cmplz-buttons">
+<button class="cmplz-btn cmplz-accept">Acepto</button>
+<button class="cmplz-btn cmplz-deny">Denegar</button>
+<button class="cmplz-btn cmplz-view-preferences">Preferencias</button>
+<button class="cmplz-btn cmplz-save-preferences">Guardar preferencias</button>
+<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="https://www.teatroscanal.com/politica-de-cookies-ue/#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Preferencias</a></div><div class="cmplz-links cmplz-documents">
+<a class="cmplz-link cookie-statement" href="https://www.teatroscanal.com/politica-de-cookies-ue/" data-relative_url="">Política de cookies</a>
+<a class="cmplz-link privacy-statement" href="https://www.teatroscanal.com/politica-de-privacidad-y-proteccion-de-datos/" data-relative_url="">Declaración de privacidad</a>
+<a class="cmplz-link impressum cmplz-hidden" href="#" data-relative_url="">{title}</a></div></div></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3CJPFT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="container"><div id="navbar" class="menu-fixed" style="width: 980px;">
+<a target="_blank" href="https://twitter.com/TeatrosCanal"><i class="fa-brands fa-x-twitter"></i></a>
+<a target="_blank" href="https://www.facebook.com/TeatrosCanal"><i class="fab fa-facebook-f"></i></a>
+<a target="_blank" href="https://www.instagram.com/teatroscanal/"><i class="fab fa-instagram"></i></a>
+<a target="_blank" href="https://www.youtube.com/user/TEATROSdelCANAL"><i class="fab fa-youtube"></i></a></div><div id="banner_header_mobile" class="primary-sidebar widget-area" role="complementary"><div class="widget_top_mobile"><div class="ubm_banner">
+<a href="https://www.teatroscanal.com/wp-content/plugins/ubm-premium/clicks-counter.php?banner_id=210" target="_self" rel="dofollow">
+<img src="https://cdn.teatroscanal.com/wp-content/uploads/useful_banner_manager_banners/210-AF_BANNERS_BAR_014_250326_375x90.jpg" alt="Bar Restaurante 014 abierto">
+</a></div></div></div><div id="banner_header_mobile_tablet" class="primary-sidebar widget-area" role="complementary"><div class="widget_top_mobile_tablet"><div class="ubm_banner">
+<a href="https://www.teatroscanal.com/wp-content/plugins/ubm-premium/clicks-counter.php?banner_id=207" target="_self" rel="dofollow">
+<img src="https://cdn.teatroscanal.com/wp-content/uploads/useful_banner_manager_banners/207-AF_BANNERS_BAR_014_250326_768x90.jpg" alt="Bar Restaurante 014 abierto">
+</a></div></div></div><div class="empty bannertop"><div id="ubm-premium-banners-5" class="widget ubm_premium_widget banner-sidebar-responsi-1"><div class="ubm_banner">
+<a href="https://www.teatroscanal.com/wp-content/plugins/ubm-premium/clicks-counter.php?banner_id=204" target="_self" rel="dofollow">
+<img src="https://cdn.teatroscanal.com/wp-content/uploads/useful_banner_manager_banners/204-AF_BANNERS_BAR_014_250326_928x90.jpg" alt="Bar Restaurante 014 abierto">
+</a></div></div></div><div id="header" class="clearfix"><div class="cont-news"></div><div id="logo">
+<a href="https://www.teatroscanal.com" title="Teatro en Madrid - Teatros del Canal"><img class="imgLogo" height="90" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/logotc_comunidad.png" alt="Teatro en Madrid - Teatros del Canal"></a></div><div class="proyecto">
+<a href="/tu-proyecto-de-exhibicion-es/"> PRESENTA TU PROYECTO DE EXHIBICIÓN </a></div><div class="hamburger-responsive" style="display:none">
+<i class="fas fa-bars"></i><header><div class="menu-inside-hambuerger" style="display: none"><nav><ul><li><div class="imagen-menu-resposive" style="padding-top: 11px;"><a href="https://www.teatroscanal.com" title="Teatro en Madrid - Teatros del Canal"><img width="126" height="43" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/logotc_comunidad.png" alt="Teatro en Madrid - Teatros del Canal"></a></div><div class="close-menu-responsive"> <img class="equis" src="/wp-content/themes/teatroscanal-responsive/images/equis.png" alt="cerrar menu"></div></li><div class="menu-completo"><li class="listado-menu bg-red " style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://www.teatroscanal.com/entradas/abono-temporada/">ABONO TEMPORADA	</a></li><li class="listado-menu " style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://entradas.teatroscanal.com/janto/">Comprar Entradas	</a></li><li class="listado-menu " style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://www.teatroscanal.com/entradas/ofertas-grupos-madrid/">DESCUENTOS PARA GRUPOS	</a></li><li class="listado-menu " style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="/cartelera-madrid/">TODOS LOS ESPECTÁCULOS</a><ul class="sub " id="d"><li class="listado-submenu"><a href="/entradas/teatro-madrid/" class="title">Teatro</a></li><li class="listado-submenu"><a href="/entradas/danza-madrid/" class="title">Danza</a></li><li class="listado-submenu"><a href="/entradas/flamenco-madrid/" class="title">Flamenco</a></li><li class="listado-submenu"><a href="/entradas/musica/" class="title">Música</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/entradas/circo-madrid/" class="title">Circo</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/entradas/festivales-madrid/" class="title">Festivales</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/entradas/internacional/" class="title">Internacional</a></li><li class="listado-submenu"><a href="/entradas/familiar/" class="title">Familiar</a></li><li class="listado-submenu"><a href="/entradas/performance/" class="title">Performance</a></li></ul></li><li class="listado-menu more-expand number1" id="number1" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="#">AYUDA A VISITANTES<i class="fas fa-plus"></i></a><ul class="sub number1" id="dnumber1"><li class="listado-submenu"><a href="/tu-visita/como-llegar-y-contacto/" class="title">Cómo llegar</a></li><li class="listado-submenu"><a href="/teatros-del-canal/teatro-accesible/" class="title">Accesibilidad</a></li><li class="listado-submenu"><a href="/tu-visita/informacion-y-horario-de-taquilla/" class="title">Horarios de taquilla</a></li><li class="listado-submenu"><a href="/tu-visita/preguntas-frecuentes/" class="title">Preguntas frecuentes</a></li><li class="listado-submenu"><a href="/tu-visita/visitas-guiadas/" class="title">Visitas guiadas</a></li></ul></li><li class="listado-menu more-expand number2" id="number2" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="#">CENTRO COREOGRÁFICO<i class="fas fa-plus"></i></a><ul class="sub number2" id="dnumber2"><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-coreografico-canal/" class="title">¿Qué es el Centro Coreográfico?</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/instalaciones/" class="title">Instalaciones</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/actividades/" class="title">Actividades</a></li><li class="listado-submenu"><a href="/centro-danza-madrid/convocatoria/" class="title">Residencias</a></li><ul class="sub number2" id="dnumber2"><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/convocatoria/" class="title">Convocatoria residencias 2026</a></li></ul>
+
+<ul class="sub number2" id="dnumber2"><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/companias-residentes/" class="title">Compañías residentes</a></li></ul>
+<ul class="sub number2" id="dnumber2"><li class="listado-submenu"><a href="https://www.teatroscanal.com/?page_id=13146" class="title">Estancias intermitentes</a></li></ul>
+<ul class="sub number2" id="dnumber2"><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/historico-residencias/" class="title">Histórico de residencias</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/companias-madrid/" class="title">Compañías Madrid</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/contacto/" class="title">Contacto</a></li><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/reserva-de-estudios/" class="title">Reserva de estudios</a></li></ul></ul></li></div><li style="text-align:center;">
+<button type="button" class="butOffers">CONSIGUE OFERTAS ESPECIALES <i class="fa fa-chevron-right"></i></button></li></ul></nav></div></header></div><div class="menu-centro-danza" style="display:none"><header><div class="menu-inside-danza" style="display: none"><nav><ul><li><div class="imagen-menu-resposive" style="padding-top: 11px;"><a href="https://www.teatroscanal.com" title="Teatro en Madrid - Teatros del Canal"><img height="43" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/logodanza-m.png" alt="Logo Teatros del Canal"></a></div><div class="close-menu-danza"> <img class="equis" src="/wp-content/themes/teatroscanal-responsive/images/equis.png" alt="cerrar menu"></div></li><div class="menu-completo"><li class="listado-menu " style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="/centro-danza-madrid/">QUÉ ES EL CENTRO COREOGRÁFICO</a><ul class="sub " id="d"><li class="listado-submenu"><a href="/centro-danza-madrid/instalaciones/" class="title">INSTALACIONES</a></li></ul></li><li class="listado-menu " id="d" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="/centro-danza-madrid/actividades/">ACTIVIDADES	</a></li><li class="listado-menu " id="d" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://www.teatroscanal.com/centro-danza-madrid/convocatoria/">Residencias</a><ul class="sub " id="d"><li class="listado-submenu"><a href="https://www.teatroscanal.com/centro-danza-madrid/convocatoria/" class="title">Convocatoria residencias 2026</a></li><li class="listado-submenu"><a href="/centro-danza-madrid/convocatoria-intermitentes/" class="title">Estancias Intermitentes</a></li><li class="listado-submenu"><a href="/centro-danza-madrid/companias-residentes/" class="title">Compañías residentes</a></li><li class="listado-submenu"><a href="/centro-danza-madrid/historico-residencias/" class="title">Histórico</a></li></ul></li><li class="listado-menu " id="d" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://www.teatroscanal.com/centro-danza-madrid/companias-madrid/">Compañías Madrid	</a></li><li class="listado-menu " id="d" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="/centro-danza-madrid/contacto/">CONTACTO	</a></li><li class="listado-menu " id="d" style="border-bottom:1px solid #F1F1F1;"><a style="text-transform: uppercase;" href="https://www.teatroscanal.com/centro-danza-madrid/reserva-de-estudios/">RESERVA DE ESTUDIOS	</a></li></div><li style="text-align:center;">
+<button type="button" class="butOffers agenda-act-cdc">RECIBE LA AGENDA DE ACTIVIDADES <i class="fa fa-chevron-right"></i></button></li></ul></nav></div></header></div>
+<i class="fas fa-search searchBottonResp" onclick="document.getElementById('modalSearch').style.display='block'"></i><div id="modalSearch" class="w3-modal modalSearchStyle">
+<i class="fas fa-times"></i><div class="w3-modal-content modalSearchContent"><div class="contentInputDiv"><form method="get" class="newStyleForm" id="searchform" action="https://www.teatroscanal.com/">
+<input type="text" name="s" id="s" class="inputSearchMovil" value="Buscar en Teatros del Canal" onfocus="if(this.value=='Buscar en Teatros del Canal')this.value='';" onblur="if(this.value=='')this.value='Buscar en Teatros del Canal';">
+<i class="fas fa-search insideInputSearch"></i>
+<input type="hidden" name="search-type" value="normal"></form></div></div></div><div class="special-offers" style="position: absolute; margin-left:auto;margin-right:auto;left:0;right:0;bottom: 30px;margin-bottom:0px; z-index: 3;display: none;"><div class="spaceFromIframe" style="width: 100%; height: 90px; position: absolute; top: 0px; z-index: 3;cursor: pointer;"></div>
+<iframe src="https://users.teatroscanal.com/newsletter-respon-promo.php" scrolling="no" frameborder="0" style="height: inherit;" id="frameResponNewsletter"> </iframe></div><div class="img-lupa" style="display:none">
+<img height="24" width="24" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/lupa2.png" alt="Buscar"></div><div style="width:440px;height:100px; float:right;margin-top:24px;margin-right:30px;" class="newsletter-header">                                    <iframe src="https://users.teatroscanal.com/newsletter-home-comunidad-header.php" class="news2" scrolling="no" frameborder="0"></iframe></div><div id="primary-nav" style="display:block;"><div class="menu-menu-principal-container"><ul id="menu-menu-principal" class="menu sf-js-enabled"><li id="menu-item-27260" class="bg-red menu-item menu-item-type-post_type menu-item-object-page menu-item-27260"><a href="https://www.teatroscanal.com/la-cuarta-sala-canal/">La cuarta sala</a></li><li id="menu-item-8853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8853"><a href="https://www.teatroscanal.com/cartelera-madrid/" title="Entradas de espectáculos en Madrid">Entradas de espectáculos</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-50085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50085"><a href="https://www.teatroscanal.com/entradas/abono-temporada/" title="abono-temporada">Abono 25-26</a></li><li id="menu-item-808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-808"><a href="https://www.teatroscanal.com/entradas/como-comprar-entradas/">Cómo comprar entradas</a></li><li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729"><a href="https://www.teatroscanal.com/tu-visita/informacion-y-horario-de-taquilla/">Horarios de taquilla</a></li><li id="menu-item-67950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67950"><a href="https://www.teatroscanal.com/entradas/descuentos-habituales/">Descuentos habituales</a></li><li id="menu-item-795" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-795"><a href="https://www.teatroscanal.com/entradas/ofertas-grupos-madrid/">DESCUENTOS PARA GRUPOS</a></li><li id="menu-item-65681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65681"><a href="https://www.teatroscanal.com/entradas/comprueba-tu-entrada/">Comprueba tu entrada</a></li></ul></li><li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-544"><a href="https://www.teatroscanal.com/cartelera-madrid/">Cartelera</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-38694" class="esconder menu-item menu-item-type-post_type menu-item-object-page menu-item-38694"><a href="https://www.teatroscanal.com/programacion-2021-2022/">Programación 2021-2022</a></li><li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816"><a href="https://www.teatroscanal.com/entradas/teatro-madrid/" title="Teatro  en Madrid">Teatro</a></li><li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-548 current_page_item menu-item-811"><a href="https://www.teatroscanal.com/entradas/danza-madrid/" aria-current="page" title="Danza en Madrid">Danza</a></li><li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="https://www.teatroscanal.com/entradas/conciertos-madrid/" title="Conciertos  en Madrid">Conciertos</a></li><li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://www.teatroscanal.com/entradas/opera-madrid/" title="Ópera  en Madrid">Ópera</a></li><li id="menu-item-1840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1840"><a href="https://www.teatroscanal.com/entradas/teatro-infantil-madrid/" title="Infantil  en Madrid">Infantil</a></li><li id="menu-item-14584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14584"><a href="https://www.teatroscanal.com/entradas/familiar/" title="Espectáculos en familia en Madrid">Familiar</a></li><li id="menu-item-14564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14564"><a href="https://www.teatroscanal.com/entradas/musica/" title="Espectáculos con música en Madrid">Música</a></li><li id="menu-item-14563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14563"><a href="https://www.teatroscanal.com/entradas/performance/" title="Espectaculos de performance en Madrid">Performance</a></li><li id="menu-item-14560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14560"><a href="https://www.teatroscanal.com/entradas/internacional/" title="Espectáculos internacionales en Madrid">Internacional</a></li><li id="menu-item-2841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2841"><a href="/actividades-canal/" title="Actividades en Madrid">Histórico actividades</a></li><li id="menu-item-2842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2842"><a href="https://www.teatroscanal.com/historico-espectaculos/" title="Histórico espectáculos en Madrid">Histórico espectáculos</a></li></ul></li><li id="menu-item-15806" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15806"><a href="#">Sobre el Teatro</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-15807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15807"><a href="https://www.teatroscanal.com/teatros-del-canal/" title="Dirección">Dirección artística</a></li><li id="menu-item-884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-884"><a href="https://www.teatroscanal.com/teatros-del-canal/informacion-general/">Información General</a></li><li id="menu-item-17244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17244"><a href="https://www.teatroscanal.com/entradas/coproducciones/" title="Coproducciones">Creaciones Canal</a></li><li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="https://www.teatroscanal.com/tu-visita/visitas-guiadas/" title="Visitas guiadas">Visitas guiadas a grupos</a></li><li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-882"><a href="https://www.teatroscanal.com/teatros-del-canal/espacios-escenicos/">Salas</a></li><li id="menu-item-3926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3926"><a href="https://www.teatroscanal.com/teatros-del-canal/funciones-accesibles/" title="Teatro Accesible">Bucle magnético</a></li><li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="https://www.teatroscanal.com/tu-visita/cafeteria-terraza/" title="Cafetería y terraza">Bar Restaurante</a></li><li id="menu-item-1565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"><a href="https://www.teatroscanal.com/teatros-del-canal/espacios-eventos-madrid/">Espacios para eventos</a></li><li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-738"><a href="https://www.teatroscanal.com/tu-visita/preguntas-frecuentes/">Preguntas frecuentes</a></li><li id="menu-item-879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-879"><a href="https://www.teatroscanal.com/teatros-del-canal/prensa/">Prensa</a></li></ul></li><li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://www.teatroscanal.com/tu-visita/como-llegar-y-contacto/">Cómo llegar y contacto</a></li><li id="menu-item-40105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40105"><a href="https://www.teatroscanal.com/teatros-del-canal/prensa/">Prensa</a></li><li id="menu-item-1266" class="last-menu cd-danza menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1266"><a href="https://www.teatroscanal.com/centro-danza-madrid/">Centro Coreográfico</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-18115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18115"><a href="https://www.teatroscanal.com/centro-danza-madrid/">Qué es el Centro Coreográfico</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-1267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1267"><a href="https://www.teatroscanal.com/centro-danza-madrid/instalaciones/" title="Salas de ensayos">Instalaciones</a></li></ul></li><li id="menu-item-13332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13332"><a href="https://www.teatroscanal.com/centro-danza-madrid/actividades/">Actividades</a></li><li id="menu-item-26484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26484"><a href="https://www.teatroscanal.com/centro-danza-madrid/convocatoria/">Residencias</a><ul class="sub-menu sf-js-enabled" style="display: none; visibility: hidden;"><li id="menu-item-9992" class="subsub menu-item menu-item-type-post_type menu-item-object-page menu-item-9992"><a href="https://www.teatroscanal.com/centro-danza-madrid/convocatoria/" title="Presenta tu proyecto">Convocatoria residencias 2026</a></li><li id="menu-item-23717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23717"><a href="https://www.teatroscanal.com/centro-danza-madrid/companias-residentes/">Compañías residentes</a></li><li id="menu-item-23720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23720"><a href="https://www.teatroscanal.com/centro-danza-madrid/historico-residencias/">Histórico</a></li></ul></li><li id="menu-item-26461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26461"><a href="https://www.teatroscanal.com/centro-danza-madrid/companias-madrid/">Compañías Madrid</a></li><li id="menu-item-12961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a href="https://www.teatroscanal.com/centro-danza-madrid/contacto/">Contacto</a></li><li id="menu-item-36608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36608"><a href="https://www.teatroscanal.com/centro-danza-madrid/reserva-de-estudios/">Reserva de estudios</a></li></ul></li></ul></div></div><form method="get" id="searchform" action="https://www.teatroscanal.com/"><fieldset><strong>Buscar</strong>
+<select name="cartelera"><option value="">En todo Teatros del Canal</option><option value="teatro">Teatro en Madrid</option><option value="danza">Danza en Madrid</option><option value="zarzuela">Zarzuela en Madrid</option><option value="infantil">Infantil en Madrid</option><option value="conciertos">Conciertos en Madrid</option><option value="opera">Ópera en Madrid</option><option value="actividades">Actividades en Madrid</option><option value="circo">Circo en Madrid</option><option value="flamenco">Flamenco en Madrid</option></select>		  <span><input type="text" name="s" id="s" value="Escribe aquí tu búsqueda..." onfocus="if(this.value=='Escribe aquí tu búsqueda...')this.value='';" onblur="if(this.value=='')this.value='Escribe aquí tu búsqueda...';">
+<input type="submit" id="buscar" class="lupa" value="Buscar">
+<input type="hidden" name="search-type" value="normal">
+<a href="https://www.teatroscanal.com/calendario-cartelera-madrid/">
+<img class="calendarsearch" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/icono_calendario-tdc-cabecera.png" alt="Calendario Teatros Canal">
+</a>
+</span></fieldset></form><div style="top:0px;right:0px;position: relative;clear:both"><div id="calendar-4" class="widget-home events_calendar_widget"><div style="width:200px; float:right"><div class="tribe-events-widget-nav">
+<a class="tribe-mini-ajax prev-month" href="#" data-month="2026-03">
+<span>« Anterior</span>
+</a>
+<span id="tribe-mini-ajax-month">abril 2026</span>
+<a class="tribe-mini-ajax next-month" href="#" data-month="2026-05">
+<span>Siguiente »</span>
+</a></div><table class="tribe-events-calendar tribe-events-calendar-widget"><thead><tr><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th></tr></thead><tbody><tr><td class="tribe-events-othermonth"></td><td class="tribe-events-othermonth"></td><td class="tribe-events-thismonth" data-day="1"><div class="daynum">1</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="2"><div class="daynum">2</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/paura-cia-lucas-escobedo-tc2526/">Compañía Lucas Escobedo</a></h5></div></td><td class="tribe-events-thismonth" data-day="3"><div class="daynum">3</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="4"><div class="daynum">4</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/the-summit-christoph-marthaler-tc2526/">Christoph Marthaler / Théâtre Vidy-Lausanne</a></h5></div></td><td class="tribe-events-thismonth" data-day="5"><div class="daynum">5</div></td></tr><tr><td class="tribe-events-thismonth" data-day="6"><div class="daynum">6</div></td><td class="tribe-events-thismonth" data-day="7"><div class="daynum">7</div></td><td class="tribe-events-thismonth" data-day="8"><div class="daynum">8</div></td><td class="tribe-events-thismonth" data-day="9"><div class="daynum">9</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="10"><div class="daynum">10</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/once-upon-a-time-goblin-party-tc2526/">Goblin Party</a></h5><h5><a href="https://www.teatroscanal.com/espectaculo/berenice-isabelle-huppert-romeo-castellucci-tc2526/">Isabelle Huppert / Romeo Castellucci</a></h5></div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="11"><div class="daynum">11</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/bobo-periferia-teatro-canal-teatralia-tc2526/">Periferia Teatro</a></h5></div></td><td class="tribe-events-thismonth" data-day="12"><div class="daynum">12</div></td></tr><tr><td class="tribe-events-thismonth" data-day="13"><div class="daynum">13</div></td><td class="tribe-events-thismonth" data-day="14"><div class="daynum">14</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="15"><div class="daynum">15</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/stuck-mounia-nassangar-tc2526/">Mounia Nassangar</a></h5></div></td><td class="tribe-events-thismonth" data-day="16"><div class="daynum">16</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="17"><div class="daynum">17</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/compagnie-accrorap-le-murmure-tc2526/">Compagnie Accrorap</a></h5></div></td><td class="tribe-events-thismonth" data-day="18"><div class="daynum">18</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="19"><div class="daynum">19</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/loira-abraham-cupeiro-tc2526/">Abraham Cupeiro</a></h5></div></td></tr><tr><td class="tribe-events-thismonth" data-day="20"><div class="daynum">20</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="21"><div class="daynum">21</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/iii-festival-de-la-guitarra/">III FESTIVAL DE LA GUITARRA</a></h5></div></td><td class="tribe-events-thismonth" data-day="22"><div class="daynum">22</div></td><td class="tribe-events-thismonth" data-day="23"><div class="daynum">23</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="24"><div class="daynum">24</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/mami-mario-banushi-tc2526/">Mario Banushi</a></h5></div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="25"><div class="daynum">25</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/accion-xm-la-juan-gallery-tc2526/">La Juan Gallery</a></h5></div></td><td class="tribe-events-thismonth" data-day="26"><div class="daynum">26</div></td></tr><tr><td class="tribe-events-thismonth" data-day="27"><div class="daynum">27</div></td><td class="tribe-events-thismonth" data-day="28"><div class="daynum">28</div></td><td class="tribe-events-thismonth tribe-events-mini-has-event" data-day="29"><div class="daynum">29</div><div class="tribe-events-tooltip"><h5><a href="https://www.teatroscanal.com/espectaculo/dia-internacional-de-la-danza-2026/">DÍA INTERNACIONAL DE LA DANZA 2026</a></h5></div></td><td class="tribe-events-thismonth" data-day="30"><div class="daynum">30</div></td><td class="tribe-events-othermonth"></td><td class="tribe-events-othermonth"></td><td class="tribe-events-othermonth"></td></tr><tr><td colspan="7"><a href="/calendario-cartelera-madrid/" class="linkcal" title="Ver calendario completo del mes">Ver calendario completo del mes</a></td></tr></tbody></table> <script>document.addEventListener('DOMContentLoaded', () => {
+    const eventDays = document.querySelectorAll('.tribe-events-mini-has-event');
+    
+    eventDays.forEach(day => {
+        day.addEventListener('mouseenter', () => {
+            const tooltip = day.querySelector('.tribe-events-tooltip');
+            if (tooltip) {
+                tooltip.style.display = 'block';
+            }
+        });
+
+        day.addEventListener('mouseleave', () => {
+            const tooltip = day.querySelector('.tribe-events-tooltip');
+            if (tooltip) {
+                tooltip.style.display = 'none';
+            }
+        });
+    });
+});</script> </div></div></div> <script>$(document).ready(function () {
+        $("#buscar").click(function (e) {
+            if ($(document.querySelectorAll("#s")[1]).val() === "Buscar en Teatros del Canal" || $(document.querySelectorAll("#s")[1]).val() === "Escribe aquí tu búsqueda..." || $.trim($(document.querySelectorAll("#s")[1]).val()) === "") {
+                e.preventDefault();
+            }
+        });
+
+        $(".insideInputSearch").click(function (e) {
+            if ($(document.querySelectorAll("#s")[0]).val() === "Buscar en Teatros del Canal" || $(document.querySelectorAll("#s")[0]).val() === "Escribe aquí tu búsqueda..." || $.trim($(document.querySelectorAll("#s")[0]).val()) === "") {
+                e.preventDefault();
+            } else {
+                document.getElementById('searchform-home').submit();
+            }
+        });
+    });</script> <div class="proyecto2" style="display: flex; justify-content: space-between; align-items: center; margin-right: 30px;     position: relative;
+top: 0px;"></div></div><div class="contentAllNew"><div id="content" class="clearfix"> <script type="text/javascript">var loading=false;
+  var options={page:0,ppp:12};
+  var ended=false;
+
+  $(window).scroll(function() {
+
+      if (($(this).scrollTop() - 100 >= $('#content').height() - $(window).height()) && (ended==false)) {
+        loadNextActividades(options);
+
+      }
+    }
+  );
+
+
+  function loadNextActividades(options){
+
+    //Miramos si está en espera de otra petición
+    if(loading===true)
+    {
+
+      return false;
+    }
+
+    //Lanzamos la petición
+
+
+    activeLoading();
+    $.ajax({
+      type: "POST",
+      url: "/wp-admin/admin-ajax.php",
+      data: {
+        'action': 'get_todos_espectaculos',
+        "section":'danza',
+        "page": options.page+1,
+        "ppp" : options.ppp
+      },
+      success: function (result) {
+        ended=JSON.parse(result).html=="";
+        handleData(JSON.parse(result),options);
+        hideLoading();
+      },
+      error: function () {
+        hideLoading();
+      }
+    });
+  }
+
+  function activeLoading(){
+    $(".imgLoadingNew").show();
+    loading=true;
+  }
+
+  function hideLoading(){
+    $(".imgLoadingNew").hide();
+    loading=false;
+  }
+
+  function handleData(result,options){
+
+    options.page=result.page;
+    $("#shows-container").append(result.html);
+
+  }</script> <div class="border-categorias"><div class="menu-categorias-cartelera"><ul id="nav"><div class="menu-menu-categorias-container"><ul id="menu-menu-categorias" class="menu"><li id="menu-item-84917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84917"><a href="https://www.teatroscanal.com/noticia/">Noticias</a></li><li id="menu-item-87479" class="oculto menu-item menu-item-type-post_type menu-item-object-page menu-item-87479"><a href="https://www.teatroscanal.com/programacion-2025-2026/">Temporada 25/26</a></li><li id="menu-item-50084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50084"><a href="https://www.teatroscanal.com/entradas/abono-temporada/" title="abono-temporada">Abono</a></li><li id="menu-item-72983" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72983"><a href="https://www.teatroscanal.com/entradas/ofertas-grupos-madrid/">Grupos</a></li><li id="menu-item-566" class="item-uno menu-item menu-item-type-post_type menu-item-object-page menu-item-566"><a href="https://www.teatroscanal.com/entradas/teatro-madrid/" title="Teatro en Madrid">Teatro</a></li><li id="menu-item-2094" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-548 current_page_item menu-item-2094"><a href="https://www.teatroscanal.com/entradas/danza-madrid/" aria-current="page" title="Danza en Madrid">Danza</a></li><li id="menu-item-14615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14615"><a href="https://www.teatroscanal.com/entradas/musica/" title="Espectáculos con música en Madrid">Música</a></li><li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2100"><a href="https://www.teatroscanal.com/entradas/flamenco-madrid/" title="Flamenco en Madrid">Flamenco</a></li><li id="menu-item-2099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2099"><a href="https://www.teatroscanal.com/entradas/festivales-madrid/" title="Festivales de música en Madrid">Festivales</a></li><li id="menu-item-15172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15172"><a href="https://www.teatroscanal.com/entradas/circo-madrid/">Circo</a></li><li id="menu-item-11997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11997"><a href="https://www.teatroscanal.com/entradas/familiar/" title="Espectáculos en familia en Madrid">Familiar</a></li><li id="menu-item-14611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14611"><a href="https://www.teatroscanal.com/entradas/internacional/" title="Espectáculos internacionales en Madrid">Internacional</a></li><li id="menu-item-14614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14614"><a href="https://www.teatroscanal.com/entradas/performance/" title="Espectáculos de performance en Madrid">Performance</a></li></ul></div></ul></div></div><div class="presenta"><div class="proyecto">
+<a href="/tu-proyecto-de-exhibicion-es/"> PRESENTA TU PROYECTO DE EXHIBICIÓN </a></div></div><div class="breadcrumbs">
+<a title="Cartelera de espectáculos en Madrid" href="/cartelera-madrid/">Cartelera de espectáculos</a> &gt;
+Danza en Madrid</div><div class="titulo-entradas" style="display:none;">
+<span class="page-title">
+Danza en Madrid    </span></div><div class="shows-home"><h1 class="page-title pagina-titulo">
+Danza en Madrid</h1><div id="post-87848" class="div-show2 tribe-events-event clearfix post-87848 tribe_events type-tribe_events status-publish has-post-thumbnail hentry tribe_events_cat-abono tribe_events_cat-circo tribe_events_cat-comedia tribe_events_cat-cultura-urbana tribe_events_cat-danza tribe_events_cat-en-cartel tribe_events_cat-familiar tribe_events_cat-flamenco tribe_events_cat-musica tribe_events_cat-opera tribe_events_cat-performance tribe_events_cat-teatro cat_abono cat_circo cat_comedia cat_cultura-urbana cat_danza cat_en-cartel cat_familiar cat_flamenco cat_musica cat_opera cat_performance cat_teatro" itemscope="" itemtype="https://schema.org/Event"><div itemprop="location" itemscope="" itemtype="https://schema.org/PerformingArtsTheater"><meta itemprop="address" content="Madrid, ES"></div>
+<span itemprop="startDate" content="2025-07-03 00:00:00"></span><div class="thumbnail-show">
+<a href="https://www.teatroscanal.com/espectaculo/abonos-teatros-canal-tc25-26/" title="Visita ABONOS TEATROS DEL CANAL" onclick="ga('send', 'event', 'Imagen espectáculo', 'Click', 'Más info');">
+<img width="293" height="150" src="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_CANAL_DESTACADO_ABONO_130625_293x150.jpg" class="attachment-cartelera size-cartelera wp-post-image" alt="" decoding="async" srcset="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_CANAL_DESTACADO_ABONO_130625_293x150.jpg 293w, https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_CANAL_DESTACADO_ABONO_130625_293x150-260x133.jpg 260w" sizes="(max-width: 293px) 100vw, 293px">                            </a></div><h2 class="show-home" style="color: #000 !important;" itemprop="name"><a href="https://www.teatroscanal.com/espectaculo/abonos-teatros-canal-tc25-26/" title="ABONOS TEATROS DEL CANAL" rel="bookmark">ABONOS TEATROS DEL CANAL</a></h2><div class="autor-show"><p>
+ABONO 5 / 10 ESPECTÁCULOS</p></div><div class="fecha-show"><p>
+TEMPORADA 2025-2026</p></div><div class="prensa"><p></p><p>Consulta aquí toda la información sobre los abonos de la temporada 25-26</p><p></p></div><div class="rating"><p></p></div><div class="botones-espectaculos"><div class="comprar-espectaculo">
+<a class="boton_comprar" title="Comprar entradas  ABONOS TEATROS DEL CANAL" style="" href="https://entradas.teatroscanal.com/janto/?Nivel=TipoE&amp;idTipoE=88" alt="Comprar Entradas  ABONOS TEATROS DEL CANAL" onclick="ga('send', 'event', 'Botón rojo', 'Click', 'Comprar');">COMPRAR</a></div><div class="informacion moveToRightClass">
+<a class="btn-info" href="https://www.teatroscanal.com/espectaculo/abonos-teatros-canal-tc25-26/" title="Ver espectáculo" onclick="ga('send', 'event', 'Botón gris', 'Click', 'Más info');">+ INFO</a></div></div></div><div id="post-86687" class="div-show2 tribe-events-event clearfix post-86687 tribe_events type-tribe_events status-publish has-post-thumbnail hentry tribe_events_cat-abono tribe_events_cat-carne-joven tribe_events_cat-danza tribe_events_cat-en-cartel cat_abono cat_carne-joven cat_danza cat_en-cartel" itemscope="" itemtype="https://schema.org/Event"><div itemprop="location" itemscope="" itemtype="https://schema.org/PerformingArtsTheater"><meta itemprop="address" content="Madrid, ES"></div>
+<span itemprop="startDate" content="2026-04-29 00:00:00"></span><div class="thumbnail-show">
+<a href="https://www.teatroscanal.com/espectaculo/las-hijas-de-bernarda-taiat-dansa-tc2526/" title="Visita Taiat Dansa | Dir.: Meritxell Barberá &amp; Inma García" onclick="ga('send', 'event', 'Imagen espectáculo', 'Click', 'Más info');">
+<img width="293" height="150" src="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNER_ABONO_CANAL_2026_180326_TAIAT_293x150.jpg" class="attachment-cartelera size-cartelera wp-post-image" alt="" decoding="async" srcset="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNER_ABONO_CANAL_2026_180326_TAIAT_293x150.jpg 293w, https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNER_ABONO_CANAL_2026_180326_TAIAT_293x150-260x133.jpg 260w" sizes="(max-width: 293px) 100vw, 293px">                            </a></div><h2 class="show-home" style="color: #000 !important;" itemprop="name"><a href="https://www.teatroscanal.com/espectaculo/las-hijas-de-bernarda-taiat-dansa-tc2526/" title="Taiat Dansa | Dir.: Meritxell Barberá &amp; Inma García" rel="bookmark">Taiat Dansa | Dir.: Meritxell Barberá &amp; Inma García</a></h2><div class="autor-show"><p>
+Las hijas de Bernarda</p></div><div class="fecha-show"><p>
+29 y 30 de abril de 2026</p></div><div class="prensa"><p></p><p>Danza. Canal Dana<br>
+Estreno en la Comunidad de Madrid</p><p></p></div><div class="rating"><p></p></div><div class="botones-espectaculos"><div class="comprar-espectaculo">
+<a class="boton_comprar" title="Comprar entradas  Taiat Dansa | Dir.: Meritxell Barberá &amp; Inma García" style="" href="https://entradas.teatroscanal.com/janto/main.php?Nivel=Evento&amp;idRecinto=TDC&amp;idEvento=HBERNARDATC25-26" alt="Comprar Entradas  Taiat Dansa | Dir.: Meritxell Barberá &amp; Inma García" onclick="ga('send', 'event', 'Botón rojo', 'Click', 'Comprar');">COMPRAR</a></div><div class="informacion moveToRightClass">
+<a class="btn-info" href="https://www.teatroscanal.com/espectaculo/las-hijas-de-bernarda-taiat-dansa-tc2526/" title="Ver espectáculo" onclick="ga('send', 'event', 'Botón gris', 'Click', 'Más info');">+ INFO</a></div></div></div><div id="post-97485" class="div-show2 tribe-events-event clearfix post-97485 tribe_events type-tribe_events status-publish has-post-thumbnail hentry tribe_events_cat-abono tribe_events_cat-carne-joven tribe_events_cat-danza tribe_events_cat-en-cartel cat_abono cat_carne-joven cat_danza cat_en-cartel" itemscope="" itemtype="https://schema.org/Event"><div itemprop="location" itemscope="" itemtype="https://schema.org/PerformingArtsTheater"><meta itemprop="address" content="Madrid, ES"></div>
+<span itemprop="startDate" content="2026-05-20 00:00:00"></span><div class="thumbnail-show">
+<a href="https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/" title="Visita SOL PICÓ CIA DE DANZA" onclick="ga('send', 'event', 'Imagen espectáculo', 'Click', 'Más info');">
+<img width="293" height="150" src="https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg" class="attachment-cartelera size-cartelera wp-post-image" alt="" decoding="async" srcset="https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg 293w, https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150-260x133.jpg 260w" sizes="(max-width: 293px) 100vw, 293px">                            </a></div><h2 class="show-home" style="color: #000 !important;" itemprop="name"><a href="https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/" title="SOL PICÓ CIA DE DANZA" rel="bookmark">SOL PICÓ CIA DE DANZA</a></h2><div class="autor-show"><p>
+La Cordero y su ejército</p></div><div class="fecha-show"><p>
+Del 20 al 23 de mayo de 2026</p></div><div class="prensa"><p></p><p>Danza contemporánea<br>
+Estreno en la Comunidad de Madrid</p><p></p></div><div class="rating"><p></p></div><div class="botones-espectaculos"><div class="comprar-espectaculo">
+<a class="boton_comprar" title="Comprar entradas  SOL PICÓ CIA DE DANZA" style="" href="https://entradas.teatroscanal.com/janto/main.php?Nivel=Evento&amp;idRecinto=TDC&amp;idEvento=SOLPICOTC25-26" alt="Comprar Entradas  SOL PICÓ CIA DE DANZA" onclick="ga('send', 'event', 'Botón rojo', 'Click', 'Comprar');">COMPRAR</a></div><div class="informacion moveToRightClass">
+<a class="btn-info" href="https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/" title="Ver espectáculo" onclick="ga('send', 'event', 'Botón gris', 'Click', 'Más info');">+ INFO</a></div></div></div><div id="post-85670" class="div-show2 tribe-events-event clearfix post-85670 tribe_events type-tribe_events status-publish has-post-thumbnail hentry tribe_events_cat-abono tribe_events_cat-carne-joven tribe_events_cat-danza tribe_events_cat-en-cartel cat_abono cat_carne-joven cat_danza cat_en-cartel" itemscope="" itemtype="https://schema.org/Event"><div itemprop="location" itemscope="" itemtype="https://schema.org/PerformingArtsTheater"><meta itemprop="address" content="Madrid, ES"></div>
+<span itemprop="startDate" content="2026-05-28 00:00:00"></span><div class="thumbnail-show">
+<a href="https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/" title="Visita Alberto Velasco" onclick="ga('send', 'event', 'Imagen espectáculo', 'Click', 'Más info');">
+<img width="293" height="150" src="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNERS_ABONO_293x150_CANAL_2025_270625_293x150_VELASCO.jpg" class="attachment-cartelera size-cartelera wp-post-image" alt="" decoding="async" srcset="https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNERS_ABONO_293x150_CANAL_2025_270625_293x150_VELASCO.jpg 293w, https://cdn.teatroscanal.com/wp-content/uploads/2025/06/AF_BANNERS_ABONO_293x150_CANAL_2025_270625_293x150_VELASCO-260x133.jpg 260w" sizes="(max-width: 293px) 100vw, 293px">                            </a></div><h2 class="show-home" style="color: #000 !important;" itemprop="name"><a href="https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/" title="Alberto Velasco" rel="bookmark">Alberto Velasco</a></h2><div class="autor-show"><p>
+SACRESIZE</p></div><div class="fecha-show"><p>
+Del 28 de mayo al 7 de junio de 2026</p></div><div class="prensa"><p></p><p>Danza contemporánea<br>
+Estreno absoluto</p><p></p></div><div class="rating"><p></p></div><div class="botones-espectaculos"><div class="comprar-espectaculo">
+<a class="boton_comprar" title="Comprar entradas  Alberto Velasco" style="" href="https://entradas.teatroscanal.com/janto/main.php?Nivel=Evento&amp;idRecinto=TDC&amp;idEvento=SACRESIZETC25-26" alt="Comprar Entradas  Alberto Velasco" onclick="ga('send', 'event', 'Botón rojo', 'Click', 'Comprar');">COMPRAR</a></div><div class="informacion moveToRightClass">
+<a class="btn-info" href="https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/" title="Ver espectáculo" onclick="ga('send', 'event', 'Botón gris', 'Click', 'Más info');">+ INFO</a></div></div></div><div id="shows-container"></div><div class="imgLoadingNew noDisplay" style="text-align: center;">
+<img src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/images/gifLoading.gif" alt="Loading" width="200" height="200"></div></div><div class="dotted"></div></div><div class="ofertasEspeciales" style="display:none;"><p>CONSIGUE OFERTAS ESPECIALES<i class="fa fa-chevron-right"></i></p></div><div class="iconosRedesSociales"><div><a href="https://www.instagram.com/teatroscanal" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/TeatrosCanal" target="_blank"><i class="fab fa-facebook-square"></i></a><a href="https://twitter.com/TeatrosCanal" target="_blank"><i class="fab fa-x-twitter"></i></a><a href="https://www.youtube.com/user/TEATROSdelCANAL" target="_blank"><i class="fab fa-youtube"></i></a></div></div><a href="#" class="goToUpHeader2"><div class="goToUpHeader"><i class="fas fa-angle-up"></i></div></a><div id="footer" class="clearfix"><div class="columFooter1"><div class="footer-right"></div><div class="footer-center"></div></div><div class="columFooter2"><div class="footer-derecha"></div><div class="footer-left"><div id="ubm-premium-banners-4" class="widget ubm_premium_widget"></div></div></div><div style="clear: both"></div></div><div id="sub-footer" class="clearfix"><div class="copyright" itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress"><div id="head" class="copyright-item">© 2026
+<span itemprop="name"><a href="https://www.teatroscanal.com">Teatros del Canal</a>.</span></div><div id="location" class="copyright-item"><span itemprop="streetAddress">Cea Bermúdez, 1</span>.<span itemprop="postalCode">28003</span> <strong itemprop="addressLocality">Madrid</strong> |</div><div id="contact" class="copyright-item"><span itemprop="telephone">(+34) 91 308 99 99/50</span>  |
+<a href="mailto:espectaculos@uteteatrosdelcanal.com" title="espectaculos@uteteatrosdelcanal.com" itemprop="email">espectaculos@uteteatrosdelcanal.com</a></div></div><div id="secondary-nav"></div><div style="clear: both"></div></div></div> <script>( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );</script> <div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-manage-consent manage-consent-1 cmplz-dismissed">Gestionar consentimiento</button></div> <script>// ios old devices
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(() => {
+                        document.querySelectorAll('audio:not(.plyr audio)').forEach(function(audio, index) {
+                        audio.setAttribute('controls','')
+                    });
+                    }, 3000);
+                });</script> <svg width="0" height="0" class="h5ap_svg_hidden" style="display: none;">
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.997 511.997" id="exchange">
+<path d="M467.938 87.164L387.063 5.652c-7.438-7.495-19.531-7.54-27.02-.108s-7.54 19.525-.108 27.014l67.471 68.006-67.42 67.42c-7.464 7.457-7.464 19.557 0 27.014 3.732 3.732 8.616 5.598 13.507 5.598s9.781-1.866 13.513-5.591l80.876-80.876c7.443-7.44 7.463-19.495.056-26.965z"></path>
+<path d="M455.005 81.509H56.995c-10.552 0-19.104 8.552-19.104 19.104v147.741c0 10.552 8.552 19.104 19.104 19.104s19.104-8.552 19.104-19.104V119.718h378.905c10.552 0 19.104-8.552 19.104-19.104.001-10.552-8.551-19.105-19.103-19.105zM83.964 411.431l67.42-67.413c7.457-7.457 7.464-19.55 0-27.014-7.463-7.464-19.563-7.464-27.02 0l-80.876 80.869c-7.444 7.438-7.47 19.493-.057 26.963l80.876 81.512a19.064 19.064 0 0013.564 5.649c4.865 0 9.731-1.847 13.456-5.54 7.489-7.432 7.54-19.525.108-27.02l-67.471-68.006z"></path>
+<path d="M454.368 238.166c-10.552 0-19.104 8.552-19.104 19.104v135.005H56.995c-10.552 0-19.104 8.552-19.104 19.104s8.552 19.104 19.104 19.104h397.38c10.552 0 19.104-8.552 19.098-19.104V257.271c-.001-10.552-8.553-19.105-19.105-19.105z"></path>
+</symbol>
+</svg>
+<svg width="0" height="0" class="h5ap_svg_hidden" style="display: none;">
+<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.88 477.88" id="shuffle">
+<path d="M472.897 124.269a.892.892 0 01-.03-.031l-.017.017-68.267-68.267c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.713l39.151 39.151h-95.334c-65.948.075-119.391 53.518-119.467 119.467-.056 47.105-38.228 85.277-85.333 85.333h-102.4C7.641 324.072 0 331.713 0 341.139s7.641 17.067 17.067 17.067h102.4c65.948-.075 119.391-53.518 119.467-119.467.056-47.105 38.228-85.277 85.333-85.333h95.334l-39.134 39.134c-6.78 6.548-6.968 17.353-.419 24.132 6.548 6.78 17.353 6.968 24.132.419.142-.137.282-.277.419-.419l68.267-68.267c6.674-6.657 6.687-17.463.031-24.136z"></path>
+<path d="M472.897 329.069l-.03-.03-.017.017-68.267-68.267c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.712l39.151 39.151h-95.334a85.209 85.209 0 01-56.9-21.726c-7.081-6.222-17.864-5.525-24.086 1.555-6.14 6.988-5.553 17.605 1.319 23.874a119.28 119.28 0 0079.667 30.43h95.334l-39.134 39.134c-6.78 6.548-6.968 17.352-.42 24.132 6.548 6.78 17.352 6.968 24.132.42.142-.138.282-.277.42-.42l68.267-68.267c6.673-6.656 6.686-17.462.03-24.135zM199.134 149.702a119.28 119.28 0 00-79.667-30.43h-102.4C7.641 119.272 0 126.913 0 136.339s7.641 17.067 17.067 17.067h102.4a85.209 85.209 0 0156.9 21.726c7.081 6.222 17.864 5.525 24.086-1.555 6.14-6.989 5.553-17.606-1.319-23.875z"></path>
+</symbol>
+</svg> <script>const single_player = document.querySelectorAll(".h5ap_single_button");
+single_player.forEach(item  => {
+	const audio = item.querySelector("audio");
+	audio.volume = 0.6;
+	item.querySelector('.play').addEventListener("click", function () {
+		console.log('Audio');
+		single_player.forEach(player => {
+			player.querySelector("audio")?.pause();
+		})
+		setTimeout(() => {
+			audio.currentTime = 0;
+			audio.play();
+		}, 0);
+
+	});
+
+	item.querySelector('.pause').style.display = 'none';
+	item.querySelector('.pause').addEventListener("click", function () {
+		audio.pause();
+	});
+
+	audio.addEventListener("ended", () => {
+		item.querySelector(".play").style.display = 'inline-block';
+		item.querySelector(".pause").style.display = 'none';
+	});
+
+	audio.addEventListener("pause", () => {
+		item.querySelector(".play").style.display = 'inline-block';
+		item.querySelector(".pause").style.display = 'none';
+	});
+	audio.addEventListener("play", () => {
+		item.querySelector(".play").style.display = 'none';
+		item.querySelector(".pause").style.display = 'inline-block';
+	});
+
+})</script> <script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+  var fileInputs = document.querySelectorAll('input[type="file"][id^="input_13_"]');
+  fileInputs.forEach(function(fileInput) {
+    var label = document.createElement('label');
+    label.className = 'custom-file-upload';
+    label.innerText = 'Select File';
+    if (fileInput.id) label.htmlFor = fileInput.id;
+
+    var fileNameDisplay = document.createElement('span');
+    fileNameDisplay.className = 'file-name-display';
+    fileNameDisplay.innerText = 'No file selected';
+
+    fileInput.parentNode.insertBefore(label, fileInput);
+    fileInput.parentNode.insertBefore(fileNameDisplay, label.nextSibling);
+
+    fileInput.addEventListener('change', function(event) {
+      var fileName = event.target.value.split('\\').pop();
+      if (fileName) {
+        fileNameDisplay.innerText = fileName;
+        label.innerText = 'Change File';
+      } else {
+        fileNameDisplay.innerText = 'No file selected';
+        label.innerText = 'Select File';
+      }
+    });
+  });
+});</script> <script>/*  */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["domingo","lunes","martes","mi\u00e9rcoles","jueves","viernes","s\u00e1bado"],"dayNamesShort":["Dom","Lun","Mar","Mi\u00e9","Jue","Vie","S\u00e1b"],"dayNamesMin":["D","L","M","X","J","V","S"],"monthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"monthNamesShort":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"monthNamesMin":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/*  */</script><script type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/js/mobile_responsive.js?ver=1.0.0" id="mobile-responsive-js"></script> <script type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/js/superfish.js?ver=1.0" id="superfish-js"></script> <script type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/js/slides.min.jquery.js?ver=1.1.9" id="slides-js"></script> <script type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/js/jquery.isotope.min.js?ver=1.5.03" id="isotope-js"></script> <script type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/themes/teatroscanal-responsive/js/jquery.custom.js?ver=2.9" id="tz_custom-js"></script> <script type="text/javascript" id="cmplz-cookiebanner-js-extra">/*  */
+var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"44","version":"7.1.5","store_consent":"","do_not_track_enabled":"","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/www.teatroscanal.com\/wp-json\/complianz\/v1\/","locale":"lang=es&locale=es_ES","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"42","cookie_path":"\/","categories":{"statistics":"estad\u00edsticas","marketing":"m\u00e1rketing"},"tcf_active":"","placeholdertext":"<div class=\"cmplz-blocked-content-notice-body\">Haz clic en \u00abEstoy de acuerdo\u00bb para activar {service}\u00a0<div class=\"cmplz-links\"><a href=\"#\" class=\"cmplz-link cookie-statement\">{title}<\/a><\/div><\/div><button class=\"cmplz-accept-service\">Estoy de acuerdo<\/button>","css_file":"https:\/\/www.teatroscanal.com\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=44","page_links":{"eu":{"cookie-statement":{"title":"Pol\u00edtica de cookies","url":"https:\/\/www.teatroscanal.com\/politica-de-cookies-ue\/"},"privacy-statement":{"title":"Declaraci\u00f3n de privacidad","url":"https:\/\/www.teatroscanal.com\/politica-de-privacidad-y-proteccion-de-datos\/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"1","aria_label":"Haz clic en el bot\u00f3n para activar {service}"};
+/*  */</script> <script defer="" type="text/javascript" src="https://cdn.teatroscanal.com/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1732523895" id="cmplz-cookiebanner-js"></script> <script type="text/plain" data-service="google-analytics" data-category="statistics" async="" data-cmplz-src="https://www.googletagmanager.com/gtag/js?id=G-GHEBESBLFN"></script> <script type="text/plain" data-category="statistics">window['gtag_enable_tcf_support'] = false;
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GHEBESBLFN', {
+	cookie_flags:'secure;samesite=none',
+	
+});</script> 
+
+
+</div>

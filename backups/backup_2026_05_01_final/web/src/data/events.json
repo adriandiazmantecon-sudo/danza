@@ -1,0 +1,302 @@
+[
+  {
+    "id": "2bf0ca5b-0dba-4476-a3ee-62e03357efea",
+    "title": "La Cordero y su ejército",
+    "company": "SOL PICÓ CIA DE DANZA",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 9€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg",
+    "url": "https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/",
+    "sessions": [
+      {
+        "date": "2026-05-20",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "594d5362-6a16-46e8-9f1c-75991e26f784",
+    "title": "SACRESIZE",
+    "company": "Alberto Velasco",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 20€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/smush-webp/2025/05/avelascowebTC-543x314-1.jpg.webp",
+    "url": "https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/",
+    "sessions": [
+      {
+        "date": "2026-05-28",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-06-02",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-03",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-04",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-05",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-06",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-07",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "c2cb2211-d44e-4993-8e1a-b6acbe9af6de",
+    "title": "COMPAÑÍA NACIONAL DE DANZA",
+    "company": "NÚMEROS (II)",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_CND06.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/compania-nacional-danza",
+    "sessions": [
+      {
+        "date": "2027-01-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-17",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-01-18",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "8d62d92a-eb34-4b40-99e7-ca2a46a661ef",
+    "title": "EL LAGO DE LOS CISNES: LA NUEVA GENERACIÓN",
+    "company": "NEW ADVENTURES",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_SwanLakeMBourne.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/lago-cisnes-nueva-generacion-matthew-bourne",
+    "sessions": [
+      {
+        "date": "2025-11-19",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-20",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-21",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "12:30"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "e673e3e4-a944-43fb-b1a0-3ce68c149c19",
+    "title": "TANZTHEATER WUPPERTAL PINA BAUSCH",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_PINABAUSCH.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/tanztheater-wuppertal-pina-bausch",
+    "sessions": [
+      {
+        "date": "2027-06-11",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-12",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-13",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-06-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-16",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "d13a28d3-fec2-45ee-b218-1126d4ff2489",
+    "title": "JULIETA Y ROMEO",
+    "company": "REAL BALLET DE SUECIA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_JulietayRomeo03%20%281%29.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/real-ballet-suecia",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-08",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "17:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "21:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "6cc15905-169d-422f-afdf-ec77fe4f7ca9",
+    "title": "ALVIN AILEY AMERICAN DANCE THEATER",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_ALVINALEY.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/alvin-ailey-american-dance-theater",
+    "sessions": [
+      {
+        "date": "2026-10-14",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "12:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-10-18",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "d8dee4e7-060b-468d-aec6-413b0777d24e",
+    "title": "BALLET NACIONAL DE ESPAÑA",
+    "company": "MEDEA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_BNE.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/ballet-nacional-espana",
+    "sessions": [
+      {
+        "date": "2025-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-17",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "21:00"
+      },
+      {
+        "date": "2025-10-19",
+        "time": "18:00"
+      }
+    ]
+  }
+]
