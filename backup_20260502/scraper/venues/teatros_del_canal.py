@@ -28,13 +28,15 @@ def parse_spanish_date(date_str):
         return f"{year}-{month}-{day}"
     return ""
 
-def scrape_event_details(browser_or_context, url):
+def scrape_event_details(browser, url):
     """Scrapes a single event page for price and booking URL."""
     print(f"Scraping event details: {url}")
-    page = browser_or_context.new_page()
+    page = browser.new_page()
+    # Set a standard user agent
+    page.set_extra_http_headers({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"})
     
     try:
-        page.goto(url, wait_until="commit", timeout=60000)
+        page.goto(url, wait_until="domcontentloaded", timeout=60000)
         
         # Extract Title (Actually found in div.autor-show-show p)
         title_el = page.query_selector('div.autor-show-show p, p[itemprop="performers"]')
@@ -91,12 +93,7 @@ def scrape_event_details(browser_or_context, url):
         if booking_url:
             print(f"  Going to booking page: {booking_url}")
             # Navigate to booking page in the same page or new one
-            page.goto(booking_url, wait_until="commit", timeout=20000)
-            # Wait for content or timeout gracefully
-            try:
-                page.wait_for_selector('.DetalleTabla', timeout=10000)
-            except:
-                pass
+            page.goto(booking_url, wait_until="domcontentloaded", timeout=60000)
             # Wait a bit for the table
             page.wait_for_timeout(2000)
             
@@ -142,10 +139,9 @@ def scrape_teatros_del_canal():
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         
         # Discovery phase
-        listing_page = context.new_page()
+        listing_page = browser.new_page()
         listing_url = "https://www.teatroscanal.com/entradas/danza-madrid/"
         print(f"Discovering events from: {listing_url}")
         
@@ -174,7 +170,7 @@ def scrape_teatros_del_canal():
             
             for url in urls:
                 try:
-                    event = scrape_event_details(context, url)
+                    event = scrape_event_details(browser, url)
                     if event and event.sessions:
                         events.append(event)
                 except Exception as e:

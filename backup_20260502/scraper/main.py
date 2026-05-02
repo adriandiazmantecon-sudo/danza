@@ -20,18 +20,6 @@ from venues.majadahonda import scrape_majadahonda
 from venues.getafe import scrape_getafe
 from venues.mostoles import scrape_mostoles
 from venues.boadilla import scrape_boadilla
-from venues.madrid_conde_duque import scrape_conde_duque
-from venues.madrid_el_pozo import scrape_el_pozo
-from venues.madrid_maris_stella import scrape_maris_stella
-from venues.madrid_el_torito import scrape_el_torito
-from venues.madrid_casa_de_vacas import scrape_casa_de_vacas
-from venues.madrid_ciudad_pegaso import scrape_ciudad_pegaso
-from venues.madrid_vallecas_teatro import scrape_vallecas_teatro
-from venues.madrid_las_californias import scrape_las_californias
-from venues.madrid_trece_rosas import scrape_trece_rosas
-from venues.madrid_museo_historia import scrape_museo_historia
-from venues.madrid_ivan_de_vargas import scrape_ivan_de_vargas
-from venues.madrid_dulce_chacon import scrape_dulce_chacon
 
 def main():
     parser = argparse.ArgumentParser(description='Madrid Dance Events Scraper')
@@ -53,19 +41,7 @@ def main():
         'majadahonda': ('Casa de la Cultura Carmen Conde', scrape_majadahonda),
         'getafe': ('Teatro Federico García Lorca', scrape_getafe),
         'mostoles': ('Teatro del Bosque', scrape_mostoles),
-        'boadilla': ('Boadilla del Monte', scrape_boadilla),
-        'conde_duque': ('Centro de Cultura Contemporánea CondeDuque', scrape_conde_duque),
-        'el_pozo': ('CC El Pozo del Tío Raimundo', scrape_el_pozo),
-        'maris_stella': ('CEAC Maris Stella', scrape_maris_stella),
-        'el_torito': ('CC El Torito', scrape_el_torito),
-        'casa_de_vacas': ('CC Casa de Vacas', scrape_casa_de_vacas),
-        'ciudad_pegaso': ('CC Ciudad Pegaso', scrape_ciudad_pegaso),
-        'vallecas_teatro': ('Teatro Municipal de Vallecas', scrape_vallecas_teatro),
-        'las_californias': ('CC Las Californias', scrape_las_californias),
-        'trece_rosas': ('Auditorio Las Trece Rosas', scrape_trece_rosas),
-        'museo_historia': ('Museo de Historia', scrape_museo_historia),
-        'ivan_de_vargas': ('Biblioteca Iván de Vargas', scrape_ivan_de_vargas),
-        'dulce_chacon': ('Espacio Igualdad Dulce Chacón', scrape_dulce_chacon)
+        'boadilla': ('Boadilla del Monte', scrape_boadilla)
     }
 
     venues_to_scrape = []
@@ -91,13 +67,6 @@ def main():
         except:
             pass
 
-    # Start with existing events
-    merged_dict = {}
-    for e in existing_events:
-        url = e.get('url')
-        if url:
-            merged_dict[url] = e
-
     new_events_list = []
     for name, scraper_func in venues_to_scrape:
         try:
@@ -106,32 +75,35 @@ def main():
             else:
                 results = scraper_func()
             new_events_list.extend(results)
-            
-            # Save partial progress
-            if results:
-                new_events_dict = {e.url: e for e in results}
-                for url, event in new_events_dict.items():
-                    merged_dict[url] = event.to_dict() if hasattr(event, "to_dict") else event
-                
-                all_events = list(merged_dict.values())
-                os.makedirs(output_dir, exist_ok=True)
-                with open(output_path, "w", encoding="utf-8") as f:
-                    json.dump(all_events, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
-                print(f"Partial save: Added {len(results)} events from {name}. Total: {len(all_events)}")
-                
         except Exception as e:
             print(f"Error scraping {name}: {e}")
-            import traceback
-            traceback.print_exc()
 
-    # Final save (redundant but ensures everything is synced)
+    # Merge logic: preserve existing events (past events) while updating with new data
+    # We use URL as the unique identifier for events
+    new_events_dict = {e.url: e for e in new_events_list}
+    
+    # Start with existing events
+    merged_dict = {}
+    for e in existing_events:
+        url = e.get('url')
+        if url:
+            merged_dict[url] = e
+
+    # Update with new events (this replaces old data with fresh data for active events)
+    for url, event in new_events_dict.items():
+        merged_dict[url] = event.to_dict() if hasattr(event, "to_dict") else event
+
     all_events = list(merged_dict.values())
-    os.makedirs(output_dir, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_events, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
 
-    # Output final summary
-    print(f"Scraping completed. Total events in database: {len(all_events)}")
+    # Output to the web app's data folder
+    os.makedirs(output_dir, exist_ok=True)
+    
+    if all_events:
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(all_events, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
+        print(f"Successfully exported {len(all_events)} events to {output_path}")
+    else:
+        print("No events scraped. Kept the existing events.json.")
 
 if __name__ == "__main__":
     main()

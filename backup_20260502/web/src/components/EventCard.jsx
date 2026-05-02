@@ -7,41 +7,17 @@ export default function EventCard({ event }) {
   // Get the next upcoming session or the first one if all are past
   const sessions = [...event.sessions].sort((a, b) => new Date(a.date) - new Date(b.date));
   
-  const isFree = event.is_free || event.price_range?.toLowerCase().includes('gratuito');
-  const fallbackImage = "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000&auto=format&fit=crop";
-
   return (
     <div className="glass-card">
-      <div className="image-container" style={{ position: 'relative' }}>
+      {event.image_url && (
         <img 
-          src={event.image_url || fallbackImage} 
+          src={event.image_url} 
           alt={event.title} 
           className="event-image" 
           loading="lazy" 
           referrerPolicy="no-referrer"
-          onError={(e) => {
-            e.target.src = fallbackImage;
-          }}
         />
-        {isFree && (
-          <div className="free-badge" style={{
-            position: 'absolute',
-            top: '10px',
-            right: '10px',
-            background: 'rgba(34, 197, 94, 0.9)',
-            color: 'white',
-            padding: '4px 12px',
-            borderRadius: '20px',
-            fontSize: '0.8rem',
-            fontWeight: 'bold',
-            backdropFilter: 'blur(4px)',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-          }}>
-            Gratuito
-          </div>
-        )}
-      </div>
-      
+      )}
       <div className="tag">{event.type}</div>
       <h3 className="event-title">{event.title}</h3>
       <p className="subtitle" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>{event.company}</p>
@@ -71,14 +47,16 @@ export default function EventCard({ event }) {
       
       <div className="event-price" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-           <Ticket size={16} /> {isFree ? 'Gratuito' : event.price_range}
+           <Ticket size={16} /> {event.price_range}
         </span>
-        <a href={event.url} target="_blank" rel="noopener noreferrer" className="primary-button" style={{
+        <a href={event.url} target="_blank" rel="noopener noreferrer" style={{
+            background: 'var(--accent-primary)',
+            color: 'white',
             padding: '0.5rem 1rem',
+            borderRadius: '8px',
             textDecoration: 'none',
             fontSize: '0.9rem',
-            textAlign: 'center',
-            display: 'inline-block'
+            fontWeight: '500'
         }}>
            Saber más
         </a>

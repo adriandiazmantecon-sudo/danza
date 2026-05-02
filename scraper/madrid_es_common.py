@@ -138,21 +138,71 @@ def scrape_all_madrid_es_events() -> List[Event]:
                 if venue_elem:
                     venue_name = venue_elem.get('data-name') or venue_elem.get_text(strip=True)
                 
-                img_elem = item.select_one('div.event-image img')
+                # Fetch more details from the event page
                 image_url = ""
-                if img_elem:
-                    image_url = "https://www.madrid.es" + img_elem['src']
+                is_free = "gratis" in date_str.lower() or "entrada libre" in date_str.lower()
+                price_range = "Gratuito" if is_free else ""
+                
+                logger.info(f"Fetching details for: {title}")
+                detail_page = None
+                try:
+                    detail_page = context.new_page()
+                    # Use a longer timeout and more relaxed wait condition
+                    detail_page.goto(event_url, wait_until="commit", timeout=60000)
+                    
+                    # Wait for either the image or the gratuidad info to appear
+                    try:
+                        detail_page.wait_for_selector('.image-content img, p.gratuita, .actividades-info', timeout=15000)
+                    except:
+                        logger.warning(f"Timeout waiting for detail elements on {title}")
+                    
+                    detail_soup = BeautifulSoup(detail_page.content(), 'html.parser')
+                    
+                    # High quality image
+                    img_container = detail_soup.select_one('.image-content img')
+                    if img_container:
+                        image_url = "https://www.madrid.es" + img_container['src']
+                    
+                    # Pricing info - check multiple places for 'gratuito'
+                    free_badge = detail_soup.select_one('p.gratuita')
+                    info_text = detail_soup.get_text().lower()
+                    
+                    if (free_badge and "gratuito" in free_badge.get_text().lower()) or \
+                       ("precio: gratuito" in info_text) or \
+                       ("entrada gratuita" in info_text):
+                        is_free = True
+                        price_range = "Gratuito"
+                        logger.info(f"FREE EVENT detected: {title}")
+                    
+                except Exception as e:
+                    logger.warning(f"Error fetching detail page for {title}: {e}")
+                finally:
+                    if detail_page:
+                        detail_page.close()
+                
+                # Fallback for image if still empty
+                if not image_url:
+                    list_img = item.select_one('div.event-image img')
+                    if list_img:
+                        image_url = "https://www.madrid.es" + list_img['src']
                 
                 venue_obj = Venue(name=venue_name, municipality="Madrid")
                 
+                # Create a robust ID that handles Spanish characters better
+                # We'll normalize by removing accents
+                normalized_id_str = (title + venue_name).lower()
+                import unicodedata
+                normalized_id_str = unicodedata.normalize('NFKD', normalized_id_str).encode('ascii', 'ignore').decode('ascii')
+                event_id = re.sub(r'[^a-z0-9]', '', normalized_id_str)
+                
                 event = Event(
-                    id=re.sub(r'[^a-z0-9]', '', (title + venue_name).lower()),
+                    id=event_id,
                     title=title,
                     company="",
                     venue=venue_obj,
                     type="Danza",
-                    price_range="",
-                    is_free="gratis" in date_str.lower() or "entrada libre" in date_str.lower(),
+                    price_range=price_range,
+                    is_free=is_free,
                     image_url=image_url,
                     url=event_url,
                     sessions=sessions
