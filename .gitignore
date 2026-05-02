@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Debug/Temp files
+*.html
+*.txt
+*.png
+*.log
+scratch/
+backups/
+canal_html.txt
+cartelera.txt
+real_html.txt
+majadahonda_event.html
+majadahonda_list.html
+majadahonda_list_debug.html
+pozuelo_list_debug.html
+scratch_matadero.html
+scratch_matadero_event.html
+test_out.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+
+# Secret
+.env
