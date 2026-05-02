@@ -15,6 +15,7 @@ __pycache__/
 *.log
 check_*.py
 debug_*.py
+get_*.py
 inspect_*.py
 ocr_check.py
 test_*.py
