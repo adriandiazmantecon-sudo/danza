@@ -41,14 +41,13 @@ jobs:
             python scraper/main.py
           fi
 
-      - name: Upload to IONOS via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload data via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
           port: 22
-          local-dir: ./web/public/data/
-          server-dir: ./data/
-          only-newer: false
+          local_path: ./web/public/data/*
+          remote_path: ./data/
+          sftp_only: true
