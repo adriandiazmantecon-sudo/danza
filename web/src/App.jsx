@@ -1,8 +1,8 @@
-// Version 2.5 - Admin Panel Update
+// Version 2.6 - Fix blank screen and base path
 import React, { useState, useEffect } from 'react';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
-import { Search, Lock } from 'lucide-react';
+import { Search, Lock, RefreshCw } from 'lucide-react';
 function App() {
   const [events, setEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -222,7 +222,7 @@ function App() {
       )}
       
       <footer>
-        <p>Madrid Dance © 2026 | Versión 2.5</p>
+        <p>Madrid Dance © 2026 | Versión 2.6</p>
         <div style={{ marginTop: '1rem' }}>
            <span className="admin-link" onClick={() => setView(view === 'admin' ? 'home' : 'admin')}>
              {view === 'admin' ? 'Ver Cartelera' : 'Administración'}
