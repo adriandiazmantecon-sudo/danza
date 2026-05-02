@@ -12,6 +12,7 @@ __pycache__/
 *.html
 !web/index.html
 *.txt
+!requirements.txt
 *.png
 *.log
 check_*.py
