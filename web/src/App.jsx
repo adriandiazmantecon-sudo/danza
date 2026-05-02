@@ -1,3 +1,4 @@
+// Version 2.5 - Admin Panel Update
 import React, { useState, useEffect } from 'react';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
