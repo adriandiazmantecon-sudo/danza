@@ -39,5 +39,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./web/dist/
-          server-dir: ./ # Subir al raíz del hosting
+          server-dir: /danza/ # Subir a la carpeta donde apunta el subdominio
           only-newer: false

@@ -48,5 +48,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./web/public/data/
-          server-dir: ./public/data/ # Adjust this path to your IONOS structure
+          server-dir: /danza/data/ # Subir a la carpeta de datos dentro de danza
           only-newer: false
