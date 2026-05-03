@@ -1,5 +1,5 @@
 // Version 3.0 - Month Filtering & Unified Filters
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { format, parseISO, startOfMonth, endOfMonth, isWithinInterval } from 'date-fns';
 import { es } from 'date-fns/locale';
 import EventCard from './components/EventCard';
