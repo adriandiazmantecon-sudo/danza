@@ -72,7 +72,7 @@ function App() {
 
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const hasFutureSession = e.sessions.some(s => {
+    const hasFutureSession = e.sessions.length === 0 || e.sessions.some(s => {
       const sessionDate = new Date(s.date);
       sessionDate.setHours(0, 0, 0, 0);
       return sessionDate >= today;

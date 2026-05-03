@@ -13,7 +13,8 @@ def try_goto(page, url, timeout=90000, retries=3):
     for i in range(retries):
         try:
             print(f"  Navigating to {url} (Attempt {i+1})...")
-            page.goto(url, wait_until="commit", timeout=timeout)
+            # Use a slightly more conservative wait
+            page.goto(url, wait_until="load", timeout=timeout)
             return True
         except Exception as e:
             print(f"  Attempt {i+1} failed: {e}")
@@ -23,15 +24,16 @@ def try_goto(page, url, timeout=90000, retries=3):
     return False
 
 def parse_spanish_date(date_str):
-    """Converts 'Jueves 28 de Mayo de 2026' to '2026-05-28'"""
+    """Converts 'Jueves 28 de Mayo de 2026' to '2026-05-28' or handles '20 de mayo'"""
     months = {
         'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
         'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
         'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
     }
     # Clean up the string
-    clean_str = date_str.lower().replace(',', ' ').replace('.', ' ')
+    clean_str = date_str.lower().replace(',', ' ').replace('.', ' ').strip()
     parts = clean_str.split()
+    
     # Format: [Weekday] [Day] de [Month] de [Year]
     # Example: ['jueves', '28', 'de', 'mayo', 'de', '2026']
     if len(parts) >= 6:
@@ -39,12 +41,25 @@ def parse_spanish_date(date_str):
         month = months.get(parts[3], '01')
         year = parts[5]
         return f"{year}-{month}-{day}"
+    
+    # Format: [Day] de [Month]
+    # Example: ['20', 'de', 'mayo']
+    if len(parts) >= 3 and parts[1] == 'de':
+        day = parts[0].zfill(2)
+        month = months.get(parts[2], '01')
+        year = str(time.localtime().tm_year)
+        # If the month has passed, assume next year
+        current_month = time.localtime().tm_mon
+        if int(month) < current_month:
+            year = str(int(year) + 1)
+        return f"{year}-{month}-{day}"
+        
     return ""
 
-def scrape_event_details(browser, url):
+def scrape_event_details(context, url):
     """Scrapes a single event page for price and booking URL."""
     print(f"Scraping event details: {url}")
-    page = browser.new_page()
+    page = context.new_page()
     # Set a standard user agent
     page.set_extra_http_headers({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"})
     
@@ -108,16 +123,16 @@ def scrape_event_details(browser, url):
                 # Extract sessions from .DetalleTabla
                 rows = page.query_selector_all('.DetalleTabla')
                 for row in rows:
-                date_el = row.query_selector('.ListaSesionesFecha')
-                hour_el = row.query_selector('.ListaSesionesHora a')
-                
-                if date_el and hour_el:
-                    date_str = date_el.inner_text().strip()
-                    time_str = hour_el.inner_text().strip()
+                    date_el = row.query_selector('.ListaSesionesFecha')
+                    hour_el = row.query_selector('.ListaSesionesHora a')
                     
-                    iso_date = parse_spanish_date(date_str)
-                    if iso_date:
-                        sessions.append(Session(date=iso_date, time=time_str))
+                    if date_el and hour_el:
+                        date_str = date_el.inner_text().strip()
+                        time_str = hour_el.inner_text().strip()
+                        
+                        iso_date = parse_spanish_date(date_str)
+                        if iso_date:
+                            sessions.append(Session(date=iso_date, time=time_str))
         
         if not sessions:
             print("  Warning: No sessions found on booking page.")
@@ -148,25 +163,32 @@ def scrape_teatros_del_canal():
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
+        # Set a global user agent for the context
+        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         
         # Discovery phase
-        listing_page = browser.new_page()
+        listing_page = context.new_page()
         listing_url = "https://www.teatroscanal.com/entradas/danza-madrid/"
         print(f"Discovering events from: {listing_url}")
         
         try:
             if try_goto(listing_page, listing_url):
-                listing_page.wait_for_timeout(5000)
+                # Wait for the selector instead of fixed time
+                try:
+                    listing_page.wait_for_selector('.div-show2', timeout=20000)
+                except:
+                    print("  Warning: Timeout waiting for .div-show2, proceeding anyway...")
                 
                 urls = []
                 items = listing_page.query_selector_all('.div-show2')
-            print(f"Found {len(items)} items in listing")
-            for item in items:
-                link_el = item.query_selector('a.btn-info')
-                if link_el:
-                    href = link_el.get_attribute('href')
-                    if href:
-                        urls.append(href)
+                print(f"Found {len(items)} items in listing")
+                for item in items:
+                    # Look for links in various places
+                    link_el = item.query_selector('a.btn-info') or item.query_selector('h2.show-home a')
+                    if link_el:
+                        href = link_el.get_attribute('href')
+                        if href:
+                            urls.append(href)
             
             listing_page.close()
             
@@ -178,7 +200,7 @@ def scrape_teatros_del_canal():
             
             for url in urls:
                 try:
-                    event = scrape_event_details(browser, url)
+                    event = scrape_event_details(context, url)
                     if event and "ABONO" not in event.title.upper():
                         events.append(event)
                 except Exception as e:
