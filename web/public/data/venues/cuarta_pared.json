@@ -1,0 +1,218 @@
+[
+  {
+    "id": "6166b71a-8147-442f-b352-6494a7756c08",
+    "title": "Stellium",
+    "company": "EYAS Dance Project",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2019/12/LOGO-scaled-e1668509863224-300x77.png.webp",
+    "url": "https://www.cuartapared.es/project/stellium/",
+    "sessions": [
+      {
+        "date": "2025-09-05",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-09-06",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "88d684b4-d041-4594-8bfb-60b53adfac31",
+    "title": "SOLO IMPROVISA– V Certamen de Improvisación en danza",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "6€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/solo-improvisa/",
+    "sessions": [
+      {
+        "date": "2025-10-30",
+        "time": "20:00"
+      },
+      {
+        "date": "2025-10-31",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "2ea23ad5-3491-4a83-beb3-6c78d9990b8c",
+    "title": "Spira",
+    "company": "Ogmia",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/spira/",
+    "sessions": [
+      {
+        "date": "2025-11-18",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-11-19",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "056797ee-5c73-4d89-a2f5-0afc7b2b07e3",
+    "title": "‎Ábrego – Alba González",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "",
+    "url": "https://www.cuartapared.es/project/abrego/",
+    "sessions": [
+      {
+        "date": "2025-12-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-12-10",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "0fac7373-7241-4e24-9db9-e40de3ecc757",
+    "title": "Flop",
+    "company": "Antonio Ruz",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/flop/",
+    "sessions": [
+      {
+        "date": "2026-01-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-01-10",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "2a9c8527-2276-4590-8656-f5988496bbbb",
+    "title": "La culpa",
+    "company": "Elena Puchol",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/la-culpa/",
+    "sessions": [
+      {
+        "date": "2026-02-20",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-02-21",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "d1378990-ef7c-43f5-b27f-50ab3d4cd5d6",
+    "title": "Informal Stage",
+    "company": "Losinformalls",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/informal-stage/",
+    "sessions": [
+      {
+        "date": "2026-03-13",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-03-14",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "7dc82b05-882d-405f-8f98-de7169cca376",
+    "title": "Lo que queda",
+    "company": "Losdedae",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/01/murmullo-pixel-de-platajpg-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/lo-que-queda/",
+    "sessions": [
+      {
+        "date": "2026-04-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-04-11",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "1d03a906-d599-4315-a2b9-6396ebc16a19",
+    "title": "Emigradas",
+    "company": "Cienfuegos Danza",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€ (50% y 30% de descuento por compra anticipada)",
+    "is_free": false,
+    "image_url": "",
+    "url": "https://www.cuartapared.es/project/emigradas/",
+    "sessions": [
+      {
+        "date": "2026-05-29",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "20:30"
+      }
+    ]
+  }
+]

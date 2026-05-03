@@ -42,6 +42,7 @@ from venues.madrid_ivan_de_vargas import scrape_ivan_de_vargas
 from venues.madrid_dulce_chacon import scrape_dulce_chacon
 from venues.escalera_jacob import scrape_escalera_jacob
 from venues.madrid_la_usina import scrape_la_usina
+from venues.madrid_cuarta_pared import scrape_cuarta_pared
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -85,7 +86,8 @@ def main():
         'ivan_de_vargas': ('Biblioteca Iván de Vargas', scrape_ivan_de_vargas),
         'dulce_chacon': ('Espacio Igualdad Dulce Chacón', scrape_dulce_chacon),
         'escalera_jacob': ('La Escalera de Jacob', scrape_escalera_jacob),
-        'la_usina': ('Teatro La Usina', scrape_la_usina)
+        'la_usina': ('Teatro La Usina', scrape_la_usina),
+        'cuarta_pared': ('Sala Cuarta Pared', scrape_cuarta_pared)
     }
 
     venues_to_scrape = []
