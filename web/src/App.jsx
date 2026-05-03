@@ -1,14 +1,19 @@
-// Version 2.7 - UI Optimizations and Stats
-import React, { useState, useEffect } from 'react';
+// Version 3.0 - Month Filtering & Unified Filters
+import React, { useState, useEffect, useMemo } from 'react';
+import { format, parseISO, startOfMonth, endOfMonth, isWithinInterval } from 'date-fns';
+import { es } from 'date-fns/locale';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
-import { Search, Lock, RefreshCw } from 'lucide-react';
+import FilterMenu from './components/FilterMenu';
+import { Search, Lock, RefreshCw, Calendar, SlidersHorizontal } from 'lucide-react';
+
 function App() {
   const [events, setEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filterType, setFilterType] = useState('All');
   const [filterMunicipality, setFilterMunicipality] = useState('All');
   const [filterVenue, setFilterVenue] = useState('All');
+  const [filterMonth, setFilterMonth] = useState('All'); // YYYY-MM
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('DateAsc');
   const [isFreeOnly, setIsFreeOnly] = useState(false);
@@ -30,33 +35,28 @@ function App() {
       });
   }, []);
 
-  // Helper to get counts based on current filters
-  const getVenueCounts = () => {
-    const counts = {};
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
+  // Calculate available months for the dropdown
+  const availableMonths = useMemo(() => {
+    const monthsSet = new Set();
     events.forEach(e => {
-        const hasFutureSession = e.sessions.some(s => {
-          const sessionDate = new Date(s.date);
-          sessionDate.setHours(0, 0, 0, 0);
-          return sessionDate >= today;
-        });
-        
-        if (showPastEvents || hasFutureSession) {
-          counts[e.venue.name] = (counts[e.venue.name] || 0) + 1;
-        }
+      e.sessions.forEach(s => {
+        const d = parseISO(s.date);
+        const key = format(d, 'yyyy-MM');
+        monthsSet.add(key);
+      });
+    });
+    return Array.from(monthsSet).sort();
+  }, [events]);
+
+  const venueCounts = useMemo(() => {
+    const counts = {};
+    events.forEach(e => {
+      counts[e.venue.name] = (counts[e.venue.name] || 0) + 1;
     });
     return counts;
-  };
+  }, [events]);
 
-  const fullVenueCounts = {};
-  events.forEach(e => {
-    fullVenueCounts[e.venue.name] = (fullVenueCounts[e.venue.name] || 0) + 1;
-  });
-
-  const venueCounts = getVenueCounts();
-  const venues = ['All', ...Object.keys(fullVenueCounts).sort()];
+  const venues = ['All', ...Object.keys(venueCounts).sort()];
   const totalAbsoluteEventsCount = events.length;
   const totalVenuesCount = venues.length - 1;
 
@@ -70,10 +70,19 @@ function App() {
     if (searchQuery && !e.title.toLowerCase().includes(searchQuery.toLowerCase())) return false;
     if (isFreeOnly && !e.is_free) return false;
 
+    // Month filter
+    if (filterMonth !== 'All') {
+      const hasSessionInMonth = e.sessions.some(s => {
+        const sessionDate = parseISO(s.date);
+        return format(sessionDate, 'yyyy-MM') === filterMonth;
+      });
+      if (!hasSessionInMonth) return false;
+    }
+
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const hasFutureSession = e.sessions.length === 0 || e.sessions.some(s => {
-      const sessionDate = new Date(s.date);
+      const sessionDate = parseISO(s.date);
       sessionDate.setHours(0, 0, 0, 0);
       return sessionDate >= today;
     });
@@ -84,8 +93,6 @@ function App() {
 
   const handleAdminLogin = (e) => {
     e.preventDefault();
-    // Security: The real password check now happens in the PHP backend.
-    // We just allow entry to the UI here.
     if (adminPassword.length > 0) {
       setIsAdminAuthenticated(true);
     } else {
@@ -95,7 +102,7 @@ function App() {
 
   const sortedEvents = [...filteredEvents].sort((a, b) => {
     const getFirstDate = (event) => {
-      const dates = event.sessions.map(s => new Date(s.date).getTime());
+      const dates = event.sessions.map(s => parseISO(s.date).getTime());
       return dates.length > 0 ? Math.min(...dates) : Infinity;
     };
 
@@ -128,59 +135,39 @@ function App() {
         <p className="subtitle">{totalAbsoluteEventsCount} espectáculos de ballet, danza contemporánea, baile y flamenco.</p>
       </header>
 
-      <div className="filters-container">
-        <div style={{ position: 'relative', flexGrow: 1, minWidth: '250px' }}>
-          <Search size={20} style={{ position: 'absolute', left: '10px', top: '12px', color: 'var(--text-secondary)' }} />
+      <div className="controls-bar glass-card">
+        <div className="search-wrapper">
+          <Search size={20} className="search-icon" />
           <input 
             type="text" 
             placeholder="Buscar espectáculos..." 
-            style={{ width: '100%', paddingLeft: '2.5rem' }}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
         
-        <select value={filterType} onChange={(e) => setFilterType(e.target.value)}>
-          {types.map(t => <option key={t} value={t}>{t === 'All' ? 'Todos los tipos' : t}</option>)}
-        </select>
-        
-        <select value={filterMunicipality} onChange={(e) => setFilterMunicipality(e.target.value)}>
-          {municipalities.map(m => <option key={m} value={m}>{m === 'All' ? 'Todos los municipios' : m}</option>)}
-        </select>
+        <div className="dropdowns-group">
+          <div className="month-selector">
+            <Calendar size={18} className="selector-icon" />
+            <select value={filterMonth} onChange={(e) => setFilterMonth(e.target.value)}>
+              <option value="All">Cualquier mes</option>
+              {availableMonths.map(m => (
+                <option key={m} value={m}>
+                  {format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es })}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <select value={filterVenue} onChange={(e) => setFilterVenue(e.target.value)}>
-          <option value="All">Todos los teatros ({totalVenuesCount})</option>
-          {venues.filter(v => v !== 'All').map(v => (
-            <option key={v} value={v}>{v}</option>
-          ))}
-        </select>
-
-        <label className="checkbox-label">
-          <input 
-            type="checkbox" 
-            checked={isFreeOnly} 
-            onChange={(e) => setIsFreeOnly(e.target.checked)} 
+          <FilterMenu 
+            filterType={filterType} setFilterType={setFilterType} types={types}
+            filterMunicipality={filterMunicipality} setFilterMunicipality={setFilterMunicipality} municipalities={municipalities}
+            filterVenue={filterVenue} setFilterVenue={setFilterVenue} venues={venues} totalVenuesCount={totalVenuesCount}
+            isFreeOnly={isFreeOnly} setIsFreeOnly={setIsFreeOnly}
+            showPastEvents={showPastEvents} setShowPastEvents={setShowPastEvents}
+            sortBy={sortBy} setSortBy={setSortBy}
           />
-          Solo gratuitos
-        </label>
-
-        <label className="checkbox-label">
-          <input 
-            type="checkbox" 
-            checked={showPastEvents} 
-            onChange={(e) => setShowPastEvents(e.target.checked)} 
-          />
-          Mostrar pasados
-        </label>
-        
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-          <option value="DateAsc">Fecha (Más cercanos)</option>
-          <option value="DateDesc">Fecha (Más lejanos)</option>
-          <option value="PriceAsc">Precio (Menor a mayor)</option>
-          <option value="PriceDesc">Precio (Mayor a menor)</option>
-          <option value="Venue">Teatro (A-Z)</option>
-          <option value="Municipality">Municipio (A-Z)</option>
-        </select>
+        </div>
       </div>
 
       {view === 'admin' ? (
@@ -203,7 +190,7 @@ function App() {
         ) : (
           <AdminPanel 
             password={adminPassword} 
-            venueCounts={fullVenueCounts}
+            venueCounts={venueCounts}
             onLogout={() => { 
               setIsAdminAuthenticated(false); 
               setAdminPassword('');
@@ -213,6 +200,10 @@ function App() {
         )
       ) : (
         <>
+          <div className="results-summary">
+            Mostrando <strong>{sortedEvents.length}</strong> espectáculos
+            {filterMonth !== 'All' && <span> en <strong>{format(parseISO(`${filterMonth}-01`), 'MMMM yyyy', { locale: es })}</strong></span>}
+          </div>
 
           <div className="events-grid">
             {sortedEvents.map(event => (
@@ -223,6 +214,15 @@ function App() {
           {sortedEvents.length === 0 && !isLoading && (
             <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-secondary)' }}>
               <p>No se encontraron espectáculos con esos filtros.</p>
+              <button className="text-button" style={{ marginTop: '1rem' }} onClick={() => {
+                setFilterType('All');
+                setFilterMunicipality('All');
+                setFilterVenue('All');
+                setFilterMonth('All');
+                setSearchQuery('');
+                setIsFreeOnly(false);
+                setShowPastEvents(false);
+              }}>Limpiar todos los filtros</button>
             </div>
           )}
 
@@ -236,7 +236,7 @@ function App() {
       )}
       
       <footer>
-        <p>Madrid Dance © 2026 | Versión 2.7</p>
+        <p>Madrid Dance © 2026 | Versión 3.0</p>
         <div style={{ marginTop: '1rem' }}>
            <span className="admin-link" onClick={() => setView(view === 'admin' ? 'home' : 'admin')}>
              {view === 'admin' ? 'Ver Cartelera' : 'Administración'}
