@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   // Calculate available months for the dropdown
-  const availableMonths = useMemo(() => {
+  const { currentMonths, pastMonths } = useMemo(() => {
     const monthsSet = new Set();
     events.forEach(e => {
       e.sessions.forEach(s => {
@@ -45,7 +45,23 @@ function App() {
         monthsSet.add(key);
       });
     });
-    return Array.from(monthsSet).sort();
+    
+    const sorted = Array.from(monthsSet).sort().reverse();
+    const today = new Date();
+    const currentMonthKey = format(today, 'yyyy-MM');
+    
+    const current = [];
+    const past = [];
+    
+    sorted.forEach(m => {
+      if (m >= currentMonthKey) {
+        current.push(m);
+      } else {
+        past.push(m);
+      }
+    });
+    
+    return { currentMonths: current, pastMonths: past };
   }, [events]);
 
   const venueCounts = useMemo(() => {
@@ -151,11 +167,20 @@ function App() {
             <Calendar size={18} className="selector-icon" />
             <select value={filterMonth} onChange={(e) => setFilterMonth(e.target.value)}>
               <option value="All">Cualquier mes</option>
-              {availableMonths.map(m => (
+              {currentMonths.map(m => (
                 <option key={m} value={m}>
                   {format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es })}
                 </option>
               ))}
+              {pastMonths.length > 0 && (
+                <optgroup label="Meses anteriores">
+                  {pastMonths.map(m => (
+                    <option key={m} value={m}>
+                      {format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es })}
+                    </option>
+                  ))}
+                </optgroup>
+              )}
             </select>
           </div>
 

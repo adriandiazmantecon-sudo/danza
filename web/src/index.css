@@ -255,10 +255,21 @@ h1 {
   right: 0;
   width: 380px;
   z-index: 1000; /* Higher than card content */
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
   padding: 2rem;
   animation: slideIn 0.2s ease-out;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 23, 42, 0.98); /* More opaque */
+  backdrop-filter: blur(20px);
+}
+
+optgroup {
+  background: var(--bg-dark);
+  color: var(--accent-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
 }
 
 @keyframes slideIn {
