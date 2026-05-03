@@ -5,7 +5,7 @@ import { es } from 'date-fns/locale';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
 import FilterMenu from './components/FilterMenu';
-import { Search, Lock, RefreshCw, Calendar, SlidersHorizontal } from 'lucide-react';
+import { Search, Lock, RefreshCw, Calendar, SlidersHorizontal, ChevronDown, ChevronUp } from 'lucide-react';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -63,6 +63,25 @@ function App() {
     
     return { currentMonths: current, pastMonths: past };
   }, [events]);
+
+  const [isMonthOpen, setIsMonthOpen] = useState(false);
+  const [showPastMonths, setShowPastMonths] = useState(false);
+  const monthRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (monthRef.current && !monthRef.current.contains(event.target)) {
+        setIsMonthOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const getMonthName = (m) => {
+    if (m === 'All') return 'Cualquier mes';
+    return format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es });
+  };
 
   const venueCounts = useMemo(() => {
     const counts = {};
@@ -163,25 +182,66 @@ function App() {
         </div>
         
         <div className="dropdowns-group">
-          <div className="month-selector">
-            <Calendar size={18} className="selector-icon" />
-            <select value={filterMonth} onChange={(e) => setFilterMonth(e.target.value)}>
-              <option value="All">Cualquier mes</option>
-              {currentMonths.map(m => (
-                <option key={m} value={m}>
-                  {format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es })}
-                </option>
-              ))}
-              {pastMonths.length > 0 && (
-                <optgroup label="Meses anteriores">
-                  {pastMonths.map(m => (
-                    <option key={m} value={m}>
-                      {format(parseISO(`${m}-01`), 'MMMM yyyy', { locale: es })}
-                    </option>
-                  ))}
-                </optgroup>
-              )}
-            </select>
+          <div className="month-selector-custom" ref={monthRef}>
+            <button 
+              className={`month-selector-btn ${isMonthOpen ? 'active' : ''}`}
+              onClick={() => setIsMonthOpen(!isMonthOpen)}
+            >
+              <Calendar size={18} className="selector-icon-static" />
+              <span style={{ flex: 1 }}>{getMonthName(filterMonth)}</span>
+              <ChevronDown size={16} className={`chevron ${isMonthOpen ? 'open' : ''}`} />
+            </button>
+
+            {isMonthOpen && (
+              <div className="month-dropdown">
+                <button 
+                  className={`month-option ${filterMonth === 'All' ? 'active' : ''}`}
+                  onClick={() => { setFilterMonth('All'); setIsMonthOpen(false); }}
+                >
+                  Cualquier mes
+                </button>
+                
+                {currentMonths.map(m => (
+                  <button 
+                    key={m} 
+                    className={`month-option ${filterMonth === m ? 'active' : ''}`}
+                    onClick={() => { setFilterMonth(m); setIsMonthOpen(false); }}
+                  >
+                    {getMonthName(m)}
+                  </button>
+                ))}
+
+                {pastMonths.length > 0 && (
+                  <>
+                    <button 
+                      className="past-months-toggle"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowPastMonths(!showPastMonths);
+                      }}
+                    >
+                      <span>Meses anteriores</span>
+                      {showPastMonths ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                    </button>
+                    
+                    {showPastMonths && (
+                      <div className="past-months-list">
+                        {pastMonths.map(m => (
+                          <button 
+                            key={m} 
+                            className={`month-option ${filterMonth === m ? 'active' : ''}`}
+                            onClick={() => { setFilterMonth(m); setIsMonthOpen(false); }}
+                            style={{ paddingLeft: '2rem' }}
+                          >
+                            {getMonthName(m)}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            )}
           </div>
 
           <FilterMenu 
