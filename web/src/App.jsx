@@ -1,4 +1,4 @@
-// Version 2.6 - Fix blank screen and base path
+// Version 2.7 - UI Optimizations and Stats
 import React, { useState, useEffect } from 'react';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
@@ -50,9 +50,15 @@ function App() {
     return counts;
   };
 
+  const fullVenueCounts = {};
+  events.forEach(e => {
+    fullVenueCounts[e.venue.name] = (fullVenueCounts[e.venue.name] || 0) + 1;
+  });
+
   const venueCounts = getVenueCounts();
-  const venues = ['All', ...Object.keys(venueCounts).sort()];
-  const totalEventsCount = Object.values(venueCounts).reduce((a, b) => a + b, 0);
+  const venues = ['All', ...Object.keys(fullVenueCounts).sort()];
+  const totalAbsoluteEventsCount = events.length;
+  const totalVenuesCount = venues.length - 1;
 
   const types = ['All', ...new Set(events.map(e => e.type))].sort();
   const municipalities = ['All', ...new Set(events.map(e => e.venue.municipality))].sort();
@@ -119,7 +125,7 @@ function App() {
     <div className="app-container">
       <header>
         <h1>Danza en Madrid</h1>
-        <p className="subtitle">Descubre los mejores espectáculos de ballet, danza contemporánea y flamenco.</p>
+        <p className="subtitle">{totalAbsoluteEventsCount} espectáculos de ballet, danza contemporánea, baile y flamenco.</p>
       </header>
 
       <div className="filters-container">
@@ -143,9 +149,9 @@ function App() {
         </select>
 
         <select value={filterVenue} onChange={(e) => setFilterVenue(e.target.value)}>
-          <option value="All">Todos los teatros ({totalEventsCount})</option>
+          <option value="All">Todos los teatros ({totalVenuesCount})</option>
           {venues.filter(v => v !== 'All').map(v => (
-            <option key={v} value={v}>{v} ({venueCounts[v]})</option>
+            <option key={v} value={v}>{v}</option>
           ))}
         </select>
 
@@ -197,6 +203,7 @@ function App() {
         ) : (
           <AdminPanel 
             password={adminPassword} 
+            venueCounts={fullVenueCounts}
             onLogout={() => { 
               setIsAdminAuthenticated(false); 
               setAdminPassword('');
@@ -206,6 +213,7 @@ function App() {
         )
       ) : (
         <>
+
           <div className="events-grid">
             {sortedEvents.map(event => (
               <EventCard key={event.id} event={event} />
@@ -228,7 +236,7 @@ function App() {
       )}
       
       <footer>
-        <p>Madrid Dance © 2026 | Versión 2.6</p>
+        <p>Madrid Dance © 2026 | Versión 2.7</p>
         <div style={{ marginTop: '1rem' }}>
            <span className="admin-link" onClick={() => setView(view === 'admin' ? 'home' : 'admin')}>
              {view === 'admin' ? 'Ver Cartelera' : 'Administración'}

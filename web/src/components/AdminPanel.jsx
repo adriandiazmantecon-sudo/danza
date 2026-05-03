@@ -14,7 +14,7 @@ const THEATERS = [
   { id: 'mostoles', name: 'Teatro del Bosque' }
 ];
 
-export default function AdminPanel({ onLogout, password }) {
+export default function AdminPanel({ onLogout, password, venueCounts }) {
   const [selected, setSelected] = useState([]);
   const [isUpdating, setIsUpdating] = useState(false);
   const [status, setStatus] = useState(null);
@@ -129,6 +129,40 @@ export default function AdminPanel({ onLogout, password }) {
           >
             Actualizar TODO
           </button>
+        </div>
+      </section>
+
+      <section style={{ marginTop: '3rem' }}>
+        <h3 style={{ marginBottom: '1.5rem' }}>Estadísticas de Teatros (Total eventos)</h3>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
+          gap: '1rem' 
+        }}>
+          {Object.entries(venueCounts || {}).sort((a,b) => b[1] - a[1]).map(([name, count]) => (
+            <div 
+              key={name}
+              style={{ 
+                padding: '1rem', 
+                background: 'rgba(255,255,255,0.03)', 
+                borderRadius: '12px',
+                border: '1px solid rgba(255,255,255,0.05)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+              }}
+            >
+              <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{name}</span>
+              <span style={{ 
+                fontWeight: 600, 
+                color: 'var(--accent-primary)',
+                background: 'rgba(var(--accent-rgb), 0.1)',
+                padding: '0.2rem 0.6rem',
+                borderRadius: '6px',
+                fontSize: '0.85rem'
+              }}>{count}</span>
+            </div>
+          ))}
         </div>
       </section>
 
