@@ -40,6 +40,7 @@ from venues.madrid_trece_rosas import scrape_trece_rosas
 from venues.madrid_museo_historia import scrape_museo_historia
 from venues.madrid_ivan_de_vargas import scrape_ivan_de_vargas
 from venues.madrid_dulce_chacon import scrape_dulce_chacon
+from venues.escalera_jacob import scrape_escalera_jacob
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -81,7 +82,8 @@ def main():
         'trece_rosas': ('Auditorio Las Trece Rosas', scrape_trece_rosas),
         'museo_historia': ('Museo de Historia', scrape_museo_historia),
         'ivan_de_vargas': ('Biblioteca Iván de Vargas', scrape_ivan_de_vargas),
-        'dulce_chacon': ('Espacio Igualdad Dulce Chacón', scrape_dulce_chacon)
+        'dulce_chacon': ('Espacio Igualdad Dulce Chacón', scrape_dulce_chacon),
+        'escalera_jacob': ('La Escalera de Jacob', scrape_escalera_jacob)
     }
 
     venues_to_scrape = []
