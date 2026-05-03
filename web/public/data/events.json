@@ -2065,5 +2065,88 @@
         "time": "20:30"
       }
     ]
+  },
+  {
+    "id": "0440a0d2-64cc-48d2-ac35-468b5cde491c",
+    "title": "Peter Pan",
+    "company": "Varios",
+    "venue": {
+      "name": "El Corral de Usera",
+      "city": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "10,75 €",
+    "is_free": false,
+    "image_url": "https://www.eventim-light.com/es/api/image/69f2fdfd1b195f1460aaae85/shop_cover_v3/webp",
+    "url": "https://www.eventim-light.com/es/a/674759731557ff1148d8ca20/s/69e61b222a2031003e747979",
+    "sessions": [
+      {
+        "date": "2026-05-29",
+        "time": "18:00",
+        "price": "10,75 €"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "18:00",
+        "price": "10,75 €"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "18:00",
+        "price": "10,75 €"
+      }
+    ]
+  },
+  {
+    "id": "4a76fd29-15bd-4fc8-8c9f-766821be5b5d",
+    "title": "Muestra de Avanzado Danza",
+    "company": "Varios",
+    "venue": {
+      "name": "El Corral de Usera",
+      "city": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7,65 €",
+    "is_free": false,
+    "image_url": "https://www.eventim-light.com/es/api/image/69f0d86b1b195f1460aa3626/shop_cover_v3/webp",
+    "url": "https://www.eventim-light.com/es/a/674759731557ff1148d8ca20/s/69e647e6a71f5564f3605023",
+    "sessions": [
+      {
+        "date": "2026-06-04",
+        "time": "18:00",
+        "price": "7,65 €"
+      },
+      {
+        "date": "2026-06-05",
+        "time": "18:00",
+        "price": "7,65 €"
+      }
+    ]
+  },
+  {
+    "id": "183b82ed-8adb-4b99-8621-dfd9db54c6c0",
+    "title": "Muestra de Básico Danza 2026",
+    "company": "Varios",
+    "venue": {
+      "name": "El Corral de Usera",
+      "city": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7,65 €",
+    "is_free": false,
+    "image_url": "https://www.eventim-light.com/es/api/image/69f0d9d3bb2274ef0f6c7f64/shop_cover_v3/webp",
+    "url": "https://www.eventim-light.com/es/a/674759731557ff1148d8ca20/s/69e64b8d2a2031003e748151",
+    "sessions": [
+      {
+        "date": "2026-06-07",
+        "time": "18:00",
+        "price": "7,65 €"
+      },
+      {
+        "date": "2026-06-08",
+        "time": "11:00",
+        "price": "7,65 €"
+      }
+    ]
   }
 ]
