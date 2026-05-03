@@ -1,0 +1,214 @@
+[
+  {
+    "id": "df368513-e567-45ca-9baf-cd4552287135",
+    "title": "EL LAGO DE LOS CISNES: LA NUEVA GENERACIÓN",
+    "company": "NEW ADVENTURES",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_SwanLakeMBourne.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/lago-cisnes-nueva-generacion-matthew-bourne",
+    "sessions": [
+      {
+        "date": "2025-11-19",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-20",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-21",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "12:30"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "a919f98d-47ed-4fd9-92e0-c3c97be81483",
+    "title": "BALLET NACIONAL DE ESPAÑA",
+    "company": "MEDEA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_BNE.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/ballet-nacional-espana",
+    "sessions": [
+      {
+        "date": "2025-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-17",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "21:00"
+      },
+      {
+        "date": "2025-10-19",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "93a6a3c4-4ff1-4849-8383-e5d510a1acfa",
+    "title": "JULIETA Y ROMEO",
+    "company": "REAL BALLET DE SUECIA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_JulietayRomeo03%20%281%29.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/real-ballet-suecia",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-08",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "17:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "21:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "1404dc8f-d1b3-47eb-b4f9-676e349ed04a",
+    "title": "ALVIN AILEY AMERICAN DANCE THEATER",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_ALVINALEY.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/alvin-ailey-american-dance-theater",
+    "sessions": [
+      {
+        "date": "2026-10-14",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "12:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-10-18",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "cf3bb150-1a35-4e59-8762-1b514406a506",
+    "title": "TANZTHEATER WUPPERTAL PINA BAUSCH",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_PINABAUSCH.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/tanztheater-wuppertal-pina-bausch",
+    "sessions": [
+      {
+        "date": "2027-06-11",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-12",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-13",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-06-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-16",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "35b36816-beae-4975-9cc4-0ca323cf0fce",
+    "title": "COMPAÑÍA NACIONAL DE DANZA",
+    "company": "NÚMEROS (II)",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_CND06.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/compania-nacional-danza",
+    "sessions": [
+      {
+        "date": "2027-01-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-17",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-01-18",
+        "time": "19:30"
+      }
+    ]
+  }
+]

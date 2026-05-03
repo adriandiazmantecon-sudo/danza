@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fusionbeatsuseracentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Fusión Beats Usera",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/0905FusionBeats.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Fusion-Beats-Usera/?vgnextfmt=default&vgnextoid=34af380a8c3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "musicatradicionalcubanacentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Música tradicional cubana",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/0905MusicaCubana.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Musica-tradicional-cubana/?vgnextfmt=default&vgnextoid=8ef6380a8c3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "iniciateenlabatukadacentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Iníciate en la batukada",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/1005Batukada.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Iniciate-en-la-batukada/?vgnextfmt=default&vgnextoid=ac8b47bb6d3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "10:30"
+      }
+    ]
+  },
+  {
+    "id": "pulsoydanzacentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Pulso y Danza",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/1605PulsoYDanza.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Pulso-y-Danza/?vgnextfmt=default&vgnextoid=35b647bb6d3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "12:00"
+      }
+    ]
+  }
+]

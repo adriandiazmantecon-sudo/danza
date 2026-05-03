@@ -7,6 +7,19 @@ import uuid
 
 from models import Event, Venue, Session
 
+async def try_goto(page, url, timeout=60000, retries=3):
+    for i in range(retries):
+        try:
+            print(f"  Navigating to {url} (Attempt {i+1})...")
+            await page.goto(url, wait_until="commit", timeout=timeout)
+            return True
+        except Exception as e:
+            print(f"  Attempt {i+1} failed: {e}")
+            if i == retries - 1:
+                return False
+            await asyncio.sleep(2 * (i + 1))
+    return False
+
 months = {
     'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6,
     'julio': 7, 'agosto': 8, 'septiembre': 9, 'octubre': 10, 'noviembre': 11, 'diciembre': 12
@@ -137,8 +150,12 @@ async def scrape_teatro_gran_via():
         browser = await p.chromium.launch()
         page = await browser.new_page()
         print(f"Scraping Teatro Gran Via catalog: {listing_url}")
-        await page.goto(listing_url)
-        await page.wait_for_timeout(3000)
+        if not await try_goto(page, listing_url, timeout=90000):
+            print("  Failed to load Gran Via catalog after retries.")
+            await browser.close()
+            return []
+        
+        await page.wait_for_timeout(5000)
         
         # Smedia uses Essential Grid. We need to find the links.
         html = await page.content()
@@ -157,8 +174,10 @@ async def scrape_teatro_gran_via():
         for link in links:
             print(f"Checking event: {link}")
             try:
-                await page.goto(link)
-                await page.wait_for_timeout(2000)
+                if not await try_goto(page, link, timeout=60000):
+                    print(f"  Skipping {link} due to timeout.")
+                    continue
+                await page.wait_for_timeout(3000)
                 event_html = await page.content()
                 esoup = BeautifulSoup(event_html, "html.parser")
                 

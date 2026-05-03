@@ -1,0 +1,66 @@
+[
+  {
+    "id": "011b0bed-4c3d-4d20-8a94-20fa610e5272",
+    "title": "Ballet Nacional de España",
+    "company": "Ballet Nacional de España",
+    "venue": {
+      "name": "Teatro del Bosque",
+      "municipality": "Móstoles"
+    },
+    "type": "Danza",
+    "price_range": "12/10/9 €",
+    "is_free": null,
+    "image_url": "https://escenamostoles.com/wp-content/uploads/2022/06/escena-mostoles-logo-2026.png",
+    "url": "https://escenamostoles.com/ballet-nacional-de-espana/",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "532aaada-3367-4912-9734-182fdbba29a7",
+    "title": "Taller Enseñanzas Profesionales Danza Clásica y Española",
+    "company": "Taller Enseñanzas Profesionales Danza Clásica y Española",
+    "venue": {
+      "name": "Teatro del Bosque",
+      "municipality": "Móstoles"
+    },
+    "type": "Danza",
+    "price_range": "3€",
+    "is_free": null,
+    "image_url": "https://escenamostoles.com/wp-content/uploads/2022/06/escena-mostoles-logo-2026.png",
+    "url": "https://escenamostoles.com/taller-ensenanzas-profesionales-danza-clasica-y-espanola/",
+    "sessions": [
+      {
+        "date": "2026-06-18",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "891fa9aa-efb5-45ee-bc13-f8940a6e9b37",
+    "title": "Taller Enseñanzas Profesionales de Baile de Flamenco",
+    "company": "Taller Enseñanzas Profesionales de Baile de Flamenco",
+    "venue": {
+      "name": "Teatro del Bosque",
+      "municipality": "Móstoles"
+    },
+    "type": "Danza",
+    "price_range": "3€",
+    "is_free": null,
+    "image_url": "https://escenamostoles.com/wp-content/uploads/2022/06/escena-mostoles-logo-2026.png",
+    "url": "https://escenamostoles.com/taller-ensenanzas-profesionales-de-baile-de-flamenco/",
+    "sessions": [
+      {
+        "date": "2026-06-19",
+        "time": "20:00"
+      }
+    ]
+  }
+]

@@ -2,6 +2,14 @@ import json
 import os
 import sys
 import argparse
+import io
+
+# Force UTF-8 encoding for Windows consoles
+if sys.platform == "win32":
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
 
 # Ensure the venues package is reachable
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -33,13 +41,21 @@ from venues.madrid_museo_historia import scrape_museo_historia
 from venues.madrid_ivan_de_vargas import scrape_ivan_de_vargas
 from venues.madrid_dulce_chacon import scrape_dulce_chacon
 
+def save_json(path, data):
+    """Saves JSON data atomically using a temporary file."""
+    tmp_path = path + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
+    if os.path.exists(path):
+        os.remove(path)
+    os.rename(tmp_path, path)
+
 def main():
     parser = argparse.ArgumentParser(description='Madrid Dance Events Scraper')
     parser.add_argument('--venue', help='Specific venue to scrape (comma separated for multiple: real,canal,matadero,...)')
     args = parser.parse_args()
 
     print("Starting Madrid Dance Events Scraper...")
-    all_events = []
     
     # Map of keys to their display names and scraper functions
     venue_map = {
@@ -50,7 +66,7 @@ def main():
         'gran_via': ('Teatro Gran Vía', scrape_teatro_gran_via),
         'real_coliseo': ('Real Coliseo Carlos III', scrape_real_coliseo),
         'paco_rabal': ('Centro Cultural Paco Rabal', scrape_paco_rabal),
-        'majadahonda': ('Casa de la Cultura Carmen Conde', scrape_majadahonda),
+        'majadahonda': ('Casa de la Culture Carmen Conde', scrape_majadahonda),
         'getafe': ('Teatro Federico García Lorca', scrape_getafe),
         'mostoles': ('Teatro del Bosque', scrape_mostoles),
         'boadilla': ('Boadilla del Monte', scrape_boadilla),
@@ -73,65 +89,74 @@ def main():
         requested_venues = [v.strip() for v in args.venue.split(',')]
         for rv in requested_venues:
             if rv in venue_map:
-                venues_to_scrape.append(venue_map[rv])
+                venues_to_scrape.append((rv, venue_map[rv]))
             else:
                 print(f"Warning: Venue '{rv}' not recognized. Available: {', '.join(venue_map.keys())}")
     else:
-        venues_to_scrape = list(venue_map.values())
+        for vid, info in venue_map.items():
+            venues_to_scrape.append((vid, info))
 
-    # Output to the web app's data folder (now in public for easier updates)
-    output_dir = os.path.join(os.path.dirname(__file__), "..", "web", "public", "data")
-    output_path = os.path.join(output_dir, "events.json")
+    # Output directories
+    base_data_dir = os.path.join(os.path.dirname(__file__), "..", "web", "public", "data")
+    venues_dir = os.path.join(base_data_dir, "venues")
+    os.makedirs(venues_dir, exist_ok=True)
     
-    existing_events = []
+    output_path = os.path.join(base_data_dir, "events.json")
+    
+    # 1. Load existing master database robustly
+    master_dict = {}
     if os.path.exists(output_path):
         try:
             with open(output_path, "r", encoding="utf-8") as f:
                 existing_events = json.load(f)
-        except:
-            pass
+                for e in existing_events:
+                    url = e.get('url')
+                    if url:
+                        master_dict[url] = e
+            print(f"Loaded {len(master_dict)} existing events from master database.")
+        except Exception as e:
+            print(f"CRITICAL ERROR: Could not load master database at {output_path}: {e}")
+            print("Aborting to prevent data loss. Please check the file.")
+            return
 
-    # Start with existing events
-    merged_dict = {}
-    for e in existing_events:
-        url = e.get('url')
-        if url:
-            merged_dict[url] = e
-
-    new_events_list = []
-    for name, scraper_func in venues_to_scrape:
+    # 2. Run scrapers and save individual venue files
+    for venue_id, (venue_name, scraper_func) in venues_to_scrape:
+        print(f"\nScraping {venue_name}...")
         try:
             if inspect.iscoroutinefunction(scraper_func):
                 results = asyncio.run(scraper_func())
             else:
                 results = scraper_func()
-            new_events_list.extend(results)
             
-            # Save partial progress
-            if results:
-                new_events_dict = {e.url: e for e in results}
-                for url, event in new_events_dict.items():
-                    merged_dict[url] = event.to_dict() if hasattr(event, "to_dict") else event
+            if results is not None: # Even if empty list, we save it (it means the venue has 0 CURRENT events)
+                venue_output_path = os.path.join(venues_dir, f"{venue_id}.json")
+                results_dicts = [e.to_dict() if hasattr(e, "to_dict") else e for e in results]
+                save_json(venue_output_path, results_dicts)
+                print(f"Saved {len(results)} current events to venues/{venue_id}.json")
                 
-                all_events = list(merged_dict.values())
-                os.makedirs(output_dir, exist_ok=True)
-                with open(output_path, "w", encoding="utf-8") as f:
-                    json.dump(all_events, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
-                print(f"Partial save: Added {len(results)} events from {name}. Total: {len(all_events)}")
+                # Update master dict (Never Delete Policy)
+                for event_dict in results_dicts:
+                    url = event_dict.get('url')
+                    if url:
+                        # Overwrite with newer data if URL matches
+                        master_dict[url] = event_dict
+                
+                # Save master after each successful scrape to ensure progress is kept
+                save_json(output_path, list(master_dict.values()))
+                print(f"Master database updated. Total events: {len(master_dict)}")
+            else:
+                print(f"Warning: Scraper for {venue_name} returned None. Skipping update for this venue.")
                 
         except Exception as e:
-            print(f"Error scraping {name}: {e}")
+            print(f"Error scraping {venue_name}: {e}")
             import traceback
             traceback.print_exc()
 
-    # Final save (redundant but ensures everything is synced)
-    all_events = list(merged_dict.values())
-    os.makedirs(output_dir, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_events, f, cls=EnhancedJSONEncoder, ensure_ascii=False, indent=2)
+    print(f"\nScraping cycle completed. Total events in database: {len(master_dict)}")
 
-    # Output final summary
-    print(f"Scraping completed. Total events in database: {len(all_events)}")
+if __name__ == "__main__":
+    main()
+
 
 if __name__ == "__main__":
     main()

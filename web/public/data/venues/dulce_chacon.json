@@ -1,0 +1,26 @@
+[
+  {
+    "id": "expresatebailandoespaciodeigualdaddulcechaconvillaverde",
+    "title": "Exprésate bailando",
+    "company": "",
+    "venue": {
+      "name": "Espacio de Igualdad Dulce Chacón. Villaverde",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Expresate-bailando/?vgnextfmt=default&vgnextoid=e7d57bdec48dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-14",
+        "time": "20:00"
+      }
+    ]
+  }
+]

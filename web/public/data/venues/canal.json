@@ -1,0 +1,88 @@
+[
+  {
+    "id": "6dcc7609-72ac-458b-ad88-53a47ee61d40",
+    "title": "SACRESIZE",
+    "company": "Alberto Velasco",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 20€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/smush-webp/2025/05/avelascowebTC-543x314-1.jpg.webp",
+    "url": "https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/",
+    "sessions": [
+      {
+        "date": "2026-05-28",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-06-02",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-03",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-04",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-05",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-06",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-07",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "02ef1064-3927-465e-9a59-fb89a98d7c9a",
+    "title": "ABONO 5 / 10 ESPECTÁCULOS",
+    "company": "ABONOS TEATROS DEL CANAL",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/smush-webp/2025/06/AF_CANAL_DESTACADO_ABONO_130625_543x314.jpg.webp",
+    "url": "https://www.teatroscanal.com/espectaculo/abonos-teatros-canal-tc25-26/",
+    "sessions": []
+  },
+  {
+    "id": "3ec8b1b3-9691-46ed-a652-e3f25d5be8a2",
+    "title": "La Cordero y su ejército",
+    "company": "SOL PICÓ CIA DE DANZA",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 9€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg",
+    "url": "https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/",
+    "sessions": []
+  }
+]

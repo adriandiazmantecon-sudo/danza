@@ -1,0 +1,22 @@
+[
+  {
+    "id": "entreseguidillasychotisauditoriomunicipallastrecerosas",
+    "title": "Entre seguidillas y chotis",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Municipal Las Trece Rosas",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/VillaVallecas/Actividades/ficheros/Mayo/1605Seguidillas.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Entre-seguidillas-y-chotis/?vgnextfmt=default&vgnextoid=06413674b04bd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-15",
+        "time": "18:00"
+      }
+    ]
+  }
+]

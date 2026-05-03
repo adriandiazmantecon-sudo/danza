@@ -1,0 +1,62 @@
+[
+  {
+    "id": "671fb130-2181-4151-9e33-bc8171ca0cc1",
+    "title": "“Mangata”",
+    "company": "“Mangata”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "8 €",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/mangata/",
+    "sessions": [
+      {
+        "date": "2026-05-12",
+        "time": "18:30"
+      }
+    ]
+  },
+  {
+    "id": "bbf561ce-ca03-48d7-a396-bbca54c9a6f6",
+    "title": "“La Zapatera Prodigiosa”",
+    "company": "“La Zapatera Prodigiosa”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "10 €",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/la-zapatera-prodigiosa-2/",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "f682d279-fa04-4772-b24b-4cd8610f75cd",
+    "title": "“Las Flamencas”",
+    "company": "“Las Flamencas”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/las-flamencas/",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "12:00"
+      }
+    ]
+  }
+]

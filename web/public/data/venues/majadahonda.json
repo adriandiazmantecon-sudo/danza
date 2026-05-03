@@ -1,0 +1,50 @@
+[
+  {
+    "id": "d2687ba6-03ee-4ac3-a3a8-0f5ef9b51068",
+    "title": "Danza - \"Anemoi",
+    "company": "Danza - \"Anemoi",
+    "venue": {
+      "name": "Casa de la Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://cultura.majadahonda.org/documents/151519/2967846/Anemoi_400x400.jpg/3bb3b47e-3934-d27b-0ef0-7d3e529358d7?version=1.0&t=1776763967010&imageThumbnail=2",
+    "url": "https://cultura.majadahonda.org/espectaculos-culturales?p_p_id=CalendarSuite_INSTANCE_STa3SHI1sEeH&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_r_p_calendarBookingId=2970015&p_r_p_calendarPath=%2Fhtml%2Fsuite%2Fdisplays%2Fdetail.jsp",
+    "sessions": [
+      {
+        "date": "2026-05-29",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "2eb3d141-ffbe-4b8a-bd37-d45243dd6cd9",
+    "title": "Danza - \"Fronteras en el aire",
+    "company": "Danza - \"Fronteras en el aire",
+    "venue": {
+      "name": "Casa de la Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://cultura.majadahonda.org/documents/151519/2967846/Fronteras+en+el+aire_400x400.jpg/2de199e1-b69b-1cfe-aab9-d15fdedf174a?version=1.0&t=1776763279337&imageThumbnail=2",
+    "url": "https://cultura.majadahonda.org/espectaculos-culturales?p_p_id=CalendarSuite_INSTANCE_STa3SHI1sEeH&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_r_p_calendarBookingId=2968086&p_r_p_calendarPath=%2Fhtml%2Fsuite%2Fdisplays%2Fdetail.jsp",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      }
+    ]
+  }
+]

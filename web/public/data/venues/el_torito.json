@@ -1,0 +1,22 @@
+[
+  {
+    "id": "danzaineditocentroculturaleltoritomoratalaz",
+    "title": "Danza. Inédito",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural el Torito (Moratalaz)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/DistritoMoratalaz/Actividades/ficheros/0605ineditos.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Danza-Inedito/?vgnextfmt=default&vgnextoid=b0e6bceb6e9bd910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-06",
+        "time": "17:30"
+      }
+    ]
+  }
+]

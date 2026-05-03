@@ -4,7 +4,11 @@ from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
 import uuid
+import sys
+import os
 
+# Ensure the models are reachable
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models import Event, Venue, Session
 
 months = {
@@ -138,107 +142,123 @@ async def scrape_matadero():
     
     async with async_playwright() as p:
         browser = await p.chromium.launch()
-        page = await browser.new_page()
+        # Create context with longer default timeout
+        context = await browser.new_context(
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+        )
+        page = await context.new_page()
+        # Set a long timeout
+        page.set_default_timeout(120000)
+        
         print(f"Scraping Matadero catalog: {prog_url}")
-        await page.goto(prog_url)
-        await page.wait_for_timeout(3000)
-        
-        html = await page.content()
-        soup = BeautifulSoup(html, "html.parser")
-        
-        links = set()
-        for a in soup.find_all('a', href=True):
-            if '/actividades/' in a['href'] or '/en/activities/' in a['href']:
+        try:
+            await page.goto(prog_url, wait_until="domcontentloaded", timeout=120000)
+            await page.wait_for_timeout(5000)
+            
+            html = await page.content()
+            soup = BeautifulSoup(html, "html.parser")
+            
+            links = set()
+            for a in soup.find_all('a', href=True):
                 href = a['href']
-                if not href.startswith('http'):
-                    href = base_url + href
-                # Exclude english pages if we want spanish only, or just use it.
-                # Actually, some might be in english. We prefer spanish.
-                if '/en/' not in href:
+                if '/actividades/' in href or '/en/activities/' in href:
+                    # Convert English URLs to Spanish to ensure consistent parsing
+                    if '/en/activities/' in href:
+                        href = href.replace('/en/activities/', '/actividades/')
+                    
+                    if not href.startswith('http'):
+                        href = base_url + href
+                    
+                    # Deduplicate by ensuring we only take the base activity URL
+                    # (remove query params if any)
+                    href = href.split('?')[0]
                     links.add(href)
-        
-        print(f"Found {len(links)} links to process.")
-        
-        for link in links:
-            print(f"Scraping Matadero event: {link}")
-            try:
-                await page.goto(link)
-                await page.wait_for_timeout(3000)
-                event_html = await page.content()
-                esoup = BeautifulSoup(event_html, "html.parser")
-                
-                # Title and company
-                h1 = esoup.find('h1')
-                title_text = h1.text.strip() if h1 else "Unknown Title"
-                
-                # Check if it's "Centro Danza Matadero" and get the next one
-                headers1 = esoup.find_all('h1')
-                if len(headers1) > 1 and "Centro Danza" in title_text:
-                    title_text = headers1[1].text.strip()
-                
-                company_text = title_text
-                subtitle_node = esoup.find(class_='field--name-field-subtitle')
-                show_title = subtitle_node.text.strip() if subtitle_node else title_text
-                
-                # It's usually "Company | Person". Let's just use the subtitle as title and H1 as company
-                if subtitle_node:
+            
+            print(f"Found {len(links)} links to process.")
+            
+            for link in links:
+                print(f"Scraping Matadero event: {link}")
+                try:
+                    # Set a dedicated timeout for each event page
+                    await page.goto(link, wait_until="domcontentloaded", timeout=90000)
+                    await page.wait_for_timeout(3000)
+                    event_html = await page.content()
+                    esoup = BeautifulSoup(event_html, "html.parser")
+                    
+                    # Title and company
+                    h1 = esoup.find('h1')
+                    title_text = h1.text.strip() if h1 else "Unknown Title"
+                    
+                    # Check if it's "Centro Danza Matadero" and get the next one
+                    headers1 = esoup.find_all('h1')
+                    if len(headers1) > 1 and "Centro Danza" in title_text:
+                        title_text = headers1[1].text.strip()
+                    
                     company_text = title_text
-                    title_text = show_title
-                
-                # Image
-                img_url = ""
-                # Priority: 1. Main media image, 2. Standard image, 3. og:image meta tag
-                img_node = esoup.select_one('.field--name-field-media-image img') or esoup.select_one('.field--name-field-image img')
-                if img_node:
-                    img_url = img_node.get('src', '')
-                
-                if not img_url:
-                    og_img = esoup.find('meta', property='og:image')
-                    if og_img:
-                        img_url = og_img.get('content', '')
+                    subtitle_node = esoup.find(class_='field--name-field-subtitle')
+                    show_title = subtitle_node.text.strip() if subtitle_node else title_text
+                    
+                    # It's usually "Company | Person". Let's just use the subtitle as title and H1 as company
+                    if subtitle_node:
+                        company_text = title_text
+                        title_text = show_title
+                    
+                    # Image
+                    img_url = ""
+                    # Priority: 1. Main media image, 2. Standard image, 3. og:image meta tag
+                    img_node = esoup.select_one('.field--name-field-media-image img') or esoup.select_one('.field--name-field-image img')
+                    if img_node:
+                        img_url = img_node.get('src', '')
+                    
+                    if not img_url:
+                        og_img = esoup.find('meta', property='og:image')
+                        if og_img:
+                            img_url = og_img.get('content', '')
 
-                if img_url and not img_url.startswith('http'):
-                    img_url = base_url + img_url
-                        
-                # Dates and Time
-                date_tip = esoup.select_one('.group--info2 .field--name-field-schedule-tip') or esoup.select_one('.main-content--right .field--name-field-schedule-tip') or esoup.find(class_='field--name-field-schedule-tip')
-                date_str = date_tip.get_text(separator=' ', strip=True) if date_tip else ""
-                if date_str.lower().startswith("fecha"):
-                    date_str = date_str[5:].strip()
-                
-                schedule_txt = esoup.select_one('.group--info2 .field--name-field-schedule-txt') or esoup.select_one('.main-content--right .field--name-field-schedule-txt') or esoup.find(class_='field--name-field-schedule-txt')
-                time_str = schedule_txt.get_text(separator=' ', strip=True) if schedule_txt else ""
-                # remove "Horario" if present
-                if time_str.lower().startswith("horario"):
-                    time_str = time_str[7:].strip()
-                
-                sessions = parse_dates(date_str, time_str)
-                
-                if not sessions:
-                    print(f"No sessions found for {title_text}, skipping.")
-                    continue
-                
-                # Price
-                price_div = esoup.find(class_='field--name-field-price')
-                price_range = price_div.get_text(strip=True) if price_div else ""
-                if price_range.lower().startswith("precio"):
-                    price_range = price_range[6:].strip()
-                
-                event = Event(
-                    id=str(uuid.uuid4()),
-                    title=title_text,
-                    company=company_text,
-                    venue=Venue(name="Matadero Madrid", municipality="Madrid"),
-                    type="Danza",
-                    price_range=price_range,
-                    is_free="gratis" in price_range.lower(),
-                    image_url=img_url,
-                    url=link,
-                    sessions=sessions
-                )
-                events.append(event)
-            except Exception as e:
-                print(f"Error parsing event {link}: {e}")
+                    if img_url and not img_url.startswith('http'):
+                        img_url = base_url + img_url
+                            
+                    # Dates and Time
+                    date_tip = esoup.select_one('.group--info2 .field--name-field-schedule-tip') or esoup.select_one('.main-content--right .field--name-field-schedule-tip') or esoup.find(class_='field--name-field-schedule-tip')
+                    date_str = date_tip.get_text(separator=' ', strip=True) if date_tip else ""
+                    if date_str.lower().startswith("fecha"):
+                        date_str = date_str[5:].strip()
+                    
+                    schedule_txt = esoup.select_one('.group--info2 .field--name-field-schedule-txt') or esoup.select_one('.main-content--right .field--name-field-schedule-txt') or esoup.find(class_='field--name-field-schedule-txt')
+                    time_str = schedule_txt.get_text(separator=' ', strip=True) if schedule_txt else ""
+                    # remove "Horario" if present
+                    if time_str.lower().startswith("horario"):
+                        time_str = time_str[7:].strip()
+                    
+                    sessions = parse_dates(date_str, time_str)
+                    
+                    if not sessions:
+                        print(f"No sessions found for {title_text}, skipping.")
+                        continue
+                    
+                    # Price
+                    price_div = esoup.find(class_='field--name-field-price')
+                    price_range = price_div.get_text(strip=True) if price_div else ""
+                    if price_range.lower().startswith("precio"):
+                        price_range = price_range[6:].strip()
+                    
+                    event = Event(
+                        id=str(uuid.uuid4()),
+                        title=title_text,
+                        company=company_text,
+                        venue=Venue(name="Matadero Madrid", municipality="Madrid"),
+                        type="Danza",
+                        price_range=price_range,
+                        is_free="gratis" in price_range.lower(),
+                        image_url=img_url,
+                        url=link,
+                        sessions=sessions
+                    )
+                    events.append(event)
+                except Exception as e:
+                    print(f"Error parsing event {link}: {e}")
+        except Exception as e:
+            print(f"Error loading catalog {prog_url}: {e}")
                 
         await browser.close()
         return events

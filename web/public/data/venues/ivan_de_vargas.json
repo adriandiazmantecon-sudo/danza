@@ -1,0 +1,22 @@
+[
+  {
+    "id": "hilvanandolapraderadesfiledemodacastizabibliotecapublicamunicipalivandevargascentro",
+    "title": "Hilvanando la pradera: desfile de moda castiza",
+    "company": "",
+    "venue": {
+      "name": "Biblioteca Pública Municipal Iván de Vargas (Centro)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/Bibliotecas/BibliotecasPublicas/Actividades/Musica_Conciertos_Danza/ficheros/260511Hilvanando_260x260.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Hilvanando-la-pradera-desfile-de-moda-castiza/?vgnextfmt=default&vgnextoid=a923c32bb1edd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "12:00"
+      }
+    ]
+  }
+]

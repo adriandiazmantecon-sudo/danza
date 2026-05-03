@@ -1,0 +1,58 @@
+[
+  {
+    "id": "7f55bcae-cae2-43a8-8eb5-d7928660cfd4",
+    "title": "Triana - Medea (BNE)",
+    "company": "Triana-Medea. Ballet Nacional de España",
+    "venue": {
+      "name": "Teatro de la Zarzuela",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar precio",
+    "is_free": false,
+    "image_url": "https://teatrodelazarzuela.inaem.gob.es/media/k2/items/cache/5189f3286915715b50cff89ddded1008_S.jpg",
+    "url": "https://teatrodelazarzuela.inaem.gob.es/es/temporada/danza-2025-2026/triana-medea",
+    "sessions": [
+      {
+        "date": "2026-07-11",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-12",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-07-14",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-17",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-18",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-19",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-07-21",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-22",
+        "time": "19:30"
+      }
+    ]
+  }
+]

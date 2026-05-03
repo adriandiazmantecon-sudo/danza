@@ -1,0 +1,26 @@
+[
+  {
+    "id": "clasesdechotiscentroculturallascaliforniasretiro",
+    "title": "Clases de chotis",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural Las Californias (Retiro)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/DistritoRetiro/FICHEROS/FICHEROS%20ACTIVIDADES%20MAYO/clases%20de%20chotis.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Clases-de-chotis/?vgnextfmt=default&vgnextoid=c1d45281610bd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2027-04-25",
+        "time": "20:00"
+      }
+    ]
+  }
+]

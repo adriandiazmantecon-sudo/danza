@@ -1,0 +1,26 @@
+[
+  {
+    "id": "festivalmalasanabailamuseodehistoriademadrid",
+    "title": "Festival Malasaña Baila",
+    "company": "",
+    "venue": {
+      "name": "Museo de Historia de Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/MuseosMunicipales/MuseoDeHistoriaDeMadrid/Actividades%20y%20Educaci%C3%B3n/Malasa%C3%B1a%20Baila/ficheros/malasa%C3%B1abaila.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Festival-Malasana-Baila/?vgnextfmt=default&vgnextoid=acf4cb7f47ddd910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-03",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-06",
+        "time": "20:00"
+      }
+    ]
+  }
+]

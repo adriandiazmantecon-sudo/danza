@@ -1,0 +1,378 @@
+[
+  {
+    "id": "5ae02912-24dc-44d6-9111-6b7e4407188b",
+    "title": "La edad de oro",
+    "company": "Israel Galván",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/PAB31811.jpg.webp?itok=xfpAFuqH",
+    "url": "https://www.centrodanzamatadero.es/actividades/israel-galvan",
+    "sessions": [
+      {
+        "date": "2026-06-05",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-06",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-07",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "9158c1a4-4dd2-49ba-8469-39ec74f0eb24",
+    "title": "Bailas, baby?",
+    "company": "Israel Galván",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "5€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/mgp04822--marcosgpunto_52781301299_o.jpg.webp?itok=MNH0aDkC",
+    "url": "https://www.centrodanzamatadero.es/actividades/israel-galvan-1",
+    "sessions": [
+      {
+        "date": "2026-06-13",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "8c5d0aa0-fcf5-42aa-b144-fe89c43a4e39",
+    "title": "Goldberg",
+    "company": "Staatsballett Hannover | Goyo Montero",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/Goldberg_ENunes_NAlcazar_01_FOTO_Jesus_Vallinas.jpg.webp?itok=5ZhQYZKd",
+    "url": "https://www.centrodanzamatadero.es/actividades/staatsballett-hannover-goyo-montero",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-08",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "41ebe1ae-d66c-4264-9f1d-121cecbf5bbe",
+    "title": "Chroniques",
+    "company": "Peeping Tom",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/%C2%A9%20Virginia%20Rota%201.jpg.webp?itok=NY99KiAH",
+    "url": "https://www.centrodanzamatadero.es/actividades/peeping-tom",
+    "sessions": [
+      {
+        "date": "2026-11-12",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-11-13",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-11-14",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-11-15",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "8b357f95-fd27-4aaf-920d-bbbeccdbc712",
+    "title": "Bilbao Square",
+    "company": "María Pagés Compañía",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/Una%20oda%20al%20tiempo%20-%20David%20Ruano%202.jpg.webp?itok=KwEENJf_",
+    "url": "https://www.centrodanzamatadero.es/actividades/maria-pages-compania-0",
+    "sessions": [
+      {
+        "date": "2026-09-25",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-09-26",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-09-27",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-10-02",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-10-03",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-10-04",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "7d5d6bc3-716c-474d-8349-7cd9ae52497c",
+    "title": "Impartido por Goyo Montero",
+    "company": "Taller de repertorio de Goyo Montero",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "18€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2026-03/_DSC9734-NB%20%C2%A9ALICE%20BLANGERO.jpg.webp?itok=x72z6hkf",
+    "url": "https://www.centrodanzamatadero.es/actividades/taller-de-repertorio-de-goyo-montero",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "329d10ff-feef-41f5-823f-5652aaaa7834",
+    "title": "Struere",
+    "company": "Compañía Nacional de Danza | Luz Arcas | Mattia Russo & Antonio de Rosa (Kor'sia)",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2026-03/_95A5396_OK%20jpg%20%C2%A9Enrique%20Escorza.jpg.webp?itok=U898KUDp",
+    "url": "https://www.centrodanzamatadero.es/actividades/compania-nacional-de-danza-luz-arcas-mattia-russo-antonio-de-rosa-korsia",
+    "sessions": [
+      {
+        "date": "2026-05-26",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-27",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-28",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "09f1b644-2539-4ae5-abd9-e99363d342ee",
+    "title": "Sevillanas solteras",
+    "company": "Israel Galván",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/GalvanEstreno_RuizCaro-048.jpg.webp?itok=QTbhDRtx",
+    "url": "https://www.centrodanzamatadero.es/actividades/israel-galvan-0",
+    "sessions": [
+      {
+        "date": "2026-06-12",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-13",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-14",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "6a0ee28b-221d-49c5-9682-e006b73e4276",
+    "title": "La protagonista",
+    "company": "Lorena Nogal",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 18€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2026-04/04_1920x1080px_reticula_A_300dpi..jpg.webp?itok=PYLiSY2M",
+    "url": "https://www.centrodanzamatadero.es/actividades/lorena-nogal",
+    "sessions": [
+      {
+        "date": "2026-06-26",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-27",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "d3fa3008-f9ca-4758-8912-70e837373459",
+    "title": "Inestable",
+    "company": "Lali Ayguadé Company",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 18€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/DSCF0297%20%281%29.jpg.webp?itok=c9uBc7YS",
+    "url": "https://www.centrodanzamatadero.es/actividades/lali-ayguade-company",
+    "sessions": [
+      {
+        "date": "2026-10-24",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-10-25",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "3dbc2ba4-efd6-4317-9d62-29121018c632",
+    "title": "Diálogos con la danza",
+    "company": "La danza, ¿el arte olvidado de la medicina?",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Entrada libre hasta completar aforo",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2026-04/IMG%20WEB_congreso%20salud%20y%20danza.png.webp?itok=jGQ1YEgt",
+    "url": "https://www.centrodanzamatadero.es/actividades/la-danza-el-arte-olvidado-de-la-medicina",
+    "sessions": [
+      {
+        "date": "2026-05-13",
+        "time": "10:00"
+      }
+    ]
+  },
+  {
+    "id": "8bb104e0-c499-447b-b312-18b1cecd69b1",
+    "title": "Tierra bendita",
+    "company": "Ballet Flamenco de Andalucía",
+    "venue": {
+      "name": "Matadero Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 27€",
+    "is_free": false,
+    "image_url": "https://www.centrodanzamatadero.es/sites/default/files/styles/desktop_full/public/2025-10/04-TIERRA%20BENDITA%20%40TeresaMontellano.JPG.webp?itok=vcuErKTj",
+    "url": "https://www.centrodanzamatadero.es/actividades/ballet-flamenco-de-andalucia-0",
+    "sessions": [
+      {
+        "date": "2026-12-10",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-11",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-12",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-13",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-14",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-15",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-16",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-17",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-18",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-19",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-20",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-12-23",
+        "time": "20:00"
+      }
+    ]
+  }
+]

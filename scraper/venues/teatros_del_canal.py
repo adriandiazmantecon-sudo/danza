@@ -9,6 +9,19 @@ import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models import Event, Venue, Session
 
+def try_goto(page, url, timeout=90000, retries=3):
+    for i in range(retries):
+        try:
+            print(f"  Navigating to {url} (Attempt {i+1})...")
+            page.goto(url, wait_until="commit", timeout=timeout)
+            return True
+        except Exception as e:
+            print(f"  Attempt {i+1} failed: {e}")
+            if i == retries - 1:
+                return False
+            time.sleep(2 * (i + 1))
+    return False
+
 def parse_spanish_date(date_str):
     """Converts 'Jueves 28 de Mayo de 2026' to '2026-05-28'"""
     months = {
@@ -28,48 +41,47 @@ def parse_spanish_date(date_str):
         return f"{year}-{month}-{day}"
     return ""
 
-def scrape_event_details(browser_or_context, url):
+def scrape_event_details(browser, url):
     """Scrapes a single event page for price and booking URL."""
     print(f"Scraping event details: {url}")
-    page = browser_or_context.new_page()
+    page = browser.new_page()
+    # Set a standard user agent
+    page.set_extra_http_headers({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"})
     
     try:
-        page.goto(url, wait_until="commit", timeout=60000)
+        # Increase timeout to 90s and use retry
+        if not try_goto(page, url):
+            print(f"  Failed to load event page after retries: {url}")
+            return None
         
-        # Extract Title (Actually found in div.autor-show-show p)
+        # Wait for some content to load
+        page.wait_for_timeout(3000)
+        
+        # Extract Title
         title_el = page.query_selector('div.autor-show-show p, p[itemprop="performers"]')
         title = title_el.inner_text().strip() if title_el else ""
         
-        # Extract Company (Actually found in h1, displayed large and white)
+        # Extract Company
         company_el = page.query_selector('div.destacado-title h1, h1[itemprop="name"]')
         company = company_el.inner_text().strip() if company_el else "Teatros del Canal"
         
-        # If title is empty but we have an h1, use the user's feedback logic
         if not title and company_el:
-            # Fallback if the specific p selector fails
             title = company
             company = "Teatros del Canal"
 
-        # Extract Image (Prioritize the specific artistic image)
+        # Extract Image
         image_url = ""
         image_el = page.query_selector('.destacado-right img')
         if image_el:
             image_url = image_el.get_attribute('src')
         
         if not image_url:
-            # Fallback to og:image meta tag
             og_image = page.query_selector('meta[property="og:image"]')
             if og_image:
                 image_url = og_image.get_attribute('content')
         
-        if not image_url:
-            # Final fallback
-            image_el = page.query_selector('.wp-post-image')
-            image_url = image_el.get_attribute('src') if image_el else ""
-        
         # Extract Price Range
         price_range = "Consultar web"
-        # Look for "Desde XX€"
         price_els = page.query_selector_all('p, div, span, a')
         for el in price_els:
             try:
@@ -81,7 +93,7 @@ def scrape_event_details(browser_or_context, url):
             except:
                 continue
 
-        # Extract Booking URL (COMPRAR button)
+        # Extract Booking URL
         booking_url = ""
         buy_btn = page.query_selector('a.boton-comprar-aside-single-event')
         if buy_btn:
@@ -90,19 +102,12 @@ def scrape_event_details(browser_or_context, url):
         sessions = []
         if booking_url:
             print(f"  Going to booking page: {booking_url}")
-            # Navigate to booking page in the same page or new one
-            page.goto(booking_url, wait_until="commit", timeout=20000)
-            # Wait for content or timeout gracefully
-            try:
-                page.wait_for_selector('.DetalleTabla', timeout=10000)
-            except:
-                pass
-            # Wait a bit for the table
-            page.wait_for_timeout(2000)
-            
-            # Extract sessions from .DetalleTabla
-            rows = page.query_selector_all('.DetalleTabla')
-            for row in rows:
+            if try_goto(page, booking_url):
+                page.wait_for_timeout(5000) # Wait a bit longer
+                
+                # Extract sessions from .DetalleTabla
+                rows = page.query_selector_all('.DetalleTabla')
+                for row in rows:
                 date_el = row.query_selector('.ListaSesionesFecha')
                 hour_el = row.query_selector('.ListaSesionesHora a')
                 
@@ -115,12 +120,13 @@ def scrape_event_details(browser_or_context, url):
                         sessions.append(Session(date=iso_date, time=time_str))
         
         if not sessions:
-            # Fallback sessions if booking page fails or is different
             print("  Warning: No sessions found on booking page.")
 
+        # Always return the event, even if sessions are empty (it will be filtered by the UI if needed)
+        # But for the aggregator, we keep it.
         return Event(
             id=str(uuid.uuid4()),
-            title=title,
+            title=title or "Evento sin t\u00edtulo",
             company=company,
             venue=Venue("Teatros del Canal", "Madrid"),
             type="Danza",
@@ -131,31 +137,29 @@ def scrape_event_details(browser_or_context, url):
             sessions=sessions
         )
     except Exception as e:
-        print(f"  Error scraping event details: {e}")
+        print(f"  Error scraping event details for {url}: {e}")
         return None
     finally:
         page.close()
 
 def scrape_teatros_del_canal():
-    print("Starting Teatros del Canal Scraper...")
+    print("Starting Teatros del Canal Scraper (Sync Mode)...")
     events = []
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         
         # Discovery phase
-        listing_page = context.new_page()
+        listing_page = browser.new_page()
         listing_url = "https://www.teatroscanal.com/entradas/danza-madrid/"
         print(f"Discovering events from: {listing_url}")
         
         try:
-            listing_page.goto(listing_url, wait_until="domcontentloaded", timeout=60000)
-            listing_page.wait_for_timeout(2000)
-            
-            urls = []
-            # Selector .div-show2 is used for the items in the list
-            items = listing_page.query_selector_all('.div-show2')
+            if try_goto(listing_page, listing_url):
+                listing_page.wait_for_timeout(5000)
+                
+                urls = []
+                items = listing_page.query_selector_all('.div-show2')
             print(f"Found {len(items)} items in listing")
             for item in items:
                 link_el = item.query_selector('a.btn-info')
@@ -168,14 +172,14 @@ def scrape_teatros_del_canal():
             
             # Deduplicate
             urls = list(set(urls))
-            # Filter out abonos if any
+            # Filter out abonos
             urls = [u for u in urls if '/abono-' not in u]
             print(f"Total URLs to scrape: {len(urls)}")
             
             for url in urls:
                 try:
-                    event = scrape_event_details(context, url)
-                    if event and event.sessions:
+                    event = scrape_event_details(browser, url)
+                    if event and "ABONO" not in event.title.upper():
                         events.append(event)
                 except Exception as e:
                     print(f"Error scraping {url}: {e}")
@@ -192,4 +196,4 @@ def scrape_teatros_del_canal():
 if __name__ == "__main__":
     res = scrape_teatros_del_canal()
     for e in res:
-        print(f"Result: {e.title} - {len(e.sessions)} sessions - Price: {e.price_range}")
+        print(f"Result: {e.title} - {len(e.sessions)} sessions")
