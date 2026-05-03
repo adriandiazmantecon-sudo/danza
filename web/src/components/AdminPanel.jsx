@@ -11,7 +11,24 @@ const THEATERS = [
   { id: 'paco_rabal', name: 'Centro Cultural Paco Rabal' },
   { id: 'majadahonda', name: 'Casa de la Cultura Carmen Conde' },
   { id: 'getafe', name: 'Teatro Federico García Lorca' },
-  { id: 'mostoles', name: 'Teatro del Bosque' }
+  { id: 'mostoles', name: 'Teatro del Bosque' },
+  { id: 'boadilla', name: 'Boadilla del Monte' },
+  { id: 'conde_duque', name: 'Conde Duque' },
+  { id: 'el_pozo', name: 'CC El Pozo' },
+  { id: 'maris_stella', name: 'CEAC Maris Stella' },
+  { id: 'el_torito', name: 'CC El Torito' },
+  { id: 'casa_de_vacas', name: 'CC Casa de Vacas' },
+  { id: 'ciudad_pegaso', name: 'CC Ciudad Pegaso' },
+  { id: 'vallecas_teatro', name: 'Teatro de Vallecas' },
+  { id: 'las_californias', name: 'CC Las Californias' },
+  { id: 'trece_rosas', name: 'Auditorio Trece Rosas' },
+  { id: 'museo_historia', name: 'Museo de Historia' },
+  { id: 'ivan_de_vargas', name: 'Biblioteca Iván de Vargas' },
+  { id: 'dulce_chacon', name: 'EI Dulce Chacón' },
+  { id: 'escalera_jacob', name: 'La Escalera de Jacob' },
+  { id: 'la_usina', name: 'Teatro La Usina' },
+  { id: 'cuarta_pared', name: 'Sala Cuarta Pared' },
+  { id: 'corral_usera', name: 'El Corral de Usera' }
 ];
 
 export default function AdminPanel({ onLogout, password, venueCounts }) {

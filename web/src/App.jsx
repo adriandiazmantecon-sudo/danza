@@ -166,7 +166,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Danza en Madrid</h1>
+        <h1 onClick={() => window.location.reload()} style={{ cursor: 'pointer' }}>Danza en Madrid</h1>
         <p className="subtitle">{totalAbsoluteEventsCount} espectáculos de ballet, danza contemporánea, baile y flamenco.</p>
       </header>
 
