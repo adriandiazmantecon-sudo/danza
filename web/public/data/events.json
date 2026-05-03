@@ -1805,5 +1805,49 @@
         "time": "20:00"
       }
     ]
+  },
+  {
+    "id": "f2b68142-1738-4114-91d3-2d1f7e7b0399",
+    "title": "Lo que insiste / Banquete Caribe",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Teatro La Usina",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "13€",
+    "is_free": false,
+    "image_url": "https://cdn.atrapalo.com/common/photo/event/4/9/4/4372/1777547/tic_0_0.jpg",
+    "url": "https://www.atrapalo.com/entradas/lo-que-insiste-banquete-caribe_e4944372/",
+    "sessions": [
+      {
+        "date": "2026-06-13",
+        "time": "12:30"
+      },
+      {
+        "date": "2026-06-14",
+        "time": "12:30"
+      }
+    ]
+  },
+  {
+    "id": "f28f1f9e-11a5-4112-aa7d-799404c3cec1",
+    "title": "Tres derivas del cuerpo",
+    "company": "Colectivo Hambrientas",
+    "venue": {
+      "name": "Teatro La Usina",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "13€",
+    "is_free": false,
+    "image_url": "https://cdn.atrapalo.com/common/photo/event/4/9/3/7149/1739148/tic_0_0.jpg",
+    "url": "https://www.atrapalo.com/entradas/tres-derivas-del-cuerpo_e4937149/",
+    "sessions": [
+      {
+        "date": "2026-06-06",
+        "time": "12:30"
+      }
+    ]
   }
 ]
