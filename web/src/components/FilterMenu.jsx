@@ -6,8 +6,7 @@ export default function FilterMenu({
   filterMunicipality, setFilterMunicipality, municipalities,
   filterVenue, setFilterVenue, venues, totalVenuesCount,
   isFreeOnly, setIsFreeOnly,
-  showPastEvents, setShowPastEvents,
-  sortBy, setSortBy
+  showPastEvents, setShowPastEvents
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
@@ -109,17 +108,7 @@ export default function FilterMenu({
             </div>
           </div>
 
-          <div className="filter-section">
-            <h4>Ordenar por</h4>
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} style={{ width: '100%' }}>
-              <option value="DateAsc">Fecha (Más cercanos)</option>
-              <option value="DateDesc">Fecha (Más lejanos)</option>
-              <option value="PriceAsc">Precio (Menor a mayor)</option>
-              <option value="PriceDesc">Precio (Mayor a menor)</option>
-              <option value="Venue">Teatro (A-Z)</option>
-              <option value="Municipality">Municipio (A-Z)</option>
-            </select>
-          </div>
+
 
           <div className="filter-actions">
             <button className="text-button" onClick={resetFilters}>Limpiar filtros</button>

@@ -5,6 +5,7 @@ import { es } from 'date-fns/locale';
 import EventCard from './components/EventCard';
 import AdminPanel from './components/AdminPanel';
 import FilterMenu from './components/FilterMenu';
+import CalendarFilter from './components/CalendarFilter';
 import { Search, Lock, RefreshCw, Calendar, SlidersHorizontal, ChevronDown, ChevronUp } from 'lucide-react';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const [filterMunicipality, setFilterMunicipality] = useState('All');
   const [filterVenue, setFilterVenue] = useState('All');
   const [filterMonth, setFilterMonth] = useState('All'); // YYYY-MM
+  const [filterDate, setFilterDate] = useState(null); // YYYY-MM-DD
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('DateAsc');
   const [isFreeOnly, setIsFreeOnly] = useState(false);
@@ -112,6 +114,14 @@ function App() {
         return format(sessionDate, 'yyyy-MM') === filterMonth;
       });
       if (!hasSessionInMonth) return false;
+    }
+
+    // Specific date filter
+    if (filterDate) {
+      const hasSessionOnDay = e.sessions.some(s => {
+        return format(parseISO(s.date), 'yyyy-MM-dd') === filterDate;
+      });
+      if (!hasSessionOnDay) return false;
     }
 
     const today = new Date();
@@ -244,13 +254,24 @@ function App() {
             )}
           </div>
 
+          <CalendarFilter 
+            events={events} 
+            selectedDate={filterDate} 
+            onDateSelect={(date) => {
+              setFilterDate(date);
+              if (date) {
+                // If a date is selected, we might want to set the month filter to that month
+                // or just keep them independent. Let's keep them independent for now.
+              }
+            }} 
+          />
+
           <FilterMenu 
             filterType={filterType} setFilterType={setFilterType} types={types}
             filterMunicipality={filterMunicipality} setFilterMunicipality={setFilterMunicipality} municipalities={municipalities}
             filterVenue={filterVenue} setFilterVenue={setFilterVenue} venues={venues} totalVenuesCount={totalVenuesCount}
             isFreeOnly={isFreeOnly} setIsFreeOnly={setIsFreeOnly}
             showPastEvents={showPastEvents} setShowPastEvents={setShowPastEvents}
-            sortBy={sortBy} setSortBy={setSortBy}
           />
         </div>
       </div>
@@ -285,9 +306,29 @@ function App() {
         )
       ) : (
         <>
-          <div className="results-summary">
-            Mostrando <strong>{sortedEvents.length}</strong> espectáculos
-            {filterMonth !== 'All' && <span> en <strong>{format(parseISO(`${filterMonth}-01`), 'MMMM yyyy', { locale: es })}</strong></span>}
+          <div className="results-header">
+            <div className="results-summary">
+              Mostrando <strong>{sortedEvents.length}</strong> espectáculos
+              {filterDate && <span> el <strong>{format(parseISO(filterDate), "d 'de' MMMM yyyy", { locale: es })}</strong></span>}
+              {filterMonth !== 'All' && !filterDate && <span> en <strong>{format(parseISO(`${filterMonth}-01`), 'MMMM yyyy', { locale: es })}</strong></span>}
+            </div>
+
+            <div className="sort-wrapper">
+              <label htmlFor="sort-select">Ordenar por:</label>
+              <select 
+                id="sort-select" 
+                value={sortBy} 
+                onChange={(e) => setSortBy(e.target.value)}
+                className="minimal-select"
+              >
+                <option value="DateAsc">Fecha (Próximos)</option>
+                <option value="DateDesc">Fecha (Lejanos)</option>
+                <option value="PriceAsc">Precio (Más baratos)</option>
+                <option value="PriceDesc">Precio (Más caros)</option>
+                <option value="Venue">Teatro (A-Z)</option>
+                <option value="Municipality">Municipio (A-Z)</option>
+              </select>
+            </div>
           </div>
 
           <div className="events-grid">
@@ -304,6 +345,7 @@ function App() {
                 setFilterMunicipality('All');
                 setFilterVenue('All');
                 setFilterMonth('All');
+                setFilterDate(null);
                 setSearchQuery('');
                 setIsFreeOnly(false);
                 setShowPastEvents(false);
