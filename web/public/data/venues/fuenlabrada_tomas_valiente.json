@@ -1,0 +1,122 @@
+[
+  {
+    "id": "509c4b5f-5034-49da-a7fa-e1a5c22782a0",
+    "title": "Colores",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026 Colores",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87626x1-xgsu6.jpg/db27a84f-49ff-44c4-a19b-a75f79d9852c",
+    "url": "https://www.giglon.com/evento/colores-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-15",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "eccc8a29-4c70-48cd-a711-c0beaf8ba20c",
+    "title": "VIAJE AL AMOR BRUJO - Ballet Español de la Comunidad de Madrid",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87249x1-1k9jf.jpg/8790d58b-1c3c-4cf9-b4c5-932b99eeba60",
+    "url": "https://www.giglon.com/evento/viaje-al-amor-brujo---ballet-espanol-de-la-comunidad-de-madrid-2026",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "6f1cfe55-c3f7-4df9-870a-3a2f0bacef06",
+    "title": "MUERTA DE AMOR - CÍA MANUEL LIÑÁN",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "6.70 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87563x1-74uve.jpg/8bdfda72-eae2-40c1-b89e-4cb8c00d2375",
+    "url": "https://www.giglon.com/evento/muerta-de-amor---cia-manuel-linan-fuenlabrada",
+    "sessions": [
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "2224ef44-646d-4727-95e0-10b3d4c7aab8",
+    "title": "CARMENCITA Y EL LOBO - CARABDANZA",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "0.00 €",
+    "is_free": true,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87636x1-qj6bp.jpg/aee5ae88-cfe7-40f2-a7ac-07c818545741",
+    "url": "https://www.giglon.com/evento/carmencita-y-el-lobo---carabdanza-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-24",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "629e1e30-d116-4da1-abf9-9c17e511e095",
+    "title": "COMPAÑÍA NACHO DUATO - DUENDE, L'AMOROSO, CANTUS",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87266x1-vqcs6.jpg/46fb2126-6450-4b63-a1ea-f6ba4f986ea7",
+    "url": "https://www.giglon.com/evento/compania-nacho-duato---duende-lamoroso-cantus-fuenlabra-2026",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "dab43928-366e-43f8-93fa-7d888f3e9b5d",
+    "title": "tÁ - CÍA MIRIÑAQUE",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "0.00 €",
+    "is_free": true,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87635x1-kaj23.jpg/1508b80c-7887-451d-afd9-5c969a67ade3",
+    "url": "https://www.giglon.com/evento/ta---cia-mirinaque-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-31",
+        "time": "12:00"
+      }
+    ]
+  }
+]

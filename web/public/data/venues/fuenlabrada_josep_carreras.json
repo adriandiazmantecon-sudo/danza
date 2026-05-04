@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2ec0c2e4-6978-4aee-a437-9ccc00ef7cfd",
+    "title": "LA MAGIA DE LA DANZA",
+    "company": "LA MAGIA DE LA DANZA",
+    "venue": {
+      "name": "Teatro Josep Carreras",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://www.giglon.com/evento/la-magia-de-la-danza-fuenlabrada",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "19:00"
+      }
+    ]
+  }
+]

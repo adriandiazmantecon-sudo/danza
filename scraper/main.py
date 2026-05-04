@@ -44,6 +44,8 @@ from venues.escalera_jacob import scrape_escalera_jacob
 from venues.madrid_la_usina import scrape_la_usina
 from venues.madrid_cuarta_pared import scrape_cuarta_pared
 from venues.corral_usera import scrape_corral_usera
+from venues.fuenlabrada_tomas_valiente import scrape_tomas_y_valiente
+from venues.fuenlabrada_josep_carreras import scrape_josep_carreras
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -89,7 +91,9 @@ def main():
         'escalera_jacob': ('La Escalera de Jacob', scrape_escalera_jacob),
         'la_usina': ('Teatro La Usina', scrape_la_usina),
         'cuarta_pared': ('Sala Cuarta Pared', scrape_cuarta_pared),
-        'corral_usera': ('El Corral de Usera', scrape_corral_usera)
+        'corral_usera': ('El Corral de Usera', scrape_corral_usera),
+        'fuenlabrada_tomas_valiente': ('Teatro Tomás y Valiente', scrape_tomas_y_valiente),
+        'fuenlabrada_josep_carreras': ('Teatro Josep Carreras', scrape_josep_carreras)
     }
 
     venues_to_scrape = []

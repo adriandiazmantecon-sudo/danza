@@ -28,7 +28,9 @@ const THEATERS = [
   { id: 'escalera_jacob', name: 'La Escalera de Jacob' },
   { id: 'la_usina', name: 'Teatro La Usina' },
   { id: 'cuarta_pared', name: 'Sala Cuarta Pared' },
-  { id: 'corral_usera', name: 'El Corral de Usera' }
+  { id: 'corral_usera', name: 'El Corral de Usera' },
+  { id: 'fuenlabrada_tomas_valiente', name: 'Teatro Tomás y Valiente' },
+  { id: 'fuenlabrada_josep_carreras', name: 'Teatro Josep Carreras' }
 ];
 
 export default function AdminPanel({ onLogout, password, venueCounts }) {
