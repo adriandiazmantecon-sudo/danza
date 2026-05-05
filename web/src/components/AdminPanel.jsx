@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { Shield, RefreshCw, CheckSquare, Square, ExternalLink, LogOut, CheckCircle2 } from 'lucide-react';
+import { 
+  Shield, 
+  RefreshCw, 
+  CheckSquare, 
+  Square, 
+  ExternalLink, 
+  LogOut, 
+  BarChart3, 
+  LayoutDashboard,
+  MapPin,
+  Building2,
+  ChevronRight,
+  Sparkles
+} from 'lucide-react';
 
 const THEATERS = [
   { id: 'real', name: 'Teatro Real' },
@@ -30,10 +43,15 @@ const THEATERS = [
   { id: 'cuarta_pared', name: 'Sala Cuarta Pared' },
   { id: 'corral_usera', name: 'El Corral de Usera' },
   { id: 'fuenlabrada_tomas_valiente', name: 'Teatro Tomás y Valiente' },
-  { id: 'fuenlabrada_josep_carreras', name: 'Teatro Josep Carreras' }
+  { id: 'fuenlabrada_josep_carreras', name: 'Teatro Josep Carreras' },
+  { id: 'replika', name: 'Réplika Teatro' },
+  { id: 'dt_espacio', name: 'DT Espacio Escénico' },
+  { id: 'ahuja', name: 'Teatro Elías Ahuja' },
+  { id: 'placido', name: 'Auditorio Plácido Domingo' }
 ];
 
-export default function AdminPanel({ onLogout, password, venueCounts }) {
+export default function AdminPanel({ onLogout, password, venueCounts, municipalityCounts }) {
+  const [activeTab, setActiveTab] = useState('update'); // 'update' or 'stats'
   const [selected, setSelected] = useState([]);
   const [isUpdating, setIsUpdating] = useState(false);
   const [status, setStatus] = useState(null);
@@ -52,7 +70,6 @@ export default function AdminPanel({ onLogout, password, venueCounts }) {
     setStatus({ type: 'info', message: 'Conectando con el servidor seguro...' });
 
     try {
-      // Call our PHP Backend instead of GitHub API
       const response = await fetch('/api/dispatch.php', {
         method: 'POST',
         headers: {
@@ -69,7 +86,7 @@ export default function AdminPanel({ onLogout, password, venueCounts }) {
       if (response.ok) {
         setStatus({ 
           type: 'success', 
-          message: '¡Petición enviada! El servidor está actualizando los datos.' 
+          message: '¡Petición enviada! El servidor está actualizando los datos en segundo plano.' 
         });
       } else {
         setStatus({ type: 'error', message: `Error del Servidor: ${result.message}` });
@@ -81,62 +98,73 @@ export default function AdminPanel({ onLogout, password, venueCounts }) {
     }
   };
 
-  return (
-    <div className="admin-panel glass-card" style={{ maxWidth: '800px', margin: '2rem auto', padding: '2rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0 }}>
-          <Shield className="accent-color" /> Panel de Control
-        </h2>
-        <button onClick={onLogout} className="secondary-button" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <LogOut size={16} /> Salir
-        </button>
-      </div>
-
-      <section>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
-            <h3 style={{ margin: 0 }}>Actualizar Eventos</h3>
-            <div style={{ display: 'flex', gap: '1rem' }}>
-                <button onClick={selectAll} className="text-button" style={{ fontSize: '0.85rem' }}>Seleccionar todos</button>
-                <button onClick={selectNone} className="text-button" style={{ fontSize: '0.85rem' }}>Deseleccionar</button>
-            </div>
-        </div>
-
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', 
-          gap: '0.75rem',
-          marginBottom: '2rem' 
-        }}>
-          {THEATERS.map(theater => (
-            <div 
-              key={theater.id} 
-              onClick={() => toggleTheater(theater.id)}
-              style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '0.5rem', 
-                cursor: 'pointer',
-                padding: '0.75rem',
-                borderRadius: '8px',
-                background: selected.includes(theater.id) ? 'rgba(var(--accent-rgb), 0.2)' : 'rgba(255,255,255,0.03)',
-                border: '1px solid ' + (selected.includes(theater.id) ? 'var(--accent-primary)' : 'rgba(255,255,255,0.05)'),
-                transition: 'all 0.2s ease'
-              }}
-            >
-              {selected.includes(theater.id) ? <CheckSquare size={18} className="accent-color" /> : <Square size={18} style={{ opacity: 0.5 }} />}
-              <span style={{ fontSize: '0.9rem' }}>{theater.name}</span>
+  const renderStats = () => (
+    <div className="stats-container animate-fade-in">
+      <div className="stats-section">
+        <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+          <Building2 size={20} className="accent-color" /> Por Teatro
+        </h3>
+        <div className="stats-grid">
+          {Object.entries(venueCounts || {}).sort((a,b) => b[1] - a[1]).map(([name, count]) => (
+            <div key={name} className="stat-card">
+              <span className="stat-label">{name}</span>
+              <span className="stat-value">{count}</span>
             </div>
           ))}
         </div>
+      </div>
 
+      <div className="stats-section" style={{ marginTop: '3rem' }}>
+        <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+          <MapPin size={20} className="accent-color" /> Por Municipio
+        </h3>
+        <div className="stats-grid">
+          {Object.entries(municipalityCounts || {}).sort((a,b) => b[1] - a[1]).map(([name, count]) => (
+            <div key={name} className="stat-card municipality">
+              <span className="stat-label">{name}</span>
+              <span className="stat-value">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderUpdate = () => (
+    <div className="update-container animate-fade-in">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.5rem' }}>
+          <div>
+            <h3 style={{ margin: 0 }}>Gestión de Scrapers</h3>
+            <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.85rem', opacity: 0.6 }}>Selecciona los teatros que deseas sincronizar.</p>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+              <button onClick={selectAll} className="text-button" style={{ fontSize: '0.85rem' }}>Seleccionar todos</button>
+              <button onClick={selectNone} className="text-button" style={{ fontSize: '0.85rem' }}>Deseleccionar</button>
+          </div>
+      </div>
+
+      <div className="theaters-grid">
+        {THEATERS.sort((a,b) => a.name.localeCompare(b.name)).map(theater => (
+          <div 
+            key={theater.id} 
+            onClick={() => toggleTheater(theater.id)}
+            className={`theater-item ${selected.includes(theater.id) ? 'selected' : ''}`}
+          >
+            {selected.includes(theater.id) ? <CheckSquare size={18} className="accent-color" /> : <Square size={18} style={{ opacity: 0.3 }} />}
+            <span>{theater.name}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="action-bar glass-card">
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <button 
             onClick={() => handleUpdate(selected)} 
             disabled={isUpdating || selected.length === 0}
             className="primary-button"
-            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2rem' }}
           >
-            <RefreshCw size={18} className={isUpdating ? 'spin' : ''} />
+            <RefreshCw size={20} className={isUpdating ? 'spin' : ''} />
             {isUpdating ? 'Procesando...' : `Actualizar seleccionados (${selected.length})`}
           </button>
           
@@ -144,67 +172,77 @@ export default function AdminPanel({ onLogout, password, venueCounts }) {
             onClick={() => handleUpdate([])} 
             disabled={isUpdating}
             className="secondary-button"
-            style={{ padding: '1rem' }}
+            style={{ padding: '1rem 1.5rem' }}
           >
             Actualizar TODO
           </button>
         </div>
-      </section>
+        <p style={{ margin: 0, fontSize: '0.8rem', opacity: 0.5, maxWidth: '250px' }}>
+          La actualización se realiza en el servidor. Los cambios pueden tardar unos minutos en reflejarse.
+        </p>
+      </div>
+    </div>
+  );
 
-      <section style={{ marginTop: '3rem' }}>
-        <h3 style={{ marginBottom: '1.5rem' }}>Estadísticas de Teatros (Total eventos)</h3>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
-          gap: '1rem' 
-        }}>
-          {Object.entries(venueCounts || {}).sort((a,b) => b[1] - a[1]).map(([name, count]) => (
-            <div 
-              key={name}
-              style={{ 
-                padding: '1rem', 
-                background: 'rgba(255,255,255,0.03)', 
-                borderRadius: '12px',
-                border: '1px solid rgba(255,255,255,0.05)',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}
-            >
-              <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{name}</span>
-              <span style={{ 
-                fontWeight: 600, 
-                color: 'var(--accent-primary)',
-                background: 'rgba(var(--accent-rgb), 0.1)',
-                padding: '0.2rem 0.6rem',
-                borderRadius: '6px',
-                fontSize: '0.85rem'
-              }}>{count}</span>
+  return (
+    <div className="admin-panel-wrapper">
+      <div className="admin-header">
+        <div className="header-title">
+          <div className="logo-icon">
+            <Shield size={24} />
+          </div>
+          <div>
+            <h2 style={{ margin: 0 }}>Panel de Control</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', opacity: 0.7 }}>
+              <Sparkles size={12} className="accent-color" />
+              <span>Administrador Autenticado</span>
             </div>
-          ))}
+          </div>
         </div>
-      </section>
+        <button onClick={onLogout} className="logout-btn">
+          <LogOut size={18} />
+          <span>Salir</span>
+        </button>
+      </div>
+
+      <div className="admin-tabs">
+        <button 
+          className={`tab-btn ${activeTab === 'update' ? 'active' : ''}`}
+          onClick={() => setActiveTab('update')}
+        >
+          <RefreshCw size={18} />
+          Actualizar Eventos
+        </button>
+        <button 
+          className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
+          onClick={() => setActiveTab('stats')}
+        >
+          <LayoutDashboard size={18} />
+          Estadísticas
+        </button>
+      </div>
+
+      <div className="admin-content">
+        {activeTab === 'update' ? renderUpdate() : renderStats()}
+      </div>
 
       {status && (
-        <div style={{ 
-          marginTop: '2rem', 
-          padding: '1.25rem', 
-          borderRadius: '12px',
-          background: status.type === 'error' ? 'rgba(255,68,68,0.1)' : 
-                      status.type === 'success' ? 'rgba(0,200,81,0.1)' : 'rgba(51,181,229,0.1)',
-          borderLeft: `4px solid ${status.type === 'error' ? '#ff4444' : 
-                                 status.type === 'success' ? '#00c851' : '#33b5e5'}`,
-          animation: 'slideIn 0.3s ease-out'
-        }}>
-          <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>
-            {status.type === 'error' ? 'Error' : status.type === 'success' ? 'Éxito' : 'Info'}
+        <div className={`status-toast ${status.type}`}>
+          <div className="status-icon">
+            {status.type === 'success' ? <CheckSquare size={20} /> : <RefreshCw size={20} className="spin" />}
           </div>
-          <div style={{ fontSize: '0.95rem' }}>{status.message}</div>
-          {status.type === 'success' && (
-            <div style={{ marginTop: '0.75rem', fontSize: '0.85rem' }}>
-              Puedes ver el progreso en <a href="https://github.com/adriandiazmantecon-sudo/danza/actions" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>GitHub Actions <ExternalLink size={12} /></a>
+          <div className="status-body">
+            <div className="status-title">
+              {status.type === 'error' ? 'Error' : status.type === 'success' ? 'Éxito' : 'Procesando'}
             </div>
-          )}
+            <div className="status-message">{status.message}</div>
+            {status.type === 'success' && (
+              <a href="https://github.com/adriandiazmantecon-sudo/danza/actions" target="_blank" rel="noreferrer" className="github-link">
+                Ver progreso en GitHub Actions <ExternalLink size={12} />
+              </a>
+            )}
+          </div>
+          <button className="close-toast" onClick={() => setStatus(null)}>&times;</button>
         </div>
       )}
     </div>

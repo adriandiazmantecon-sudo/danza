@@ -93,6 +93,15 @@ function App() {
     return counts;
   }, [events]);
 
+  const municipalityCounts = useMemo(() => {
+    const counts = {};
+    events.forEach(e => {
+      const muni = e.venue.municipality || 'Madrid';
+      counts[muni] = (counts[muni] || 0) + 1;
+    });
+    return counts;
+  }, [events]);
+
   const venues = ['All', ...Object.keys(venueCounts).sort()];
   const totalAbsoluteEventsCount = events.length;
   const totalVenuesCount = venues.length - 1;
@@ -297,6 +306,7 @@ function App() {
           <AdminPanel 
             password={adminPassword} 
             venueCounts={venueCounts}
+            municipalityCounts={municipalityCounts}
             onLogout={() => { 
               setIsAdminAuthenticated(false); 
               setAdminPassword('');
