@@ -46,6 +46,10 @@ from venues.madrid_cuarta_pared import scrape_cuarta_pared
 from venues.corral_usera import scrape_corral_usera
 from venues.fuenlabrada_tomas_valiente import scrape_tomas_y_valiente
 from venues.fuenlabrada_josep_carreras import scrape_josep_carreras
+from venues.replika_teatro import scrape_replika_teatro
+from venues.dt_espacio_escenico import scrape_dt_espacio_escenico
+from venues.teatro_elias_ahuja import scrape_teatro_elias_ahuja
+from venues.auditorio_placido_domingo import scrape_auditorio_placido_domingo
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -93,7 +97,11 @@ def main():
         'cuarta_pared': ('Sala Cuarta Pared', scrape_cuarta_pared),
         'corral_usera': ('El Corral de Usera', scrape_corral_usera),
         'fuenlabrada_tomas_valiente': ('Teatro Tomás y Valiente', scrape_tomas_y_valiente),
-        'fuenlabrada_josep_carreras': ('Teatro Josep Carreras', scrape_josep_carreras)
+        'fuenlabrada_josep_carreras': ('Teatro Josep Carreras', scrape_josep_carreras),
+        'replika': ('Réplika Teatro', scrape_replika_teatro),
+        'dt_espacio': ('DT Espacio Escénico', scrape_dt_espacio_escenico),
+        'ahuja': ('Teatro Elías Ahuja', scrape_teatro_elias_ahuja),
+        'placido': ('Auditorio Plácido Domingo', scrape_auditorio_placido_domingo)
     }
 
     venues_to_scrape = []

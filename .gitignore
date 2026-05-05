@@ -14,6 +14,7 @@ __pycache__/
 *.txt
 !requirements.txt
 *.png
+!web/public/images/*.png
 *.log
 check_*.py
 debug_*.py
