@@ -215,9 +215,13 @@ def main():
                 # Update master dict (Never Delete Policy)
                 for event_dict in results_dicts:
                     url = event_dict.get('url')
+                    venue_name = event_dict.get('venue', {}).get('name', '')
+                    muni = event_dict.get('venue', {}).get('municipality', '')
+                    
                     if url:
-                        # Overwrite with newer data if URL matches
-                        master_dict[url] = event_dict
+                        # Use a unique key combining URL and location to support the same event in multiple places
+                        key = f"{url}_{venue_name}_{muni}"
+                        master_dict[key] = event_dict
                 
                 # Save master after each successful scrape to ensure progress is kept
                 save_json(output_path, list(master_dict.values()))

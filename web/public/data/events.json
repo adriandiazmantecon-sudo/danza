@@ -2556,5 +2556,1297 @@
         "time": "11:00"
       }
     ]
+  },
+  {
+    "id": "ba7bc499-8268-4674-b18b-c0ce06e6309b",
+    "title": "EL LAGO DE LOS CISNES: LA NUEVA GENERACIÓN",
+    "company": "NEW ADVENTURES",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_SwanLakeMBourne.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/lago-cisnes-nueva-generacion-matthew-bourne",
+    "sessions": [
+      {
+        "date": "2025-11-19",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-20",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-21",
+        "time": "19:00"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "12:30"
+      },
+      {
+        "date": "2025-11-22",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "851a2671-1b76-4f27-a741-9ceefee4d0ca",
+    "title": "ALVIN AILEY AMERICAN DANCE THEATER",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_ALVINALEY.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/alvin-ailey-american-dance-theater",
+    "sessions": [
+      {
+        "date": "2026-10-14",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "12:30"
+      },
+      {
+        "date": "2026-10-17",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-10-18",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "cac5ab71-a4c4-4b02-8725-c3ebc4127e52",
+    "title": "COMPAÑÍA NACIONAL DE DANZA",
+    "company": "NÚMEROS (II)",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_CND06.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/compania-nacional-danza",
+    "sessions": [
+      {
+        "date": "2027-01-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-17",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-01-18",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "d1c85717-8433-476b-803c-4a4db3a5bd5e",
+    "title": "TANZTHEATER WUPPERTAL PINA BAUSCH",
+    "company": "",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_PINABAUSCH.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/tanztheater-wuppertal-pina-bausch",
+    "sessions": [
+      {
+        "date": "2027-06-11",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-12",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-13",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-06-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-06-16",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "9caf633a-f62a-4236-8a01-14f1f1ceab66",
+    "title": "BALLET NACIONAL DE ESPAÑA",
+    "company": "MEDEA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_BNE.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/ballet-nacional-espana",
+    "sessions": [
+      {
+        "date": "2025-10-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-17",
+        "time": "19:30"
+      },
+      {
+        "date": "2025-10-18",
+        "time": "21:00"
+      },
+      {
+        "date": "2025-10-19",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "dc5f0c6f-482d-4316-b1b7-7f189bde479a",
+    "title": "JULIETA Y ROMEO",
+    "company": "REAL BALLET DE SUECIA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_JULIETAYROMEO.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/real-ballet-suecia",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-08",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "17:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "21:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "90f380c4-e20c-4195-8efa-cc2e8fe57950",
+    "title": "SACRESIZE",
+    "company": "Alberto Velasco",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 20€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/smush-webp/2025/05/avelascowebTC-543x314-1.jpg.webp",
+    "url": "https://www.teatroscanal.com/espectaculo/alberto-velasco-sacresize-tc2526/",
+    "sessions": [
+      {
+        "date": "2026-05-28",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-31",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-06-02",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-03",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-04",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-05",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-06",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-06-07",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "07ebf8a4-6c86-4ece-b21c-a923f387efdc",
+    "title": "La Cordero y su ejército",
+    "company": "SOL PICÓ CIA DE DANZA",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 9€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg",
+    "url": "https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/",
+    "sessions": [
+      {
+        "date": "2026-05-20",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "3347e5f9-e2fd-4021-8484-712967f29914",
+    "title": "Triana - Medea (BNE)",
+    "company": "Triana-Medea. Ballet Nacional de España",
+    "venue": {
+      "name": "Teatro de la Zarzuela",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar precio",
+    "is_free": false,
+    "image_url": "https://teatrodelazarzuela.inaem.gob.es/media/k2/items/cache/5189f3286915715b50cff89ddded1008_S.jpg",
+    "url": "https://teatrodelazarzuela.inaem.gob.es/es/temporada/danza-2025-2026/triana-medea",
+    "sessions": [
+      {
+        "date": "2026-07-11",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-12",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-07-14",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-17",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-18",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-19",
+        "time": "18:00"
+      },
+      {
+        "date": "2026-07-21",
+        "time": "19:30"
+      },
+      {
+        "date": "2026-07-22",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "2becbcde-3db9-4bcc-8239-0d1347c95374",
+    "title": "PREMIO A MEJOR ESPECTÁCULO DE DANZA FETEN 2025",
+    "company": "PREMIO A MEJOR ESPECTÁCULO DE DANZA FETEN 2025",
+    "venue": {
+      "name": "Real Coliseo de Carlos III",
+      "municipality": "San Lorenzo de El Escorial"
+    },
+    "type": "Danza",
+    "price_range": "6 euros",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/03/26/paisajes-de-oro.jpg?VersionId=0cVVbUMrgXjJm0oDYtQPURyaQqeP_5sp&itok=EGhaLasG",
+    "url": "https://www.comunidad.madrid/actividades/2026/danza-familiar-paisajes-oro-sharon-fridman",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "17:00"
+      },
+      {
+        "date": "2026-05-16",
+        "time": "17:30"
+      }
+    ]
+  },
+  {
+    "id": "c75141c0-cc0a-4594-8a7b-140e46f96327",
+    "title": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
+    "company": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
+    "venue": {
+      "name": "Real Coliseo de Carlos III",
+      "municipality": "San Lorenzo de El Escorial"
+    },
+    "type": "Danza",
+    "price_range": "Desde 10 euros",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/03/26/zarzuela-flamenco-legado-hispanoamerica.jpg?VersionId=QI2O88Pmwo5ALdeTKzmsjaJadm4PUypj&itok=pYB8BY3U",
+    "url": "https://www.comunidad.madrid/actividades/2026/danza-musica-zarzuela-flamenco-legado-hispanoamerica",
+    "sessions": [
+      {
+        "date": "2026-05-02",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-02",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "9d682e88-ff1b-4210-9157-3003cef984f7",
+    "title": "Taller de Danza Urbana",
+    "company": "Patrycja Kulpa",
+    "venue": {
+      "name": "Centro Cultural Paco Rabal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2025/08/29/pp_dance_formation.jpg?VersionId=LfEF0AFC7QtpEHqx_oyFpV_EyyE4rNDJ&itok=cmnWr5K1",
+    "url": "https://www.comunidad.madrid/actividades/2021/taller-danza-urbana",
+    "sessions": [
+      {
+        "date": "2025-10-07",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-30",
+        "time": "22:00"
+      }
+    ]
+  },
+  {
+    "id": "4bd9e9d0-da1c-4b7a-9830-6815ac4df0b7",
+    "title": "BAZAMAT",
+    "company": "Nesma Al- Ándalus Project",
+    "venue": {
+      "name": "Centro Cultural Paco Rabal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "10€",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/03/26/nesma_0.jpg?VersionId=47eyqup.qGupCb.rslgwQXr9JwsVGiVr&itok=VlR6TnvZ",
+    "url": "https://www.comunidad.madrid/actividades/2026/danza-musica-bazamat-sabado-2-domingo-3",
+    "sessions": [
+      {
+        "date": "2026-05-02",
+        "time": "22:00"
+      },
+      {
+        "date": "2026-05-02",
+        "time": "23:00"
+      }
+    ]
+  },
+  {
+    "id": "bf2ffe3d-73e2-4a08-ab42-430f1f7618a3",
+    "title": "AURUNCA",
+    "company": "Elías Aguirre",
+    "venue": {
+      "name": "Centro Cultural Paco Rabal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "8€",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/04/17/aurunca.jpg?VersionId=3ilvRKGege6YhiJAgMdXLiIZ2_hUGoC.&itok=6bJMAVh7",
+    "url": "https://www.comunidad.madrid/actividades/2026/danza-aurunca-sabado-9",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "22:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "23:00"
+      }
+    ]
+  },
+  {
+    "id": "f85158a0-5295-4919-a048-48b1df64c6ce",
+    "title": "Danza - \"Anemoi",
+    "company": "Danza - \"Anemoi",
+    "venue": {
+      "name": "Casa de la Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://cultura.majadahonda.org/documents/151519/2967846/Anemoi_400x400.jpg/3bb3b47e-3934-d27b-0ef0-7d3e529358d7?version=1.0&t=1776763967010&imageThumbnail=2",
+    "url": "https://cultura.majadahonda.org/espectaculos-culturales?p_p_id=CalendarSuite_INSTANCE_STa3SHI1sEeH&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_r_p_calendarBookingId=2970015&p_r_p_calendarPath=%2Fhtml%2Fsuite%2Fdisplays%2Fdetail.jsp",
+    "sessions": [
+      {
+        "date": "2026-05-29",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-29",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "8ac2abec-ebaa-4926-baac-4b4859d7443b",
+    "title": "Danza - \"Fronteras en el aire",
+    "company": "Danza - \"Fronteras en el aire",
+    "venue": {
+      "name": "Casa de la Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://cultura.majadahonda.org/documents/151519/2967846/Fronteras+en+el+aire_400x400.jpg/2de199e1-b69b-1cfe-aab9-d15fdedf174a?version=1.0&t=1776763279337&imageThumbnail=2",
+    "url": "https://cultura.majadahonda.org/espectaculos-culturales?p_p_id=CalendarSuite_INSTANCE_STa3SHI1sEeH&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_r_p_calendarBookingId=2968086&p_r_p_calendarPath=%2Fhtml%2Fsuite%2Fdisplays%2Fdetail.jsp",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "1685f3af-f8cd-41d2-8582-1135775d860f",
+    "title": "“La Zapatera Prodigiosa”",
+    "company": "“La Zapatera Prodigiosa”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "10 €",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/la-zapatera-prodigiosa-2/",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "7df5da3c-d2d1-4635-aa72-b14eafe6e797",
+    "title": "“Las Flamencas”",
+    "company": "“Las Flamencas”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/las-flamencas/",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "ecd82421-7f01-4dd2-96e7-289ec1fb1d69",
+    "title": "“Mangata”",
+    "company": "“Mangata”",
+    "venue": {
+      "name": "Teatro Federico García Lorca",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "8 €",
+    "is_free": null,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://cultura.getafe.es/agenda-cultura/mangata/",
+    "sessions": [
+      {
+        "date": "2026-05-12",
+        "time": "18:30"
+      }
+    ]
+  },
+  {
+    "id": "707d0e4f-145c-4d02-9ee3-b6a3cd69d720",
+    "title": "MÚSICA Y DANZA EN EL PALACIO",
+    "company": "danza de Pilar Domínguez con la Orquesta de Pulso y Púa 5º traste de Boadilla del Monte",
+    "venue": {
+      "name": "Jardines del Palacio del Infante Don Luis",
+      "municipality": "Boadilla del Monte"
+    },
+    "type": "Danza",
+    "price_range": "Gratis",
+    "is_free": true,
+    "image_url": "https://www.ayuntamientoboadilladelmonte.org/sites/default/files/styles/ultimas_imagenes_alcalde/public/images/boadilla_portada-cultura_a3_38.jpg?itok=ZIMzeJNK",
+    "url": "https://www.ayuntamientoboadilladelmonte.org/boadilla-actualidad/agenda/musica-y-danza-en-el-palacio-2",
+    "sessions": [
+      {
+        "date": "2026-06-05",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "lisiestarasthisisbeautycentrodeculturacontemporaneacondeduque",
+    "title": "Lisi Estarás «#THISISBEAUTY»",
+    "company": "",
+    "venue": {
+      "name": "Centro de Cultura Contemporánea CondeDuque",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "",
+    "is_free": false,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/MadridDestino/ficheros/lisi.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Lisi-Estaras-THISISBEAUTY/?vgnextfmt=default&vgnextoid=6025b4d724339910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "fusionbeatsuseracentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Fusión Beats Usera",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/0905FusionBeats.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Fusion-Beats-Usera/?vgnextfmt=default&vgnextoid=34af380a8c3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "musicatradicionalcubanacentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Música tradicional cubana",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/0905MusicaCubana.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Musica-tradicional-cubana/?vgnextfmt=default&vgnextoid=8ef6380a8c3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "iniciateenlabatukadacentrodeeducacionambientalyculturalmarisstellausera",
+    "title": "Iníciate en la batukada",
+    "company": "",
+    "venue": {
+      "name": "Centro de Educación Ambiental y Cultural Maris Stella (Usera)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/Usera/ProgramacionCulturalUsera/MarisStella/ficheros/1005Batukada.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Iniciate-en-la-batukada/?vgnextfmt=default&vgnextoid=ac8b47bb6d3dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "10:30"
+      }
+    ]
+  },
+  {
+    "id": "danzaineditocentroculturaleltoritomoratalaz",
+    "title": "Danza. Inédito",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural el Torito (Moratalaz)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/DistritoMoratalaz/Actividades/ficheros/0605ineditos.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Danza-Inedito/?vgnextfmt=default&vgnextoid=b0e6bceb6e9bd910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-06",
+        "time": "17:30"
+      }
+    ]
+  },
+  {
+    "id": "enlazadascentroculturalcasadevacasretiro",
+    "title": "Enlazadas",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural Casa de Vacas (Retiro)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/DistritoRetiro/FICHEROS/FICHEROS%20ACTIVIDADES%20MAYO/Enlazadas-001.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Enlazadas/?vgnextfmt=default&vgnextoid=01665cb735fbd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "tallerdedanzaafricanacentroculturalciudadpegasosanblascanillejas",
+    "title": "Taller de danza africana",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural Ciudad Pegaso (San Blas - Canillejas)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/SanBlas/SanBlasActividadesNuevo/FicherosProgramacion/DanzaAfrican%20a.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Taller-de-danza-africana/?vgnextfmt=default&vgnextoid=9275bba2f97f6910VgnVCM1000001d4a900aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "11:00"
+      }
+    ]
+  },
+  {
+    "id": "muertosdehambreteatromunicipaldevallecas",
+    "title": "Muertos de hambre",
+    "company": "",
+    "venue": {
+      "name": "Teatro Municipal de Vallecas",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadWeb/UGBBDD/Actividades/Distritos/VillaVallecas/Actividades/ficheros/Mayo/1005Muertos.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Muertos-de-hambre/?vgnextfmt=default&vgnextoid=f372a217bc9ad910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "clasesdechotiscentroculturallascaliforniasretiro",
+    "title": "Clases de chotis",
+    "company": "",
+    "venue": {
+      "name": "Centro Cultural Las Californias (Retiro)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/DistritoRetiro/FICHEROS/FICHEROS%20ACTIVIDADES%20MAYO/clases%20de%20chotis.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Clases-de-chotis/?vgnextfmt=default&vgnextoid=c1d45281610bd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2027-04-25",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "festivalmalasanabailamuseodehistoriademadrid",
+    "title": "Festival Malasaña Baila",
+    "company": "",
+    "venue": {
+      "name": "Museo de Historia de Madrid",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/MuseosMunicipales/MuseoDeHistoriaDeMadrid/Actividades%20y%20Educaci%C3%B3n/Malasa%C3%B1a%20Baila/ficheros/malasa%C3%B1abaila.png",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Festival-Malasana-Baila/?vgnextfmt=default&vgnextoid=acf4cb7f47ddd910VgnVCM200000f921e388RCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-03",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-06",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "hilvanandolapraderadesfiledemodacastizabibliotecapublicamunicipalivandevargascentro",
+    "title": "Hilvanando la pradera: desfile de moda castiza",
+    "company": "",
+    "venue": {
+      "name": "Biblioteca Pública Municipal Iván de Vargas (Centro)",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "https://www.madrid.es/UnidadesDescentralizadas/Bibliotecas/BibliotecasPublicas/Actividades/Musica_Conciertos_Danza/ficheros/260511Hilvanando_260x260.jpg",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Hilvanando-la-pradera-desfile-de-moda-castiza/?vgnextfmt=default&vgnextoid=a923c32bb1edd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "expresatebailandoespaciodeigualdaddulcechaconvillaverde",
+    "title": "Exprésate bailando",
+    "company": "",
+    "venue": {
+      "name": "Espacio de Igualdad Dulce Chacón. Villaverde",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Gratuito",
+    "is_free": true,
+    "image_url": "",
+    "url": "https://www.madrid.es/portales/munimadrid/es/Inicio/Actualidad/Actividades-y-eventos/Expresate-bailando/?vgnextfmt=default&vgnextoid=e7d57bdec48dd910VgnVCM100000891ecb1aRCRD&vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-14",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "34786bec-6ec9-4ebc-8d91-8c4516d32262",
+    "title": "MANIFIESTO",
+    "company": "MooDanza y Victoria Pérez",
+    "venue": {
+      "name": "La Escalera de Jacob",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "12€",
+    "is_free": false,
+    "image_url": "https://www.laescaleradejacob.es/img/logo.png",
+    "url": "https://www.laescaleradejacob.es/cartelera/manifiesto/",
+    "sessions": [
+      {
+        "date": "2026-06-03",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-10",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-06-24",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "f9949ced-c72f-4d0e-bffc-5c860647e5f9",
+    "title": "Lo que insiste / Banquete Caribe",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Teatro La Usina",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "13€",
+    "is_free": false,
+    "image_url": "https://cdn.atrapalo.com/common/photo/event/4/9/4/4372/1777547/tic_0_0.jpg",
+    "url": "https://www.atrapalo.com/entradas/lo-que-insiste-banquete-caribe_e4944372/",
+    "sessions": [
+      {
+        "date": "2026-06-13",
+        "time": "12:30"
+      },
+      {
+        "date": "2026-06-14",
+        "time": "12:30"
+      }
+    ]
+  },
+  {
+    "id": "c191764e-bd75-4547-aaef-9991c5d7a125",
+    "title": "Tres derivas del cuerpo",
+    "company": "Colectivo Hambrientas",
+    "venue": {
+      "name": "Teatro La Usina",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "13€",
+    "is_free": false,
+    "image_url": "https://cdn.atrapalo.com/common/photo/event/4/9/3/7149/1739148/tic_0_0.jpg",
+    "url": "https://www.atrapalo.com/entradas/tres-derivas-del-cuerpo_e4937149/",
+    "sessions": [
+      {
+        "date": "2026-06-06",
+        "time": "12:30"
+      }
+    ]
+  },
+  {
+    "id": "6257e49b-2357-4a9b-a9d3-c37685f485ce",
+    "title": "Stellium",
+    "company": "EYAS Dance Project",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2019/12/LOGO-scaled-e1668509863224-300x77.png.webp",
+    "url": "https://www.cuartapared.es/project/stellium/",
+    "sessions": [
+      {
+        "date": "2025-09-05",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-09-06",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "91e7b23a-17b5-48a4-bc08-0b24f20fd58d",
+    "title": "SOLO IMPROVISA– V Certamen de Improvisación en danza",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "6€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/solo-improvisa/",
+    "sessions": [
+      {
+        "date": "2025-10-30",
+        "time": "20:00"
+      },
+      {
+        "date": "2025-10-31",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "41ca7bdc-eec0-4f42-9387-810cd6ea4269",
+    "title": "Spira",
+    "company": "Ogmia",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/spira/",
+    "sessions": [
+      {
+        "date": "2025-11-18",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-11-19",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "a646a378-f400-43fa-b245-93efa694d140",
+    "title": "‎Ábrego – Alba González",
+    "company": "Compañía desconocida",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "",
+    "url": "https://www.cuartapared.es/project/abrego/",
+    "sessions": [
+      {
+        "date": "2025-12-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2025-12-10",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "da2b40d3-f619-40bb-8e93-20d0b9a39ca0",
+    "title": "Flop",
+    "company": "Antonio Ruz",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/flop/",
+    "sessions": [
+      {
+        "date": "2026-01-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-01-10",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "ebc65901-a22c-4aaf-92a1-6f66e86e165a",
+    "title": "La culpa",
+    "company": "Elena Puchol",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€.",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/la-culpa/",
+    "sessions": [
+      {
+        "date": "2026-02-20",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-02-21",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "b1b0e48e-9056-47c1-8355-3eb326542b85",
+    "title": "Informal Stage",
+    "company": "Losinformalls",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/informal-stage/",
+    "sessions": [
+      {
+        "date": "2026-03-13",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-03-14",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "829d142d-ebc5-4660-aae7-6134e07643b6",
+    "title": "Lo que queda",
+    "company": "Losdedae",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2025/11/ese-ruido-es-un-animal-alberto-mateo-web-938x938.jpeg",
+    "url": "https://www.cuartapared.es/project/lo-que-queda/",
+    "sessions": [
+      {
+        "date": "2026-04-09",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-04-11",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "34ceba7f-d6ff-4ae0-87e8-23ef7d1ddcc8",
+    "title": "Emigradas",
+    "company": "Cienfuegos Danza",
+    "venue": {
+      "name": "Sala Cuarta Pared",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€ (50% y 30% de descuento por compra anticipada)",
+    "is_free": false,
+    "image_url": "https://www.cuartapared.es/wp-content/uploads/2026/02/inesgomez-emigradas3-468x312.jpg",
+    "url": "https://www.cuartapared.es/project/emigradas/",
+    "sessions": [
+      {
+        "date": "2026-05-29",
+        "time": "20:30"
+      },
+      {
+        "date": "2026-05-30",
+        "time": "20:30"
+      }
+    ]
+  },
+  {
+    "id": "932553b2-bf9c-48aa-a274-6af7766b5f6c",
+    "title": "Colores",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026 Colores",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87626x1-xgsu6.jpg/db27a84f-49ff-44c4-a19b-a75f79d9852c",
+    "url": "https://www.giglon.com/evento/colores-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-15",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "a0710bf6-de07-45fd-84fa-d20d77b7826d",
+    "title": "VIAJE AL AMOR BRUJO - Ballet Español de la Comunidad de Madrid",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87249x1-1k9jf.jpg/8790d58b-1c3c-4cf9-b4c5-932b99eeba60",
+    "url": "https://www.giglon.com/evento/viaje-al-amor-brujo---ballet-espanol-de-la-comunidad-de-madrid-2026",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "56063809-b7ad-427e-bba7-0a58116f3784",
+    "title": "MUERTA DE AMOR - CÍA MANUEL LIÑÁN",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "6.70 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87563x1-74uve.jpg/8bdfda72-eae2-40c1-b89e-4cb8c00d2375",
+    "url": "https://www.giglon.com/evento/muerta-de-amor---cia-manuel-linan-fuenlabrada",
+    "sessions": [
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "05c886d2-840c-4b43-92e9-b4869692691c",
+    "title": "CARMENCITA Y EL LOBO - CARABDANZA",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "0.00 €",
+    "is_free": true,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87636x1-qj6bp.jpg/aee5ae88-cfe7-40f2-a7ac-07c818545741",
+    "url": "https://www.giglon.com/evento/carmencita-y-el-lobo---carabdanza-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-24",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "c733aa74-1a47-4ef0-b22d-ddf991d924a6",
+    "title": "COMPAÑÍA NACHO DUATO - DUENDE, L'AMOROSO, CANTUS",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "7.60 €",
+    "is_free": false,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87266x1-vqcs6.jpg/46fb2126-6450-4b63-a1ea-f6ba4f986ea7",
+    "url": "https://www.giglon.com/evento/compania-nacho-duato---duende-lamoroso-cantus-fuenlabra-2026",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "9ea46a81-dd02-488c-9c66-be68d85ce612",
+    "title": "tÁ - CÍA MIRIÑAQUE",
+    "company": "FESTIVAL FUENLABRADA EN DANZA 2026",
+    "venue": {
+      "name": "Teatro Tomás y Valiente",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "0.00 €",
+    "is_free": true,
+    "image_url": "https://www.giglon.com/documents/10180/30003/3-87635x1-kaj23.jpg/1508b80c-7887-451d-afd9-5c969a67ade3",
+    "url": "https://www.giglon.com/evento/ta---cia-mirinaque-fuenlabrada-2026",
+    "sessions": [
+      {
+        "date": "2026-05-31",
+        "time": "12:00"
+      }
+    ]
+  },
+  {
+    "id": "da4e86e0-0e7b-4fe2-915b-3395c8e9fefd",
+    "title": "LA MAGIA DE LA DANZA",
+    "company": "LA MAGIA DE LA DANZA",
+    "venue": {
+      "name": "Teatro Josep Carreras",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop",
+    "url": "https://www.giglon.com/evento/la-magia-de-la-danza-fuenlabrada",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "19:00"
+      }
+    ]
   }
 ]

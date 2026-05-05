@@ -1,6 +1,6 @@
 [
   {
-    "id": "df368513-e567-45ca-9baf-cd4552287135",
+    "id": "ba7bc499-8268-4674-b18b-c0ce06e6309b",
     "title": "EL LAGO DE LOS CISNES: LA NUEVA GENERACIÓN",
     "company": "NEW ADVENTURES",
     "venue": {
@@ -36,75 +36,7 @@
     ]
   },
   {
-    "id": "a919f98d-47ed-4fd9-92e0-c3c97be81483",
-    "title": "BALLET NACIONAL DE ESPAÑA",
-    "company": "MEDEA",
-    "venue": {
-      "name": "Teatro Real",
-      "municipality": "Madrid"
-    },
-    "type": "Ballet",
-    "price_range": "Desde 15€",
-    "is_free": false,
-    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_BNE.jpg",
-    "url": "https://www.teatroreal.es/es/espectaculo/ballet-nacional-espana",
-    "sessions": [
-      {
-        "date": "2025-10-16",
-        "time": "19:30"
-      },
-      {
-        "date": "2025-10-17",
-        "time": "19:30"
-      },
-      {
-        "date": "2025-10-18",
-        "time": "21:00"
-      },
-      {
-        "date": "2025-10-19",
-        "time": "18:00"
-      }
-    ]
-  },
-  {
-    "id": "93a6a3c4-4ff1-4849-8383-e5d510a1acfa",
-    "title": "JULIETA Y ROMEO",
-    "company": "REAL BALLET DE SUECIA",
-    "venue": {
-      "name": "Teatro Real",
-      "municipality": "Madrid"
-    },
-    "type": "Ballet",
-    "price_range": "Desde 15€",
-    "is_free": false,
-    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_JulietayRomeo03%20%281%29.jpg",
-    "url": "https://www.teatroreal.es/es/espectaculo/real-ballet-suecia",
-    "sessions": [
-      {
-        "date": "2026-05-07",
-        "time": "19:30"
-      },
-      {
-        "date": "2026-05-08",
-        "time": "19:30"
-      },
-      {
-        "date": "2026-05-09",
-        "time": "17:00"
-      },
-      {
-        "date": "2026-05-09",
-        "time": "21:00"
-      },
-      {
-        "date": "2026-05-10",
-        "time": "18:00"
-      }
-    ]
-  },
-  {
-    "id": "1404dc8f-d1b3-47eb-b4f9-676e349ed04a",
+    "id": "851a2671-1b76-4f27-a741-9ceefee4d0ca",
     "title": "ALVIN AILEY AMERICAN DANCE THEATER",
     "company": "",
     "venue": {
@@ -144,7 +76,39 @@
     ]
   },
   {
-    "id": "cf3bb150-1a35-4e59-8762-1b514406a506",
+    "id": "cac5ab71-a4c4-4b02-8725-c3ebc4127e52",
+    "title": "COMPAÑÍA NACIONAL DE DANZA",
+    "company": "NÚMEROS (II)",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_CND06.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/compania-nacional-danza",
+    "sessions": [
+      {
+        "date": "2027-01-15",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-16",
+        "time": "19:30"
+      },
+      {
+        "date": "2027-01-17",
+        "time": "18:00"
+      },
+      {
+        "date": "2027-01-18",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "d1c85717-8433-476b-803c-4a4db3a5bd5e",
     "title": "TANZTHEATER WUPPERTAL PINA BAUSCH",
     "company": "",
     "venue": {
@@ -180,34 +144,70 @@
     ]
   },
   {
-    "id": "35b36816-beae-4975-9cc4-0ca323cf0fce",
-    "title": "COMPAÑÍA NACIONAL DE DANZA",
-    "company": "NÚMEROS (II)",
+    "id": "9caf633a-f62a-4236-8a01-14f1f1ceab66",
+    "title": "BALLET NACIONAL DE ESPAÑA",
+    "company": "MEDEA",
     "venue": {
       "name": "Teatro Real",
       "municipality": "Madrid"
     },
-    "type": "Danza",
+    "type": "Ballet",
     "price_range": "Desde 15€",
     "is_free": false,
-    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_CND06.jpg",
-    "url": "https://www.teatroreal.es/es/espectaculo/compania-nacional-danza",
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_DANZA_BNE.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/ballet-nacional-espana",
     "sessions": [
       {
-        "date": "2027-01-15",
+        "date": "2025-10-16",
         "time": "19:30"
       },
       {
-        "date": "2027-01-16",
+        "date": "2025-10-17",
         "time": "19:30"
       },
       {
-        "date": "2027-01-17",
+        "date": "2025-10-18",
+        "time": "21:00"
+      },
+      {
+        "date": "2025-10-19",
         "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "dc5f0c6f-482d-4316-b1b7-7f189bde479a",
+    "title": "JULIETA Y ROMEO",
+    "company": "REAL BALLET DE SUECIA",
+    "venue": {
+      "name": "Teatro Real",
+      "municipality": "Madrid"
+    },
+    "type": "Ballet",
+    "price_range": "Desde 15€",
+    "is_free": false,
+    "image_url": "https://www.teatroreal.es/sites/default/files/espectaculos/CabeceraWeb_1920x550_JULIETAYROMEO.jpg",
+    "url": "https://www.teatroreal.es/es/espectaculo/real-ballet-suecia",
+    "sessions": [
+      {
+        "date": "2026-05-07",
+        "time": "19:30"
       },
       {
-        "date": "2027-01-18",
+        "date": "2026-05-08",
         "time": "19:30"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "17:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "21:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "18:00"
       }
     ]
   }

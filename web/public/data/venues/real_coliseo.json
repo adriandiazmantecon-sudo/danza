@@ -1,30 +1,6 @@
 [
   {
-    "id": "a6328b21-db8d-4c97-9cb9-72ac273b8665",
-    "title": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
-    "company": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
-    "venue": {
-      "name": "Real Coliseo de Carlos III",
-      "municipality": "San Lorenzo de El Escorial"
-    },
-    "type": "Danza",
-    "price_range": "Desde 10 euros",
-    "is_free": false,
-    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/03/26/zarzuela-flamenco-legado-hispanoamerica.jpg?VersionId=QI2O88Pmwo5ALdeTKzmsjaJadm4PUypj&itok=pYB8BY3U",
-    "url": "https://www.comunidad.madrid/actividades/2026/danza-musica-zarzuela-flamenco-legado-hispanoamerica",
-    "sessions": [
-      {
-        "date": "2026-05-02",
-        "time": "19:00"
-      },
-      {
-        "date": "2026-05-02",
-        "time": "20:30"
-      }
-    ]
-  },
-  {
-    "id": "bba9e520-b5f5-4e1c-a852-4c0cc24d8670",
+    "id": "2becbcde-3db9-4bcc-8239-0d1347c95374",
     "title": "PREMIO A MEJOR ESPECTÁCULO DE DANZA FETEN 2025",
     "company": "PREMIO A MEJOR ESPECTÁCULO DE DANZA FETEN 2025",
     "venue": {
@@ -44,6 +20,30 @@
       {
         "date": "2026-05-16",
         "time": "17:30"
+      }
+    ]
+  },
+  {
+    "id": "c75141c0-cc0a-4594-8a7b-140e46f96327",
+    "title": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
+    "company": "ZARZUELA AL COMPÁS DEL FLAMENCO Y LA FUSIÓN",
+    "venue": {
+      "name": "Real Coliseo de Carlos III",
+      "municipality": "San Lorenzo de El Escorial"
+    },
+    "type": "Danza",
+    "price_range": "Desde 10 euros",
+    "is_free": false,
+    "image_url": "https://www.comunidad.madrid/docs/styles/3x1_1272w_1x/public/assets/2026/03/26/zarzuela-flamenco-legado-hispanoamerica.jpg?VersionId=QI2O88Pmwo5ALdeTKzmsjaJadm4PUypj&itok=pYB8BY3U",
+    "url": "https://www.comunidad.madrid/actividades/2026/danza-musica-zarzuela-flamenco-legado-hispanoamerica",
+    "sessions": [
+      {
+        "date": "2026-05-02",
+        "time": "19:00"
+      },
+      {
+        "date": "2026-05-02",
+        "time": "20:30"
       }
     ]
   }

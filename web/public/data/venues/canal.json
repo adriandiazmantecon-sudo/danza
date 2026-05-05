@@ -1,38 +1,6 @@
 [
   {
-    "id": "0bad2241-f968-4bec-ba78-653c1e733085",
-    "title": "La Cordero y su ejército",
-    "company": "SOL PICÓ CIA DE DANZA",
-    "venue": {
-      "name": "Teatros del Canal",
-      "municipality": "Madrid"
-    },
-    "type": "Danza",
-    "price_range": "Desde 9€",
-    "is_free": false,
-    "image_url": "https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg",
-    "url": "https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/",
-    "sessions": [
-      {
-        "date": "2026-05-20",
-        "time": "20:00"
-      },
-      {
-        "date": "2026-05-21",
-        "time": "20:00"
-      },
-      {
-        "date": "2026-05-22",
-        "time": "20:00"
-      },
-      {
-        "date": "2026-05-23",
-        "time": "20:00"
-      }
-    ]
-  },
-  {
-    "id": "0d97f165-85ef-4f85-9822-b782760dcbad",
+    "id": "90f380c4-e20c-4195-8efa-cc2e8fe57950",
     "title": "SACRESIZE",
     "company": "Alberto Velasco",
     "venue": {
@@ -84,6 +52,38 @@
       {
         "date": "2026-06-07",
         "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "07ebf8a4-6c86-4ece-b21c-a923f387efdc",
+    "title": "La Cordero y su ejército",
+    "company": "SOL PICÓ CIA DE DANZA",
+    "venue": {
+      "name": "Teatros del Canal",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Desde 9€",
+    "is_free": false,
+    "image_url": "https://cdn.teatroscanal.com/wp-content/uploads/2026/03/AF_BANNERS_ABONO_CANAL_2026_150426_CORDERO_293x150.jpg",
+    "url": "https://www.teatroscanal.com/espectaculo/sol-pico-cia-de-danza/",
+    "sessions": [
+      {
+        "date": "2026-05-20",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
       }
     ]
   }

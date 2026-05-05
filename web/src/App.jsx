@@ -111,8 +111,8 @@ function App() {
   const totalAbsoluteEventsCount = events.length;
   const totalVenuesCount = venues.length - 1;
 
-  const types = ['All', ...new Set(events.map(e => e.type))].sort();
-  const municipalities = ['All', ...new Set(events.map(e => e.venue.municipality))].sort();
+  const types = ['All', ...[...new Set(events.map(e => e.type))].sort()];
+  const municipalities = ['All', ...[...new Set(events.map(e => e.venue.municipality))].sort()];
 
   const filteredEvents = events.filter(e => {
     if (filterType !== 'All' && e.type !== filterType) return false;
