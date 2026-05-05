@@ -51,6 +51,16 @@ from venues.dt_espacio_escenico import scrape_dt_espacio_escenico
 from venues.teatro_elias_ahuja import scrape_teatro_elias_ahuja
 from venues.auditorio_placido_domingo import scrape_auditorio_placido_domingo
 from venues.ciempozuelos import scrape_ciempozuelos
+from venues.ajalvir import scrape_ajalvir
+from venues.alcala import scrape_alcala
+from venues.alcobendas import scrape_alcobendas
+from venues.alcorcon_buero_vallejo import scrape_alcorcon_buero
+from venues.alcorcon_vinagrande import scrape_alcorcon_vina
+from venues.algete import scrape_algete
+from venues.alpedrete import scrape_alpedrete
+from venues.aranjuez import scrape_aranjuez
+from venues.arganda import scrape_arganda
+from venues.arroyomolinos import scrape_arroyomolinos
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -103,7 +113,17 @@ def main():
         'dt_espacio': ('DT Espacio Escénico', scrape_dt_espacio_escenico),
         'ahuja': ('Teatro Elías Ahuja', scrape_teatro_elias_ahuja),
         'placido': ('Auditorio Plácido Domingo', scrape_auditorio_placido_domingo),
-        'ciempozuelos': ('Sala Multifuncional de Ciempozuelos', scrape_ciempozuelos)
+        'ciempozuelos': ('Sala Multifuncional de Ciempozuelos', scrape_ciempozuelos),
+        'ajalvir': ('Ajalvir - Salón Municipal de Actos', scrape_ajalvir),
+        'alcala': ('Alcalá de Henares - Teatro Salón Cervantes', scrape_alcala),
+        'alcobendas': ('Alcobendas - Teatro Auditorio Ciudad de Alcobendas', scrape_alcobendas),
+        'alcorcon_buero': ('Alcorcón - Teatro municipal Buero Vallejo', scrape_alcorcon_buero),
+        'alcorcon_vina': ('Alcorcón - Centro Cultural Viñagrande', scrape_alcorcon_vina),
+        'algete': ('Algete - Auditorio Joan Manuel Serrat', scrape_algete),
+        'alpedrete': ('Alpedrete - Centro Cultural Alpedrete', scrape_alpedrete),
+        'aranjuez': ('Aranjuez - Auditorio Joaquín Rodrigo', scrape_aranjuez),
+        'arganda': ('Arganda del Rey - Auditorio Montserrat Caballé', scrape_arganda),
+        'arroyomolinos': ('Arroyomolinos - Auditorium del centro de las artes', scrape_arroyomolinos)
     }
 
     venues_to_scrape = []

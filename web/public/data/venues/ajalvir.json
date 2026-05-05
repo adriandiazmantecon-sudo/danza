@@ -1,0 +1,22 @@
+[
+  {
+    "id": "e2c7fc2c-2d25-4af5-ad66-bff41b3c0df5",
+    "title": "PASAJE",
+    "company": "Juan Carlos Avecilla",
+    "venue": {
+      "name": "Salón Municipal de Actos",
+      "municipality": "Ajalvir"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pasaje/pasaje1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pasaje.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "19:00"
+      }
+    ]
+  }
+]

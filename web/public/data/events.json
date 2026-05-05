@@ -2438,7 +2438,7 @@
     ]
   },
   {
-    "id": "ecf6412a-b9bb-4c86-ae84-17839a5cda02",
+    "id": "91fef657-91c7-4a73-ada5-5a60820a86bb",
     "title": "AL SON",
     "company": "Sara Cano Compañía de Danza",
     "venue": {
@@ -2452,8 +2452,88 @@
     "url": "https://www.madrid.org/clas_artes/red/alson.html",
     "sessions": [
       {
-        "date": "2027-03-07",
+        "date": "2026-03-07",
         "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "e2c7fc2c-2d25-4af5-ad66-bff41b3c0df5",
+    "title": "PASAJE",
+    "company": "Juan Carlos Avecilla",
+    "venue": {
+      "name": "Salón Municipal de Actos",
+      "municipality": "Ajalvir"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pasaje/pasaje1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pasaje.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "a3554a2e-4fff-4df9-9f0c-21cf93177580",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Salón Cervantes",
+      "municipality": "Alcalá de Henares"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-02-13",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "1131c544-9f09-4315-9458-67e2d721fe14",
+    "title": "LATIDO Y TAÑIDO - ALEJANDRO LARA DANCE PROJECT",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Auditorio Joan Manuel Serrat",
+      "municipality": "Algete"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-02-07",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "b1c1faa1-fee5-4b7c-bfc8-65489823f2b3",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Auditorio Joaquín Rodrigo",
+      "municipality": "Aranjuez"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-02-28",
+        "time": "19:30"
       }
     ]
   }

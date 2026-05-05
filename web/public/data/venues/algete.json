@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1131c544-9f09-4315-9458-67e2d721fe14",
+    "title": "LATIDO Y TAÑIDO - ALEJANDRO LARA DANCE PROJECT",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Auditorio Joan Manuel Serrat",
+      "municipality": "Algete"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-02-07",
+        "time": "19:00"
+      }
+    ]
+  }
+]

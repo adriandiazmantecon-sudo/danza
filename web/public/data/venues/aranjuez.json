@@ -1,0 +1,22 @@
+[
+  {
+    "id": "b1c1faa1-fee5-4b7c-bfc8-65489823f2b3",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Auditorio Joaquín Rodrigo",
+      "municipality": "Aranjuez"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-02-28",
+        "time": "19:30"
+      }
+    ]
+  }
+]
