@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": "0ccc3fc2-b725-4998-9cc5-05ebcb930684",
+    "title": "Egunero - Madrid",
+    "company": "",
+    "venue": {
+      "name": "DT Espacio Escénico",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/egunero-harritxu-de-atxa-cancel?event=30299818#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-14",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-15",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  }
+]

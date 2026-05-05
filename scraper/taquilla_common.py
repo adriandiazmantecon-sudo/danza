@@ -1,7 +1,7 @@
 import asyncio
 import re
 import logging
-from typing import List, Optional
+from typing import List, Optional, Dict
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 from models import Event, Venue, Session
@@ -22,7 +22,7 @@ async def scrape_all_taquilla_events() -> List[Event]:
     if _EVENTS_CACHE is not None:
         return _EVENTS_CACHE
 
-    all_events = []
+    all_events_map: Dict[str, Event] = {}
     url = "https://www.taquilla.com/espectaculos/danza/madrid"
     
     async with async_playwright() as p:
@@ -36,102 +36,106 @@ async def scrape_all_taquilla_events() -> List[Event]:
         
         try:
             logger.info(f"Navigating to {url}")
-            await page.goto(url, wait_until="domcontentloaded", timeout=60000)
-            await page.wait_for_selector('.ent-result', timeout=30000)
+            await page.goto(url, wait_until="networkidle", timeout=60000)
             
-            # Wait a bit for any dynamic content
-            await asyncio.sleep(2)
+            # Wait for any of the event list items
+            await page.wait_for_selector('li[itemtype="https://schema.org/DanceEvent"]', timeout=30000)
+            
+            # Scroll to load more if lazy loaded
+            for _ in range(5):
+                await page.mouse.wheel(0, 2000)
+                await asyncio.sleep(0.5)
             
             soup = BeautifulSoup(await page.content(), 'html.parser')
-            event_blocks = soup.select('.ent-result')
+            session_items = soup.select('li[itemtype="https://schema.org/DanceEvent"]')
             
-            logger.info(f"Found {len(event_blocks)} event blocks on page.")
+            logger.info(f"Found {len(session_items)} session items on page.")
             
-            for block in event_blocks:
-                title_elem = block.select_one('.l-title-entity')
-                venue_elem = block.select_one('.l-subtitle-entity')
+            for s_item in session_items:
+                # Extract basic info from metadata
+                name_meta = s_item.find('meta', itemprop='name')
+                date_meta = s_item.find('meta', itemprop='startDate')
+                url_meta = s_item.find('meta', itemprop='url')
+                price_meta = s_item.find('meta', itemprop='lowPrice')
                 
-                if not title_elem or not venue_elem:
-                    continue
-                    
-                title = title_elem.get_text(strip=True)
-                venue_name_full = venue_elem.get_text(strip=True)
-                # Venue name is usually "Venue Name, Municipality"
-                venue_name = venue_name_full.split(',')[0].strip()
-                municipality = "Madrid"
-                if ',' in venue_name_full:
-                    municipality = venue_name_full.split(',')[1].replace("Ver mapa", "").strip()
-                
-                sessions = []
-                session_items = block.select('li[itemtype="https://schema.org/DanceEvent"]')
-                
-                # Default info from block
-                event_url = ""
-                price_range = ""
-                
-                for s_item in session_items:
-                    date_meta = s_item.find('meta', itemprop='startDate')
-                    url_meta = s_item.find('meta', itemprop='url')
-                    price_meta = s_item.find('meta', itemprop='lowPrice')
-                    
-                    if date_meta:
-                        date_val = date_meta['content'] # YYYY-MM-DD
-                        # Find time in the list
-                        time_span = s_item.select_one('.ent-results-list-hour-time span')
-                        time_val = time_span.get_text(strip=True) if time_span else "20:00"
-                        
-                        sessions.append(Session(date=date_val, time=time_val))
-                    
-                    if url_meta and not event_url:
-                        event_url = url_meta['content']
-                        
-                    if price_meta and not price_range:
-                        price_val = price_meta['content']
-                        price_range = f"{price_val}€"
-                
-                if not sessions:
+                # Venue info usually in a nested div/span with itemprop="location"
+                location_elem = s_item.select_one('[itemprop="location"]')
+                venue_name = "Madrid"
+                if location_elem:
+                    venue_name_elem = location_elem.find('meta', itemprop='name') or location_elem.select_one('[itemprop="name"]')
+                    if venue_name_elem:
+                        venue_name = venue_name_elem.get('content') if venue_name_elem.name == 'meta' else venue_name_elem.get_text(strip=True)
+
+                if not name_meta or not date_meta:
                     continue
                 
-                # If event_url still empty, try to find any link in the block
-                if not event_url:
-                    first_link = block.select_one('a')
-                    if first_link:
-                        event_url = first_link['href']
-                        if event_url.startswith('/'):
-                            event_url = "https://www.taquilla.com" + event_url
+                title = name_meta['content'].strip()
+                date_full = date_meta['content'] # e.g. "2026-05-08T21:00:00+02:00"
+                date_val = date_full.split('T')[0]
+                time_val = "20:00"
+                if 'T' in date_full:
+                    time_val = date_full.split('T')[1][:5]
                 
-                # Generic image for all these venues as requested
-                image_url = "/images/generic_dance.png"
+                event_url = url_meta['content'] if url_meta else ""
+                price_val = price_meta['content'] if price_meta else ""
+                price_range = f"{price_val}€" if price_val else ""
                 
-                event = Event(
-                    id=str(uuid.uuid4()),
-                    title=title,
-                    company="", # Not necessary as per user request
-                    venue=Venue(name=venue_name, municipality=municipality),
-                    type="Danza",
-                    price_range=price_range,
-                    is_free=price_range.lower() in ["0€", "0.00€", "gratis", "gratuito"],
-                    image_url=image_url,
-                    url=event_url,
-                    sessions=sessions
-                )
-                all_events.append(event)
+                # Clean up venue name (sometimes it has city appended)
+                venue_name = venue_name.split(',')[0].strip()
+                
+                # Use (title, venue) as key to group sessions
+                key = f"{title}|{venue_name}"
+                
+                if key not in all_events_map:
+                    all_events_map[key] = Event(
+                        id=str(uuid.uuid4()),
+                        title=title,
+                        company="",
+                        venue=Venue(name=venue_name, municipality="Madrid"),
+                        type="Danza",
+                        price_range=price_range,
+                        is_free=price_range.lower() in ["0€", "0.00€", "gratis", "gratuito"],
+                        image_url="/images/generic_dance.png",
+                        url=event_url,
+                        sessions=[]
+                    )
+                
+                # Add session if not already added
+                session = Session(date=date_val, time=time_val)
+                if not any(s.date == session.date and s.time == session.time for s in all_events_map[key].sessions):
+                    all_events_map[key].sessions.append(session)
+                
+                # Update price range if this session is cheaper
+                if price_val and (not all_events_map[key].price_range or price_val < all_events_map[key].price_range.replace('€', '')):
+                    all_events_map[key].price_range = f"{price_val}€"
+
+            logger.info(f"Grouped into {len(all_events_map)} unique events.")
                 
         except Exception as e:
             logger.error(f"Error scraping taquilla.com: {e}")
         finally:
             await browser.close()
             
-    _EVENTS_CACHE = all_events
-    return all_events
+    _EVENTS_CACHE = list(all_events_map.values())
+    return _EVENTS_CACHE
+
+import unicodedata
+
+def normalize_string(s: str) -> str:
+    """Removes accents and converts to lowercase."""
+    if not s:
+        return ""
+    s = unicodedata.normalize('NFD', s)
+    return "".join([c for c in s if unicodedata.category(c) != 'Mn']).lower()
 
 async def get_events_for_venue(venue_name_pattern: str) -> List[Event]:
     """
     Returns events that match the given venue name pattern (substring).
     """
     all_events = await scrape_all_taquilla_events()
+    normalized_pattern = normalize_string(venue_name_pattern)
     filtered = []
     for event in all_events:
-        if venue_name_pattern.lower() in event.venue.name.lower():
+        if normalized_pattern in normalize_string(event.venue.name):
             filtered.append(event)
     return filtered

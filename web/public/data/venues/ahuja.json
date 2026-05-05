@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "8bcbf7d1-8982-46c8-8afa-e8daa304c69e",
+    "title": "Ballet of Lights: La Bella Durmiente en un espectáculo deslumbrante - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Teatro Elías Ahuja",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "28€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/we-call-it-ballet?event=30369018#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-24",
+        "time": "20:00"
+      }
+    ]
+  }
+]

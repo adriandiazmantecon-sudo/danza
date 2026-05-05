@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": "ae3af974-0008-4a48-a928-c4c5ebb9907f",
+    "title": "Actuaciones de danza - 1 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189606#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-01",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "5064f612-4f31-42dd-af5e-ea6a9261b321",
+    "title": "Actuaciones de danza - 2 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189607#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-02",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "001aab20-dbd8-4d89-9689-12e2f29f8446",
+    "title": "Actuaciones de danza - 3 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189608#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-03",
+        "time": "20:00"
+      }
+    ]
+  }
+]

@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "e61c7a0a-0a30-4d05-a13d-bc428a2a3ad3",
+    "title": "FORCE SONG - Miguel Deblas x ÉSKATON - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Réplika Teatro",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/miguel-deblas-x-eskaton?event=29739881#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "20:00"
+      }
+    ]
+  }
+]
