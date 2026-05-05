@@ -1,0 +1,22 @@
+[
+  {
+    "id": "72a99483-c620-4595-816a-88bb988bd2df",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Casa de la Cultura",
+      "municipality": "Collado Villalba"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-21",
+        "time": "19:00"
+      }
+    ]
+  }
+]

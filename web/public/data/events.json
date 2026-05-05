@@ -2478,12 +2478,12 @@
     ]
   },
   {
-    "id": "a3554a2e-4fff-4df9-9f0c-21cf93177580",
+    "id": "c5d3b9a6-c63d-4afa-9f90-90f3c07c6ccf",
     "title": "CARMENCITA Y EL LOBO",
     "company": "Carabdanza",
     "venue": {
-      "name": "Teatro Salón Cervantes",
-      "municipality": "Alcalá de Henares"
+      "name": "Jardines de Peñalba",
+      "municipality": "Collado Villalba"
     },
     "type": "Danza",
     "price_range": "Consultar web",
@@ -2492,8 +2492,8 @@
     "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
     "sessions": [
       {
-        "date": "2026-02-13",
-        "time": "20:00"
+        "date": "2026-03-21",
+        "time": "19:00"
       }
     ]
   },
@@ -2534,6 +2534,26 @@
       {
         "date": "2026-02-28",
         "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "66a25f22-0245-4c16-b807-c500b94c9d5d",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Teatro Municipal",
+      "municipality": "Coslada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-02-22",
+        "time": "11:00"
       }
     ]
   }

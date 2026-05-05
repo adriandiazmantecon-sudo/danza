@@ -61,6 +61,24 @@ from venues.alpedrete import scrape_alpedrete
 from venues.aranjuez import scrape_aranjuez
 from venues.arganda import scrape_arganda
 from venues.arroyomolinos import scrape_arroyomolinos
+from venues.becerril import scrape_becerril
+from venues.boadilla_teatro import scrape_boadilla_teatro
+from venues.boadilla_auditorio import scrape_boadilla_auditorio
+from venues.buitrago import scrape_buitrago
+from venues.camarma import scrape_camarma
+from venues.cenicientos import scrape_cenicientos
+from venues.chapineria import scrape_chapineria
+from venues.chinchon_lope import scrape_chinchon_lope
+from venues.chinchon_plaza import scrape_chinchon_plaza
+from venues.cobena import scrape_cobena
+from venues.collado_mediano import scrape_collado_mediano
+from venues.collado_villalba_teatro import scrape_collado_villalba_teatro
+from venues.collado_villalba_jardines import scrape_collado_villalba_jardines
+from venues.colmenar_arroyo import scrape_colmenar_arroyo
+from venues.colmenar_oreja import scrape_colmenar_oreja
+from venues.colmenar_viejo import scrape_colmenar_viejo
+from venues.colmenarejo import scrape_colmenarejo
+from venues.coslada import scrape_coslada
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -123,7 +141,25 @@ def main():
         'alpedrete': ('Alpedrete - Centro Cultural Alpedrete', scrape_alpedrete),
         'aranjuez': ('Aranjuez - Auditorio Joaquín Rodrigo', scrape_aranjuez),
         'arganda': ('Arganda del Rey - Auditorio Montserrat Caballé', scrape_arganda),
-        'arroyomolinos': ('Arroyomolinos - Auditorium del centro de las artes', scrape_arroyomolinos)
+        'arroyomolinos': ('Arroyomolinos - Auditorium del centro de las artes', scrape_arroyomolinos),
+        'becerril': ('Becerril de la Sierra - Sala Real', scrape_becerril),
+        'boadilla_teatro': ('Boadilla del Monte - Teatro Municipal', scrape_boadilla_teatro),
+        'boadilla_auditorio': ('Boadilla del Monte - Auditorio Municipal', scrape_boadilla_auditorio),
+        'buitrago': ('Buitrago del Lozoya - Casa de la Cultura', scrape_buitrago),
+        'camarma': ('Camarma de Esteruelas - Auditorio Municipal', scrape_camarma),
+        'cenicientos': ('Cenicientos - CC Carmen de la Rocha', scrape_cenicientos),
+        'chapineria': ('Chapinería - Auditorio Municipal', scrape_chapineria),
+        'chinchon_lope': ('Chinchón - Teatro Lope de Vega', scrape_chinchon_lope),
+        'chinchon_plaza': ('Chinchón - Plaza Mayor', scrape_chinchon_plaza),
+        'cobena': ('Cobeña - Casa de la Cultura', scrape_cobena),
+        'collado_mediano': ('Collado Mediano - Teatro Carlos Saura', scrape_collado_mediano),
+        'collado_villalba_teatro': ('Collado Villalba - Teatro Casa de la Cultura', scrape_collado_villalba_teatro),
+        'collado_villalba_jardines': ('Collado Villalba - Jardines de Peñalba', scrape_collado_villalba_jardines),
+        'colmenar_arroyo': ('Colmenar de Arroyo - Centro El Corralizo', scrape_colmenar_arroyo),
+        'colmenar_oreja': ('Colmenar de Oreja - Teatro Diéguez', scrape_colmenar_oreja),
+        'colmenar_viejo': ('Colmenar Viejo - Auditorio Villa de Colmenar Viejo', scrape_colmenar_viejo),
+        'colmenarejo': ('Colmenarejo - Teatro Municipal', scrape_colmenarejo),
+        'coslada': ('Coslada - Teatro Municipal', scrape_coslada)
     }
 
     venues_to_scrape = []

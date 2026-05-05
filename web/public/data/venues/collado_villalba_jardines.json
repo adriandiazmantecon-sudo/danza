@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c5d3b9a6-c63d-4afa-9f90-90f3c07c6ccf",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Jardines de Peñalba",
+      "municipality": "Collado Villalba"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-21",
+        "time": "19:00"
+      }
+    ]
+  }
+]
