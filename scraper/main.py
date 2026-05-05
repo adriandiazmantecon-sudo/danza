@@ -50,6 +50,7 @@ from venues.replika_teatro import scrape_replika_teatro
 from venues.dt_espacio_escenico import scrape_dt_espacio_escenico
 from venues.teatro_elias_ahuja import scrape_teatro_elias_ahuja
 from venues.auditorio_placido_domingo import scrape_auditorio_placido_domingo
+from venues.ciempozuelos import scrape_ciempozuelos
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -101,7 +102,8 @@ def main():
         'replika': ('Réplika Teatro', scrape_replika_teatro),
         'dt_espacio': ('DT Espacio Escénico', scrape_dt_espacio_escenico),
         'ahuja': ('Teatro Elías Ahuja', scrape_teatro_elias_ahuja),
-        'placido': ('Auditorio Plácido Domingo', scrape_auditorio_placido_domingo)
+        'placido': ('Auditorio Plácido Domingo', scrape_auditorio_placido_domingo),
+        'ciempozuelos': ('Sala Multifuncional de Ciempozuelos', scrape_ciempozuelos)
     }
 
     venues_to_scrape = []

@@ -2436,5 +2436,25 @@
         "time": "20:00"
       }
     ]
+  },
+  {
+    "id": "ecf6412a-b9bb-4c86-ae84-17839a5cda02",
+    "title": "AL SON",
+    "company": "Sara Cano Compañía de Danza",
+    "venue": {
+      "name": "Sala Multifuncional de Ciempozuelos",
+      "municipality": "Ciempozuelos"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/alson/alson1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/alson.html",
+    "sessions": [
+      {
+        "date": "2027-03-07",
+        "time": "19:00"
+      }
+    ]
   }
 ]
