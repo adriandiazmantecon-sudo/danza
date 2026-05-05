@@ -8,6 +8,40 @@ import FilterMenu from './components/FilterMenu';
 import CalendarFilter from './components/CalendarFilter';
 import { Search, Lock, RefreshCw, Calendar, SlidersHorizontal, ChevronDown, ChevronUp } from 'lucide-react';
 
+const ALL_MUNICIPALITIES = [
+  'Madrid',
+  'Ajalvir',
+  'Alcalá de Henares',
+  'Alcobendas',
+  'Alcorcón',
+  'Algete',
+  'Alpedrete',
+  'Aranjuez',
+  'Arganda del Rey',
+  'Arroyomolinos',
+  'Becerril de la Sierra',
+  'Boadilla del Monte',
+  'Buitrago del Lozoya',
+  'Camarma de Esteruelas',
+  'Cenicientos',
+  'Chapinería',
+  'Chinchón',
+  'Ciempozuelos',
+  'Cobeña',
+  'Collado Mediano',
+  'Collado Villalba',
+  'Colmenar de Arroyo',
+  'Colmenar de Oreja',
+  'Colmenar Viejo',
+  'Colmenarejo',
+  'Coslada',
+  'Fuenlabrada',
+  'Getafe',
+  'Majadahonda',
+  'Móstoles',
+  'San Lorenzo de El Escorial'
+];
+
 function App() {
   const [events, setEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -112,7 +146,13 @@ function App() {
   const totalVenuesCount = venues.length - 1;
 
   const types = ['All', ...[...new Set(events.map(e => e.type))].sort()];
-  const municipalities = ['All', ...[...new Set(events.map(e => e.venue.municipality))].sort()];
+  
+  // Ensure all municipalities appear, even if they have 0 events currently
+  const municipalities = useMemo(() => {
+    const fromEvents = events.map(e => e.venue.municipality);
+    const combined = new Set([...ALL_MUNICIPALITIES, ...fromEvents]);
+    return ['All', ...Array.from(combined).sort()];
+  }, [events]);
 
   const filteredEvents = events.filter(e => {
     if (filterType !== 'All' && e.type !== filterType) return false;

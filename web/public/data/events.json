@@ -3848,5 +3848,313 @@
         "time": "19:00"
       }
     ]
+  },
+  {
+    "id": "d5d5e0b0-12f6-4583-ac34-5971d270a938",
+    "title": "FORCE SONG - Miguel Deblas x ÉSKATON - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Réplika Teatro",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "7€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/miguel-deblas-x-eskaton?event=29739881#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-08",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-10",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "7c255cc5-643b-48aa-a7b8-71bb1dca0644",
+    "title": "Egunero - Madrid",
+    "company": "",
+    "venue": {
+      "name": "DT Espacio Escénico",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "14€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/egunero-harritxu-de-atxa-cancel?event=30299818#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-14",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-15",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-21",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-22",
+        "time": "20:00"
+      },
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "081372d5-c6ec-4e97-801e-ebdc31e5287d",
+    "title": "Ballet of Lights: La Bella Durmiente en un espectáculo deslumbrante - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Teatro Elías Ahuja",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "28€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/we-call-it-ballet?event=30369018#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-05-24",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "86a4a608-296a-4e21-a702-1068d26bec9e",
+    "title": "Actuaciones de danza - 1 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189606#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-01",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "8214b13e-6162-4299-b7e6-65d1c982d17e",
+    "title": "Actuaciones de danza - 2 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189607#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-02",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "16a36864-255b-44e6-8018-81bdcb0f01e9",
+    "title": "Actuaciones de danza - 3 de junio - Madrid",
+    "company": "",
+    "venue": {
+      "name": "Auditorio Plácido Domingo",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "3.69€",
+    "is_free": false,
+    "image_url": "/images/generic_dance.png",
+    "url": "https://www.taquilla.com/entradas/actuaciones-de-danza-festival-musa?event=31189608#tickets-list",
+    "sessions": [
+      {
+        "date": "2026-06-03",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "aaa2ace8-0b27-4e43-a7c0-f63b02e00b42",
+    "title": "AL SON",
+    "company": "Sara Cano Compañía de Danza",
+    "venue": {
+      "name": "Sala Multifuncional de Ciempozuelos",
+      "municipality": "Ciempozuelos"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/alson/alson1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/alson.html",
+    "sessions": [
+      {
+        "date": "2026-03-07",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "0e31d714-bafa-45a4-b24f-133e63327cf6",
+    "title": "PASAJE",
+    "company": "Juan Carlos Avecilla",
+    "venue": {
+      "name": "Salón Municipal de Actos",
+      "municipality": "Ajalvir"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pasaje/pasaje1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pasaje.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "20ec79a2-4460-4048-b71f-020d683c3d37",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Salón Cervantes",
+      "municipality": "Alcalá de Henares"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-02-13",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "85741060-cdaf-4f70-bb2d-fe77abe7d1f3",
+    "title": "LATIDO Y TAÑIDO - ALEJANDRO LARA DANCE PROJECT",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Auditorio Joan Manuel Serrat",
+      "municipality": "Algete"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-02-07",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "36ae4b3e-356b-4002-a924-320b4c9a78b9",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Auditorio Joaquín Rodrigo",
+      "municipality": "Aranjuez"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-02-28",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "0d5fcede-d5ac-4061-be4d-eaa8e563f226",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Casa de la Cultura",
+      "municipality": "Collado Villalba"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-21",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "4dfe44bf-a328-4c17-8ff4-110aff93054b",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Jardines de Peñalba",
+      "municipality": "Collado Villalba"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-21",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "f8b53d6e-d87a-4acc-91fd-c768d1fb03f1",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Teatro Municipal",
+      "municipality": "Coslada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-02-22",
+        "time": "11:00"
+      }
+    ]
   }
 ]
