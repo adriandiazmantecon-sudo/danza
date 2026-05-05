@@ -14,7 +14,9 @@ function App() {
   const [filterType, setFilterType] = useState('All');
   const [filterMunicipality, setFilterMunicipality] = useState('All');
   const [filterVenue, setFilterVenue] = useState('All');
-  const [filterMonth, setFilterMonth] = useState('All'); // YYYY-MM
+  const [filterMonth, setFilterMonth] = useState(format(new Date(), 'yyyy-MM')); // Default to current month
+  const [isProminentMonthOpen, setIsProminentMonthOpen] = useState(false);
+  const prominentMonthRef = useRef(null);
   const [filterDate, setFilterDate] = useState(null); // YYYY-MM-DD
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('DateAsc');
@@ -74,6 +76,9 @@ function App() {
     const handleClickOutside = (event) => {
       if (monthRef.current && !monthRef.current.contains(event.target)) {
         setIsMonthOpen(false);
+      }
+      if (prominentMonthRef.current && !prominentMonthRef.current.contains(event.target)) {
+        setIsProminentMonthOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -201,67 +206,7 @@ function App() {
         </div>
         
         <div className="dropdowns-group">
-          <div className="month-selector-custom" ref={monthRef}>
-            <button 
-              className={`month-selector-btn ${isMonthOpen ? 'active' : ''}`}
-              onClick={() => setIsMonthOpen(!isMonthOpen)}
-            >
-              <Calendar size={18} className="selector-icon-static" />
-              <span style={{ flex: 1 }}>{getMonthName(filterMonth)}</span>
-              <ChevronDown size={16} className={`chevron ${isMonthOpen ? 'open' : ''}`} />
-            </button>
-
-            {isMonthOpen && (
-              <div className="month-dropdown">
-                <button 
-                  className={`month-option ${filterMonth === 'All' ? 'active' : ''}`}
-                  onClick={() => { setFilterMonth('All'); setIsMonthOpen(false); }}
-                >
-                  Cualquier mes
-                </button>
-                
-                {currentMonths.map(m => (
-                  <button 
-                    key={m} 
-                    className={`month-option ${filterMonth === m ? 'active' : ''}`}
-                    onClick={() => { setFilterMonth(m); setIsMonthOpen(false); }}
-                  >
-                    {getMonthName(m)}
-                  </button>
-                ))}
-
-                {pastMonths.length > 0 && (
-                  <>
-                    <button 
-                      className="past-months-toggle"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setShowPastMonths(!showPastMonths);
-                      }}
-                    >
-                      <span>Meses anteriores</span>
-                      {showPastMonths ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                    </button>
-                    
-                    {showPastMonths && (
-                      <div className="past-months-list">
-                        {pastMonths.map(m => (
-                          <button 
-                            key={m} 
-                            className={`month-option ${filterMonth === m ? 'active' : ''}`}
-                            onClick={() => { setFilterMonth(m); setIsMonthOpen(false); }}
-                            style={{ paddingLeft: '2rem' }}
-                          >
-                            {getMonthName(m)}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            )}
-          </div>
+          {/* Month selector moved to prominent position in results-header */}
 
           <CalendarFilter 
             events={events} 
@@ -320,7 +265,70 @@ function App() {
             <div className="results-summary">
               Mostrando <strong>{sortedEvents.length}</strong> espectáculos
               {filterDate && <span> el <strong>{format(parseISO(filterDate), "d 'de' MMMM yyyy", { locale: es })}</strong></span>}
-              {filterMonth !== 'All' && !filterDate && <span> en <strong>{format(parseISO(`${filterMonth}-01`), 'MMMM yyyy', { locale: es })}</strong></span>}
+            </div>
+
+            <div className="prominent-month-selector" ref={prominentMonthRef}>
+              <span className="label">MOSTRANDO MES DE</span>
+              <div className="month-toggle-wrapper">
+                <button 
+                  className="month-toggle-btn"
+                  onClick={() => setIsProminentMonthOpen(!isProminentMonthOpen)}
+                >
+                  {filterMonth === 'All' ? 'TODOS LOS MESES' : format(parseISO(`${filterMonth}-01`), 'MMMM', { locale: es }).toUpperCase()}
+                  <ChevronDown size={24} className={`chevron ${isProminentMonthOpen ? 'open' : ''}`} />
+                </button>
+
+                {isProminentMonthOpen && (
+                  <div className="month-dropdown prominent glass-card">
+                    <button 
+                      className={`month-option ${filterMonth === 'All' ? 'active' : ''}`}
+                      onClick={() => { setFilterMonth('All'); setIsProminentMonthOpen(false); }}
+                    >
+                      Cualquier mes
+                    </button>
+                    
+                    {currentMonths.map(m => (
+                      <button 
+                        key={m} 
+                        className={`month-option ${filterMonth === m ? 'active' : ''}`}
+                        onClick={() => { setFilterMonth(m); setIsProminentMonthOpen(false); }}
+                      >
+                        {getMonthName(m)}
+                      </button>
+                    ))}
+
+                    {pastMonths.length > 0 && (
+                      <>
+                        <button 
+                          className="past-months-toggle"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setShowPastMonths(!showPastMonths);
+                          }}
+                        >
+                          <span>Meses anteriores</span>
+                          {showPastMonths ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                        </button>
+                        
+                        {showPastMonths && (
+                          <div className="past-months-list">
+                            {pastMonths.map(m => (
+                              <button 
+                                key={m} 
+                                className={`month-option ${filterMonth === m ? 'active' : ''}`}
+                                onClick={() => { setFilterMonth(m); setIsProminentMonthOpen(false); }}
+                                style={{ paddingLeft: '2rem' }}
+                              >
+                                {getMonthName(m)}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="sort-wrapper">
