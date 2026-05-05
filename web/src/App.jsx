@@ -381,7 +381,7 @@ function App() {
       )}
       
       <footer>
-        <span>Madrid Dance &copy; 2026 | Versión 3.1</span>
+        <span>Madrid Dance &copy; 2026 | Versión 3.2</span>
         <div style={{ marginTop: '1rem' }}>
            <span className="admin-link" onClick={() => setView(view === 'admin' ? 'home' : 'admin')}>
              {view === 'admin' ? 'Ver Cartelera' : 'Administración'}
