@@ -67,7 +67,7 @@ function App() {
       });
     });
     
-    const sorted = Array.from(monthsSet).sort().reverse();
+    const sorted = Array.from(monthsSet).sort();
     const today = new Date();
     const currentMonthKey = format(today, 'yyyy-MM');
     
@@ -82,7 +82,7 @@ function App() {
       }
     });
     
-    return { currentMonths: current, pastMonths: past };
+    return { currentMonths: current, pastMonths: past.reverse() };
   }, [events]);
 
   const [isMonthOpen, setIsMonthOpen] = useState(false);
@@ -298,7 +298,7 @@ function App() {
                   className="month-toggle-btn"
                   onClick={() => setIsProminentMonthOpen(!isProminentMonthOpen)}
                 >
-                  {filterMonth === 'All' ? 'TODOS LOS MESES' : format(parseISO(`${filterMonth}-01`), 'MMMM', { locale: es }).toUpperCase()}
+                  {filterMonth === 'All' ? 'TODOS LOS MESES' : format(parseISO(`${filterMonth}-01`), 'MMMM yyyy', { locale: es }).toUpperCase()}
                   <ChevronDown size={24} className={`chevron ${isProminentMonthOpen ? 'open' : ''}`} />
                 </button>
 
