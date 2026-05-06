@@ -223,6 +223,7 @@ function App() {
     }
     if (sortBy === 'Venue') return a.venue.name.localeCompare(b.venue.name);
     if (sortBy === 'Municipality') return a.venue.municipality.localeCompare(b.venue.municipality);
+    if (sortBy === 'Title') return a.title.localeCompare(b.title);
     
     return 0;
   });
@@ -385,6 +386,7 @@ function App() {
                 <option value="PriceDesc">Precio (Más caros)</option>
                 <option value="Venue">Teatro (A-Z)</option>
                 <option value="Municipality">Municipio (A-Z)</option>
+                <option value="Title">Título (A-Z)</option>
               </select>
             </div>
           </div>
