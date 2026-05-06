@@ -238,8 +238,7 @@ function App() {
             onDateSelect={(date) => {
               setFilterDate(date);
               if (date) {
-                // If a date is selected, we might want to set the month filter to that month
-                // or just keep them independent. Let's keep them independent for now.
+                setFilterMonth('All');
               }
             }} 
           />
