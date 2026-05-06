@@ -2916,5 +2916,265 @@
         "time": "18:00"
       }
     ]
+  },
+  {
+    "id": "a401f2be-0215-4935-8279-bcdc8872d45e",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Auditorio Municipal Pilar Bardem",
+      "municipality": "Rivas-Vaciamadrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-03-20",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "3bb91624-eea4-45ca-b6ce-0c8cf70d87ab",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Centro Juvenil La Casa + Grande",
+      "municipality": "Rivas-Vaciamadrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-03-20",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "6399ad4a-5494-4043-8d52-a7cd4c318307",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Municipal Federico García Lorca",
+      "municipality": "San Fernando de Henares"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-22",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "dd2a3599-0c31-40e3-8e65-f9c02498d7f0",
+    "title": "LA PRODIGIOSA ZAPATERA",
+    "company": "Ibérica de Danza",
+    "venue": {
+      "name": "Teatro Municipal Adolfo Marsillach",
+      "municipality": "San Sebastián de los Reyes"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/laprodigiosazapatera/laprodigiosazapatera1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/laprodigiosazapatera.html",
+    "sessions": [
+      {
+        "date": "2026-02-14",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "ae61ce45-12ad-43a7-b1c7-9c36e57949ff",
+    "title": "FOREVER TANGO DE LUIS BRAVO",
+    "company": "Forever Tango de Luis Bravo",
+    "venue": {
+      "name": "Teatro Municipal Adolfo Marsillach",
+      "municipality": "San Sebastián de los Reyes"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/forevertango/forevertango1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/forevertango.html",
+    "sessions": [
+      {
+        "date": "2026-03-21",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "517fc601-0ca7-48a3-8d66-e5b5936f3187",
+    "title": "EL PIANO FLAMENCO DEL SIGLO XXI",
+    "company": "Andrés Barrios",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pianoflamenco/pianoflamenco1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pianoflamenco.html",
+    "sessions": [
+      {
+        "date": "2026-03-14",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "e63c7278-ee1e-48a1-8ff2-9cc328353786",
+    "title": "FOREVER TANGO DE LUIS BRAVO",
+    "company": "Forever Tango de Luis Bravo",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/forevertango/forevertango1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/forevertango.html",
+    "sessions": [
+      {
+        "date": "2026-03-22",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "c363a1ac-0ea9-402b-8163-d050b53544d4",
+    "title": "LATIDO Y TAÑIDO",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "297bc4d8-4733-499b-b441-bd07babc1c99",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Casa de Cultura",
+      "municipality": "Torrelaguna"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "d39b2a8c-9d15-4ce4-88ba-11bdfec781e6",
+    "title": "VIAJE AL AMOR BRUJO",
+    "company": "Ballet Español de la Comunidad de Madrid",
+    "venue": {
+      "name": "Teatro Bulevar",
+      "municipality": "Torrelodones"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/viajeamorbrujo/viajeamorbrujo1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/viajeamorbrujo.html",
+    "sessions": [
+      {
+        "date": "2026-03-06",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "31ac7b1e-9092-4e8c-97ec-6151b66dacda",
+    "title": "VIAJE AL AMOR BRUJO",
+    "company": "Ballet Español de la Comunidad de Madrid",
+    "venue": {
+      "name": "Teatro Municipal",
+      "municipality": "Tres Cantos"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/viajeamorbrujo/viajeamorbrujo1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/viajeamorbrujo.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "19:30"
+      }
+    ]
+  },
+  {
+    "id": "9aa54602-1ebc-4ae8-a783-44c48c1a20a7",
+    "title": "DANZAS SOLEMNES",
+    "company": "Cía. Cristina Cazorla",
+    "venue": {
+      "name": "Teatro Municipal Juan Prado",
+      "municipality": "Valdemoro"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/danzassolemnes/danzassolemnes1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/danzassolemnes.html",
+    "sessions": [
+      {
+        "date": "2026-04-29",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "1fd9204f-31cd-4552-8acd-d64507752228",
+    "title": "LATIDO Y TAÑIDO - ALEJANDRO LARA DANCE PROJECT",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Coliseo de la Cultura (Auditorio Teresa Berganza)",
+      "municipality": "Villaviciosa de Odón"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-02-28",
+        "time": "19:00"
+      }
+    ]
   }
 ]

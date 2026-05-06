@@ -1,0 +1,22 @@
+[
+  {
+    "id": "d39b2a8c-9d15-4ce4-88ba-11bdfec781e6",
+    "title": "VIAJE AL AMOR BRUJO",
+    "company": "Ballet Español de la Comunidad de Madrid",
+    "venue": {
+      "name": "Teatro Bulevar",
+      "municipality": "Torrelodones"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/viajeamorbrujo/viajeamorbrujo1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/viajeamorbrujo.html",
+    "sessions": [
+      {
+        "date": "2026-03-06",
+        "time": "19:30"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1fd9204f-31cd-4552-8acd-d64507752228",
+    "title": "LATIDO Y TAÑIDO - ALEJANDRO LARA DANCE PROJECT",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Coliseo de la Cultura (Auditorio Teresa Berganza)",
+      "municipality": "Villaviciosa de Odón"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-02-28",
+        "time": "19:00"
+      }
+    ]
+  }
+]

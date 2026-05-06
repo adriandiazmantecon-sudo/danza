@@ -1,0 +1,22 @@
+[
+  {
+    "id": "297bc4d8-4733-499b-b441-bd07babc1c99",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Casa de Cultura",
+      "municipality": "Torrelaguna"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      }
+    ]
+  }
+]

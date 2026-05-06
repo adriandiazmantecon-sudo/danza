@@ -1,0 +1,62 @@
+[
+  {
+    "id": "517fc601-0ca7-48a3-8d66-e5b5936f3187",
+    "title": "EL PIANO FLAMENCO DEL SIGLO XXI",
+    "company": "Andrés Barrios",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pianoflamenco/pianoflamenco1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pianoflamenco.html",
+    "sessions": [
+      {
+        "date": "2026-03-14",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "e63c7278-ee1e-48a1-8ff2-9cc328353786",
+    "title": "FOREVER TANGO DE LUIS BRAVO",
+    "company": "Forever Tango de Luis Bravo",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/forevertango/forevertango1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/forevertango.html",
+    "sessions": [
+      {
+        "date": "2026-03-22",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "c363a1ac-0ea9-402b-8163-d050b53544d4",
+    "title": "LATIDO Y TAÑIDO",
+    "company": "Alejandro Lara Dance Project",
+    "venue": {
+      "name": "Teatro Municipal José María Rodero",
+      "municipality": "Torrejón de Ardoz"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/latidoytanido/latidoytanido1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/latidoytanido.html",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "a401f2be-0215-4935-8279-bcdc8872d45e",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Auditorio Municipal Pilar Bardem",
+      "municipality": "Rivas-Vaciamadrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-03-20",
+        "time": "18:00"
+      }
+    ]
+  }
+]

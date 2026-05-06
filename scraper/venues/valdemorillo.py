@@ -1,0 +1,9 @@
+from madrid_org_red_common import scrape_red_municipios
+
+async def scrape():
+    return await scrape_red_municipios(
+        url="https://www.madrid.org/clas_artes/red/valdemorillo.html",
+        venue_name="Casa de Cultura Giralt Laporta",
+        municipality="Valdemorillo",
+        venue_header_text="Casa de Cultura Giralt Laporta"
+    )

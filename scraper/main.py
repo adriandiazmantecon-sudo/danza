@@ -107,6 +107,32 @@ from venues.parla_jaime_salom import scrape_parla_jaime_salom
 from venues.parla_dulce_chacon import scrape_parla_dulce_chacon
 from venues.pedrezuela import scrape_pedrezuela
 from venues.pinto import scrape_pinto
+from venues.pozuelo_mira import scrape as scrape_pozuelo_mira
+from venues.rivas_pilar_bardem import scrape as scrape_rivas_pilar_bardem
+from venues.rivas_casa_grande import scrape as scrape_rivas_casa_grande
+from venues.san_agustin_guadalix import scrape as scrape_san_agustin_guadalix
+from venues.san_fernando_henares import scrape as scrape_san_fernando_henares
+from venues.san_lorenzo_escorial import scrape as scrape_san_lorenzo_escorial
+from venues.san_martin_vega import scrape as scrape_san_martin_vega
+from venues.san_martin_valdeiglesias import scrape as scrape_san_martin_valdeiglesias
+from venues.san_sebastian_reyes import scrape as scrape_san_sebastian_reyes
+from venues.serranillos_del_valle import scrape as scrape_serranillos_del_valle
+from venues.soto_del_real import scrape as scrape_soto_del_real
+from venues.talamanca_jarama import scrape as scrape_talamanca_jarama
+from venues.torrejon_rodero import scrape as scrape_torrejon_rodero
+from venues.torrejon_calzada import scrape as scrape_torrejon_calzada
+from venues.torrelaguna import scrape as scrape_torrelaguna
+from venues.torrelodones import scrape as scrape_torrelodones
+from venues.torres_alameda import scrape as scrape_torres_alameda
+from venues.tres_cantos import scrape as scrape_tres_cantos
+from venues.valdemorillo import scrape as scrape_valdemorillo
+from venues.valdemoro import scrape as scrape_valdemoro
+from venues.valdeolmos_alalpardo import scrape as scrape_valdeolmos_alalpardo
+from venues.velilla_san_antonio import scrape as scrape_velilla_san_antonio
+from venues.villa_del_prado import scrape as scrape_villa_del_prado
+from venues.villanueva_canada import scrape as scrape_villanueva_canada
+from venues.villanueva_pardillo import scrape as scrape_villanueva_pardillo
+from venues.villaviciosa_odon import scrape as scrape_villaviciosa_odon
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -215,7 +241,33 @@ def main():
         'parla_jaime': ('Parla - Teatro Jaime Salom', scrape_parla_jaime_salom),
         'parla_dulce': ('Parla - Teatro Dulce Chacón', scrape_parla_dulce_chacon),
         'pedrezuela': ('Pedrezuela - Auditorio Municipal', scrape_pedrezuela),
-        'pinto': ('Pinto - Teatro Francisco Rabal', scrape_pinto)
+        'pinto': ('Pinto - Teatro Francisco Rabal', scrape_pinto),
+        'pozuelo_mira': ('Pozuelo de Alarcón - MIRA Teatro', scrape_pozuelo_mira),
+        'rivas_pilar_bardem': ('Rivas-Vaciamadrid - Auditorio Pilar Bardem', scrape_rivas_pilar_bardem),
+        'rivas_casa_grande': ('Rivas-Vaciamadrid - La Casa + Grande', scrape_rivas_casa_grande),
+        'san_agustin_guadalix': ('San Agustín de Guadalix - Casa de Cultura', scrape_san_agustin_guadalix),
+        'san_fernando_henares': ('San Fernando de Henares - Teatro García Lorca', scrape_san_fernando_henares),
+        'san_lorenzo_escorial': ('San Lorenzo de El Escorial - Casa de Cultura', scrape_san_lorenzo_escorial),
+        'san_martin_vega': ('San Martín de la Vega - Centro Cívico Cultural', scrape_san_martin_vega),
+        'san_martin_valdeiglesias': ('San Martín de Valdeiglesias - Teatro Municipal', scrape_san_martin_valdeiglesias),
+        'san_sebastian_reyes': ('San Sebastián de los Reyes - Auditorio Adolfo Marsillach', scrape_san_sebastian_reyes),
+        'serranillos': ('Serranillos del Valle - Centro Cultural', scrape_serranillos_del_valle),
+        'soto_del_real': ('Soto del Real - Centro Cultural', scrape_soto_del_real),
+        'talamanca': ('Talamanca de Jarama - Salón de Actos', scrape_talamanca_jarama),
+        'torrejon_rodero': ('Torrejón de Ardoz - Teatro José María Rodero', scrape_torrejon_rodero),
+        'torrejon_calzada': ('Torrejón de la Calzada - Casa de Cultura', scrape_torrejon_calzada),
+        'torrelaguna': ('Torrelaguna - Casa de Cultura', scrape_torrelaguna),
+        'torrelodones': ('Torrelodones - Teatro Bulevar', scrape_torrelodones),
+        'torres_alameda': ('Torres de la Alameda - Auditorio Las Amapolas', scrape_torres_alameda),
+        'tres_cantos': ('Tres Cantos - Teatro Municipal', scrape_tres_cantos),
+        'valdemorillo': ('Valdemorillo - Casa de Cultura', scrape_valdemorillo),
+        'valdemoro': ('Valdemoro - Teatro Juan Prado', scrape_valdemoro),
+        'valdeolmos': ('Valdeolmos-Alalpardo - Casa de Cultura', scrape_valdeolmos_alalpardo),
+        'velilla': ('Velilla de San Antonio - CC Mariana Pineda', scrape_velilla_san_antonio),
+        'villa_del_prado': ('Villa del Prado - Centro de Artes', scrape_villa_del_prado),
+        'villanueva_canada': ('Villanueva de la Cañada - CC La Despernada', scrape_villanueva_canada),
+        'villanueva_pardillo': ('Villanueva del Pardillo - Auditorio Sebastián Cestero', scrape_villanueva_pardillo),
+        'villaviciosa': ('Villaviciosa de Odón - Coliseo de la Cultura', scrape_villaviciosa_odon)
     }
 
     venues_to_scrape = []

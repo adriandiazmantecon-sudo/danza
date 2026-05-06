@@ -1,0 +1,22 @@
+[
+  {
+    "id": "3bb91624-eea4-45ca-b6ce-0c8cf70d87ab",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Centro Juvenil La Casa + Grande",
+      "municipality": "Rivas-Vaciamadrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-03-20",
+        "time": "18:00"
+      }
+    ]
+  }
+]

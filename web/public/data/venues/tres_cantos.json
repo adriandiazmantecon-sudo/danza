@@ -1,0 +1,22 @@
+[
+  {
+    "id": "31ac7b1e-9092-4e8c-97ec-6151b66dacda",
+    "title": "VIAJE AL AMOR BRUJO",
+    "company": "Ballet Español de la Comunidad de Madrid",
+    "venue": {
+      "name": "Teatro Municipal",
+      "municipality": "Tres Cantos"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/viajeamorbrujo/viajeamorbrujo1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/viajeamorbrujo.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "19:30"
+      }
+    ]
+  }
+]

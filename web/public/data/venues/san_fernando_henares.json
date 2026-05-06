@@ -1,0 +1,22 @@
+[
+  {
+    "id": "6399ad4a-5494-4043-8d52-a7cd4c318307",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Municipal Federico García Lorca",
+      "municipality": "San Fernando de Henares"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-03-22",
+        "time": "18:00"
+      }
+    ]
+  }
+]

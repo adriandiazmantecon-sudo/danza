@@ -1,0 +1,22 @@
+[
+  {
+    "id": "9aa54602-1ebc-4ae8-a783-44c48c1a20a7",
+    "title": "DANZAS SOLEMNES",
+    "company": "Cía. Cristina Cazorla",
+    "venue": {
+      "name": "Teatro Municipal Juan Prado",
+      "municipality": "Valdemoro"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/danzassolemnes/danzassolemnes1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/danzassolemnes.html",
+    "sessions": [
+      {
+        "date": "2026-04-29",
+        "time": "19:00"
+      }
+    ]
+  }
+]
