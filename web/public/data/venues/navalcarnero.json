@@ -1,0 +1,22 @@
+[
+  {
+    "id": "731efe37-797c-40ee-860b-bd12bd31e1f8",
+    "title": "DANZAS SOLEMNES",
+    "company": "Cía. Cristina Cazorla",
+    "venue": {
+      "name": "Teatro Municipal Centro",
+      "municipality": "Navalcarnero"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/danzassolemnes/danzassolemnes1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/danzassolemnes.html",
+    "sessions": [
+      {
+        "date": "2026-04-10",
+        "time": "20:00"
+      }
+    ]
+  }
+]

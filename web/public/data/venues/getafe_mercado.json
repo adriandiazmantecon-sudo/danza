@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ad239cd7-5295-4f29-ba3e-e0b6ceb4771e",
+    "title": "PASAJE",
+    "company": "Juan Carlos Avecilla",
+    "venue": {
+      "name": "Espacio Mercado",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pasaje/pasaje1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pasaje.html",
+    "sessions": [
+      {
+        "date": "2026-04-18",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "b8f2625e-38da-4b1d-8d17-ae17a9a5b69e",
+    "title": "LA PRODIGIOSA ZAPATERA",
+    "company": "Ibérica de Danza",
+    "venue": {
+      "name": "Espacio Mercado",
+      "municipality": "Getafe"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/laprodigiosazapatera/laprodigiosazapatera1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/laprodigiosazapatera.html",
+    "sessions": [
+      {
+        "date": "2026-05-10",
+        "time": "19:00"
+      }
+    ]
+  }
+]

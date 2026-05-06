@@ -79,6 +79,34 @@ from venues.colmenar_oreja import scrape_colmenar_oreja
 from venues.colmenar_viejo import scrape_colmenar_viejo
 from venues.colmenarejo import scrape_colmenarejo
 from venues.coslada import scrape_coslada
+from venues.cubas_de_la_sagra import scrape_cubas
+from venues.el_alamo import scrape_el_alamo
+from venues.fuenlabrada_nuria_espert import scrape_nuria_espert
+from venues.fuenlabrada_maribel_verdu import scrape_maribel_verdu
+from venues.galapagar import scrape_galapagar
+from venues.getafe_espacio_mercado import scrape_getafe_espacio_mercado
+from venues.grinon import scrape_grinon
+from venues.guadarrama import scrape_guadarrama
+from venues.hoyo_de_manzanares import scrape_hoyo_manzanares
+from venues.la_cabrera import scrape_la_cabrera
+from venues.las_rozas_perez_de_la_riva import scrape_las_rozas_perez_riva
+from venues.las_rozas_joaquin_rodrigo import scrape_las_rozas_joaquin_rodrigo
+from venues.leganes_jose_monleon import scrape_leganes_monleon
+from venues.madrid_pilar_miro import scrape_pilar_miro
+from venues.manzanares_el_real import scrape_manzanares_real
+from venues.majadahonda_red import scrape_majadahonda_red
+from venues.meco import scrape_meco
+from venues.mejorada_del_campo import scrape_mejorada
+from venues.moraleja_de_enmedio import scrape_moraleja
+from venues.moralzarzal import scrape_moralzarzal
+from venues.morata_de_tajuna import scrape_morata
+from venues.mostoles_el_soto import scrape_mostoles_el_soto
+from venues.navalcarnero import scrape_navalcarnero
+from venues.paracuellos_de_jarama import scrape_paracuellos
+from venues.parla_jaime_salom import scrape_parla_jaime_salom
+from venues.parla_dulce_chacon import scrape_parla_dulce_chacon
+from venues.pedrezuela import scrape_pedrezuela
+from venues.pinto import scrape_pinto
 
 def save_json(path, data):
     """Saves JSON data atomically using a temporary file."""
@@ -159,7 +187,35 @@ def main():
         'colmenar_oreja': ('Colmenar de Oreja - Teatro Diéguez', scrape_colmenar_oreja),
         'colmenar_viejo': ('Colmenar Viejo - Auditorio Villa de Colmenar Viejo', scrape_colmenar_viejo),
         'colmenarejo': ('Colmenarejo - Teatro Municipal', scrape_colmenarejo),
-        'coslada': ('Coslada - Teatro Municipal', scrape_coslada)
+        'coslada': ('Coslada - Teatro Municipal', scrape_coslada),
+        'cubas': ('Cubas de la Sagra - CAE', scrape_cubas),
+        'el_alamo': ('El Álamo - Centro Sociocultural', scrape_el_alamo),
+        'fuenlabrada_nuria': ('Fuenlabrada - Teatro Nuria Espert', scrape_nuria_espert),
+        'fuenlabrada_maribel': ('Fuenlabrada - Teatro Maribel Verdú', scrape_maribel_verdu),
+        'galapagar': ('Galapagar - Centro Cultural La Pocilla', scrape_galapagar),
+        'getafe_mercado': ('Getafe - Espacio Mercado', scrape_getafe_espacio_mercado),
+        'grinon': ('Griñón - Centro Cultural', scrape_grinon),
+        'guadarrama': ('Guadarrama - Centro Cultural La Torre', scrape_guadarrama),
+        'hoyo': ('Hoyo de Manzanares - Teatro Las Cigüeñas', scrape_hoyo_manzanares),
+        'la_cabrera': ('La Cabrera - CCH Sierra Norte', scrape_la_cabrera),
+        'las_rozas_perez': ('Las Rozas - CC Pérez de la Riva', scrape_las_rozas_perez_riva),
+        'las_rozas_joaquin': ('Las Rozas - Auditorio Joaquín Rodrigo', scrape_las_rozas_joaquin_rodrigo),
+        'leganes_monleon': ('Leganés - Teatro José Monleón', scrape_leganes_monleon),
+        'madrid_pilar': ('Madrid - CC Pilar Miró', scrape_pilar_miro),
+        'manzanares_real': ('Manzanares el Real - Sala El Rodaje', scrape_manzanares_real),
+        'majadahonda_red': ('Majadahonda - Casa de Cultura (Red)', scrape_majadahonda_red),
+        'meco': ('Meco - CC Antonio Llorente', scrape_meco),
+        'mejorada': ('Mejorada del Campo - Casa de Cultura', scrape_mejorada),
+        'moraleja': ('Moraleja de Enmedio - CC El Cerro', scrape_moraleja),
+        'moralzarzal': ('Moralzarzal - Teatro Municipal', scrape_moralzarzal),
+        'morata': ('Morata de Tajuña - CC Francisco González', scrape_morata),
+        'mostoles_soto': ('Móstoles - CSC El Soto', scrape_mostoles_el_soto),
+        'navalcarnero': ('Navalcarnero - Teatro Municipal Centro', scrape_navalcarnero),
+        'paracuellos': ('Paracuellos de Jarama - Centro Cultural', scrape_paracuellos),
+        'parla_jaime': ('Parla - Teatro Jaime Salom', scrape_parla_jaime_salom),
+        'parla_dulce': ('Parla - Teatro Dulce Chacón', scrape_parla_dulce_chacon),
+        'pedrezuela': ('Pedrezuela - Auditorio Municipal', scrape_pedrezuela),
+        'pinto': ('Pinto - Teatro Francisco Rabal', scrape_pinto)
     }
 
     venues_to_scrape = []
@@ -189,8 +245,11 @@ def main():
                 existing_events = json.load(f)
                 for e in existing_events:
                     url = e.get('url')
+                    venue_name = e.get('venue', {}).get('name', '')
+                    muni = e.get('venue', {}).get('municipality', '')
                     if url:
-                        master_dict[url] = e
+                        key = f"{url}_{venue_name}_{muni}"
+                        master_dict[key] = e
             print(f"Loaded {len(master_dict)} existing events from master database.")
         except Exception as e:
             print(f"CRITICAL ERROR: Could not load master database at {output_path}: {e}")

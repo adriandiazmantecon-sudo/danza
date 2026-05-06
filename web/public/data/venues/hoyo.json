@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c35c9499-a94d-402c-b18b-3b7db63a5971",
+    "title": "EL PIANO FLAMENCO DEL SIGLO XXI",
+    "company": "Andrés Barrios",
+    "venue": {
+      "name": "Teatro Municipal \"Las Cigüeñas\"",
+      "municipality": "Hoyo de Manzanares"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pianoflamenco/pianoflamenco1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pianoflamenco.html",
+    "sessions": [
+      {
+        "date": "2026-01-31",
+        "time": "20:00"
+      }
+    ]
+  }
+]

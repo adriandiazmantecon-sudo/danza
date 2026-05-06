@@ -1,0 +1,62 @@
+[
+  {
+    "id": "7aecc17e-feff-4902-b998-4bec78d6f302",
+    "title": "DANZAS SOLEMNES",
+    "company": "Cía. Cristina Cazorla",
+    "venue": {
+      "name": "Casa de Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/danzassolemnes/danzassolemnes1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/danzassolemnes.html",
+    "sessions": [
+      {
+        "date": "2026-01-17",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "a459af8b-c7aa-4929-926d-6f7c81d9f6c5",
+    "title": "HILO DE FUEGO",
+    "company": "Carlos Rodríguez Ballet Flamenco Company",
+    "venue": {
+      "name": "Casa de Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/hilodefuego/hilodefuego1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/hilodefuego.html",
+    "sessions": [
+      {
+        "date": "2026-02-07",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "4911690b-14f2-47e6-9c09-f1bd2b353cfd",
+    "title": "FRONTERAS EN EL AIRE",
+    "company": "Nuevo Ballet Español",
+    "venue": {
+      "name": "Casa de Cultura Carmen Conde",
+      "municipality": "Majadahonda"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/fronterasenaire/fronterasenaire1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/fronterasenaire.html",
+    "sessions": [
+      {
+        "date": "2026-05-09",
+        "time": "20:00"
+      }
+    ]
+  }
+]

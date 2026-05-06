@@ -1,0 +1,42 @@
+[
+  {
+    "id": "d72dc4e7-01d2-4ae1-86ab-c56e7e3cad12",
+    "title": "PIANO FLAMENCO DEL SIGLO XXI",
+    "company": "Andrés Barrios",
+    "venue": {
+      "name": "Centro Cultural Pilar Miró",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/pianoflamenco/pianoflamenco1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/pianoflamenco.html",
+    "sessions": [
+      {
+        "date": "2026-01-25",
+        "time": "19:00"
+      }
+    ]
+  },
+  {
+    "id": "a5370d62-afdd-4ee4-895e-9df1734d1842",
+    "title": "EMPAQUE",
+    "company": "Chicharrón Circo Flamenco",
+    "venue": {
+      "name": "Centro Cultural Pilar Miró",
+      "municipality": "Madrid"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/empaque/empaque1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/empaque.html",
+    "sessions": [
+      {
+        "date": "2026-03-28",
+        "time": "20:00"
+      }
+    ]
+  }
+]

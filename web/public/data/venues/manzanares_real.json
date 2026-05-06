@@ -1,0 +1,22 @@
+[
+  {
+    "id": "796830c5-1389-4ac8-9809-03ec00dff5ef",
+    "title": "PAÑUELOS",
+    "company": "Tarambana Espectáculos S.L",
+    "venue": {
+      "name": "Sala El Rodaje",
+      "municipality": "Manzanares el Real"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/panuelos/panuelos1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/panuelos.html",
+    "sessions": [
+      {
+        "date": "2026-02-01",
+        "time": "12:30"
+      }
+    ]
+  }
+]

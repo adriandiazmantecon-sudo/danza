@@ -1,0 +1,102 @@
+[
+  {
+    "id": "9a8949b3-0a0a-464d-ac88-e393990993de",
+    "title": "TIERRA VIRGEN",
+    "company": "Compañía Marco Flores",
+    "venue": {
+      "name": "Teatro Maribel Verdú",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/tierravirgen/tierravirgen1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/tierravirgen.html",
+    "sessions": [
+      {
+        "date": "2026-04-25",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "7e7c1061-b5c3-40a3-a5e3-662f46817dda",
+    "title": "VIAJE AL AMOR BRUJO",
+    "company": "Ballet Español de la Comunidad de Madrid",
+    "venue": {
+      "name": "Teatro Maribel Verdú",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/viajeamorbrujo/viajeamorbrujo1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/viajeamorbrujo.html",
+    "sessions": [
+      {
+        "date": "2026-05-16",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "3d2990d7-f79a-431e-962b-e5522262ac6f",
+    "title": "MUERTA DE AMOR",
+    "company": "Manuel Liñán",
+    "venue": {
+      "name": "Teatro Maribel Verdú",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/muertadeamor/muertadeamor1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/muertadeamor.html",
+    "sessions": [
+      {
+        "date": "2026-05-23",
+        "time": "20:00"
+      }
+    ]
+  },
+  {
+    "id": "99cb5e0d-af13-4a7b-8d0f-2d4229f9eb77",
+    "title": "CARMENCITA Y EL LOBO",
+    "company": "Carabdanza",
+    "venue": {
+      "name": "Teatro Maribel Verdú",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/carmencita/carmencita1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/carmencita.html",
+    "sessions": [
+      {
+        "date": "2026-05-24",
+        "time": "18:00"
+      }
+    ]
+  },
+  {
+    "id": "d1e2236b-84e8-46f8-92a0-43fd22f0c53a",
+    "title": "COMPAÑÍA NACHO DUATO — DUENDE, NA FLORESTA, CANTUS",
+    "company": "Compañía Nacho Duato",
+    "venue": {
+      "name": "Teatro Maribel Verdú",
+      "municipality": "Fuenlabrada"
+    },
+    "type": "Danza",
+    "price_range": "Consultar web",
+    "is_free": false,
+    "image_url": "https://www.madrid.org/clas_artes/red/fotos/fichas/nachoduato/nachoduato1.jpg",
+    "url": "https://www.madrid.org/clas_artes/red/nachoduato.html",
+    "sessions": [
+      {
+        "date": "2026-05-30",
+        "time": "19:00"
+      }
+    ]
+  }
+]
